@@ -1,7 +1,6 @@
 import 'package:budgetbuddy/common/color_extension.dart';
 import 'package:budgetbuddy/common_widget/primary_button.dart';
 import 'package:budgetbuddy/common_widget/secondary_button.dart';
-import 'package:budgetbuddy/views/login/signin.dart';
 import 'package:budgetbuddy/views/login/social_login.dart';
 import 'package:budgetbuddy/views/login/social_signin.dart';
 import 'package:flutter/material.dart';

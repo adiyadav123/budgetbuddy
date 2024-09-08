@@ -1,5 +1,6 @@
 import 'package:budgetbuddy/common_widget/login_buttons.dart';
 import 'package:budgetbuddy/views/home/home_view.dart';
+import 'package:budgetbuddy/views/login/config.dart';
 import 'package:budgetbuddy/views/login/email_signin.dart';
 import 'package:budgetbuddy/views/login/signin.dart';
 import 'package:budgetbuddy/views/login/social_config.dart';
@@ -80,10 +81,10 @@ class _SocialSignInState extends State<SocialSignIn> {
                           color: Colors.black.withOpacity(0.35), fontSize: 14)),
                   const SizedBox(height: 15),
                   SecondaryButton(
-                      title: "Sign in with E-mail ( Offline )",
+                      title: "Continue without signing in",
                       asset: "assets/img/secondary_btn.png",
                       onPressed: () {
-                        Get.to(() => SignIn(),
+                        Get.to(() => ConfigPage(),
                             transition: Transition.rightToLeftWithFade,
                             duration: const Duration(milliseconds: 1000));
                       },

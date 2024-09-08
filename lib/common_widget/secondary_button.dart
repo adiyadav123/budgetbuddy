@@ -46,6 +46,7 @@ class _SecondaryButtonState extends State<SecondaryButton> {
         duration: Duration(milliseconds: 200),
         curve: Curves.easeInOut,
         child: Container(
+          constraints: const BoxConstraints(maxWidth: 648),
           height: 55,
           decoration: BoxDecoration(
             image: DecorationImage(

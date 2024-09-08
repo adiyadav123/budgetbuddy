@@ -2,6 +2,7 @@ import 'package:budgetbuddy/common_widget/login_buttons.dart';
 import 'package:budgetbuddy/common_widget/primary_button.dart';
 import 'package:budgetbuddy/views/home/home_view.dart';
 import 'package:budgetbuddy/views/login/signin.dart';
+import 'package:budgetbuddy/views/main_tab/main_tab_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -179,7 +180,7 @@ class _ConfigPageState extends State<ConfigPage> {
 
       Navigator.pushAndRemoveUntil(
           context,
-          MaterialPageRoute(builder: (context) => HomeView()),
+          MaterialPageRoute(builder: (context) => MainTabView()),
           (route) => false);
     }
   }

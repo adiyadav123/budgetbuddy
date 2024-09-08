@@ -22,12 +22,9 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
-  
-
   @override
   void initState() {
     super.initState();
-
   }
 
   TextEditingController emailController = TextEditingController();
@@ -188,7 +185,18 @@ class _SignInState extends State<SignIn> {
   }
 
   _getStarted() async {
+
+    if (email.isEmpty || password.isEmpty) {
+      return Get.snackbar("Uh oh!", "Please fill in all fields",
+          snackPosition: SnackPosition.BOTTOM,
+          backgroundColor: TColor.gray80,
+          colorText: TColor.white);
+    }
+
+    var auth = FirebaseAuth.instance;
+    
     var box = await Hive.openBox('user');
+
 
     if (box.get('email') == null ||
         box.get("password") == null ||
@@ -198,12 +206,19 @@ class _SignInState extends State<SignIn> {
       box.put("password", password);
       box.put("method", "hive");
 
+      try {
+        await auth.signInWithEmailAndPassword(email: email, password: password);
+      } on FirebaseAuthException catch (e) {
+         return Get.snackbar("Uh oh!", e.code,
+              snackPosition: SnackPosition.BOTTOM,
+              backgroundColor: TColor.gray80,
+              colorText: TColor.white);
+      }
+
       Get.to(() => ConfigPage(),
           transition: Transition.fadeIn,
           duration: const Duration(milliseconds: 1000));
     } else {
-      Get.snackbar("Got user", "Welcome back ${box.get('email')}");
-
       Get.to(() => ConfigPage(),
           transition: Transition.fadeIn,
           duration: const Duration(milliseconds: 1000));

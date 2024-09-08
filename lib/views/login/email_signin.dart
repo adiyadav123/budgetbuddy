@@ -22,12 +22,9 @@ class EmailLogin extends StatefulWidget {
 }
 
 class _EmailLoginState extends State<EmailLogin> {
-  
-
   @override
   void initState() {
     super.initState();
-
   }
 
   TextEditingController emailController = TextEditingController();
@@ -214,6 +211,19 @@ class _EmailLoginState extends State<EmailLogin> {
       box.put("email", email);
       box.put("password", password);
       box.put("method", "hive");
+
+      var auth = FirebaseAuth.instance;
+      try {
+        await auth.createUserWithEmailAndPassword(
+            email: email, password: password);
+      } on FirebaseAuthException catch (e) {
+       return Get.snackbar("Uh oh!", e.code,
+            snackPosition: SnackPosition.BOTTOM,
+            backgroundColor: TColor.gray80,
+            colorText: TColor.white);
+      } catch (e) {
+        return print(e);
+      }
 
       Get.to(() => ConfigPage(),
           transition: Transition.fadeIn,

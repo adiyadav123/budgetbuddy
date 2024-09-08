@@ -1,5 +1,6 @@
 import 'package:budgetbuddy/common_widget/login_buttons.dart';
 import 'package:budgetbuddy/views/home/home_view.dart';
+import 'package:budgetbuddy/views/login/config.dart';
 import 'package:budgetbuddy/views/login/email_signin.dart';
 import 'package:budgetbuddy/views/login/social_config.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -20,12 +21,9 @@ class SocialLogin extends StatefulWidget {
 }
 
 class _SocialLoginState extends State<SocialLogin> {
-  
-
   @override
   void initState() {
     super.initState();
-
   }
 
   @override
@@ -82,10 +80,10 @@ class _SocialLoginState extends State<SocialLogin> {
                           color: Colors.black.withOpacity(0.35), fontSize: 14)),
                   const SizedBox(height: 15),
                   SecondaryButton(
-                      title: "Sign up with E-mail ( Offline )",
+                      title: "Continue without signing up",
                       asset: "assets/img/secondary_btn.png",
                       onPressed: () {
-                        Get.to(() => EmailLogin(),
+                        Get.to(() => ConfigPage(),
                             transition: Transition.rightToLeftWithFade,
                             duration: const Duration(milliseconds: 1000));
                       },
@@ -131,7 +129,6 @@ class _SocialLoginState extends State<SocialLogin> {
           var box = await Hive.openBox("user");
           box.put("email", "$mail");
           box.put("method", "firebase");
-         
 
           Get.to(() => SocialConfigPage(),
               transition: Transition.fadeIn,
@@ -163,7 +160,7 @@ class _SocialLoginState extends State<SocialLogin> {
 
         box.put("email", "$mail");
         box.put("method", "firebase");
-        
+
         Get.to(() => SocialConfigPage(),
             transition: Transition.fadeIn,
             duration: const Duration(milliseconds: 1000));

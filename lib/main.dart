@@ -1,19 +1,24 @@
 import 'package:budgetbuddy/firebase_options.dart';
+import 'package:budgetbuddy/views/home/home_view.dart';
 import 'package:budgetbuddy/views/login/config.dart';
 import 'package:budgetbuddy/views/login/welcome.dart';
+import 'package:budgetbuddy/views/main_tabview/main_tab_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/adapters.dart';
+import 'dart:async';
 
 import 'common/color_extension.dart';
 
 void main() async {
-  runApp(const MyApp());
-
   await Hive.initFlutter();
+  var box = await Hive.openBox('user');
+  print("getting user");
+  print(box.get('user'));
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   WidgetsFlutterBinding.ensureInitialized();
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -35,7 +40,7 @@ class MyApp extends StatelessWidget {
             secondary: TColor.secondary),
         useMaterial3: false,
       ),
-      home: WelcomeView(),
+      home: const WelcomeView(),
     );
   }
 }

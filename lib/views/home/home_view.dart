@@ -1,8 +1,6 @@
-import 'package:budgetbuddy/views/login/welcome.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:budgetbuddy/common/color_extension.dart';
+import 'package:budgetbuddy/common_widget/segment_button.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:hive_flutter/adapters.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -12,84 +10,59 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  void checkUser() async {
-    FirebaseAuth auth = FirebaseAuth.instance;
-    User? user = auth.currentUser;
-    if (user == null) {}
-  }
-
-  String email = "";
-  String password = "";
-  String budget = "";
-  String name = "";
-  String method = "";
-
-  void checkData() async {
-    var box = await Hive.openBox('user');
-    if (box.get('budget') == null || box.get('name') == null) {
-      box.clear();
-    } else {
-      setState(() {
-        budget = box.get('budget');
-        name = box.get('name');
-        email = box.get('email');
-        password = box.get('password');
-        method = box.get('method');
-      });
-    }
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    checkUser();
-    checkData();
-  }
+  bool isSubscribed = true;
 
   @override
   Widget build(BuildContext context) {
+    var media = MediaQuery.of(context).size;
     return Scaffold(
-      body: SafeArea(
-        child: Center(
+      backgroundColor: TColor.gray80,
+      body: SingleChildScrollView(
           child: Column(
-            children: [
-              Text("Home Page"),
-              Text("Name: $name"),
-              Text("Email: $email"),
-              Text("Budget: $budget"),
-              Text("Method: $method"),
-              Text("Password: $password"),
-              SizedBox(height: 10),
-              ElevatedButton(
-                  onPressed: () {
-                    WidgetsBinding.instance.addPostFrameCallback((_) {
-                      _singOutAndRedirect();
-                    });
-                  },
-                  child: Text("Logout"))
-            ],
+        children: [
+          Container(
+              height: media.width * 1.1,
+              decoration: BoxDecoration(
+                color: TColor.gray70,
+                borderRadius: const BorderRadius.only(
+                  bottomLeft: Radius.circular(25),
+                  bottomRight: Radius.circular(25),
+                ),
+              )),
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+            height: 60,
+            decoration: BoxDecoration(
+                color: TColor.gray, borderRadius: BorderRadius.circular(25)),
+            child: Row(
+              children: [
+                Expanded(
+                  child: SegmentButton(
+                      title: "Your subscriptions",
+                      isActive: isSubscribed,
+                      onTap: () {
+                        setState(() {
+                          isSubscribed = !isSubscribed;
+                        });
+                      }),
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: SegmentButton(
+                      title: "Upcoming Bills",
+                      isActive: !isSubscribed,
+                      onTap: () {
+                        setState(() {
+                          isSubscribed = !isSubscribed;
+                        });
+                      }),
+                ),
+              ],
+            ),
           ),
-        ),
-      ),
+        ],
+      )),
     );
-  }
-
-  _singOutAndRedirect() async {
-    if (method == "hive") {
-      var box = await Hive.openBox('user');
-      box.put("isSignedIn", "false");
-      Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(builder: (context) => WelcomeView()),
-          (route) => false);
-    } else {
-      var box = await Hive.openBox('user');
-      box.put("isSignedIn", "false");
-      FirebaseAuth.instance.signOut();
-      Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(builder: (context) => WelcomeView()),
-          (route) => false);
-    }
   }
 }
