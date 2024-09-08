@@ -2,6 +2,7 @@ import 'package:budgetbuddy/common_widget/login_buttons.dart';
 import 'package:budgetbuddy/views/home/home_view.dart';
 import 'package:budgetbuddy/views/login/email_signin.dart';
 import 'package:budgetbuddy/views/login/signin.dart';
+import 'package:budgetbuddy/views/login/social_config.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,21 +21,9 @@ class SocialSignIn extends StatefulWidget {
 }
 
 class _SocialSignInState extends State<SocialSignIn> {
-  void checkUser() async {
-    FirebaseAuth auth = FirebaseAuth.instance;
-    User? user = auth.currentUser;
-    if (user != null) {
-      Get.to(() => HomeView(),
-          transition: Transition.fadeIn,
-          duration: const Duration(milliseconds: 1000));
-    }
-  }
-
   @override
   void initState() {
     super.initState();
-
-    checkUser();
   }
 
   @override
@@ -136,7 +125,7 @@ class _SocialSignInState extends State<SocialSignIn> {
             box.put("method", "firebase");
           }
 
-          Get.to(() => HomeView(),
+          Get.to(() => SocialConfigPage(),
               transition: Transition.fadeIn,
               duration: const Duration(milliseconds: 1000));
         }
@@ -163,7 +152,7 @@ class _SocialSignInState extends State<SocialSignIn> {
             transition: Transition.fadeIn,
             duration: const Duration(milliseconds: 1000));
       } else {
-        Get.to(() => HomeView(),
+        Get.to(() => SocialConfigPage(),
             transition: Transition.fadeIn,
             duration: const Duration(milliseconds: 1000));
       }

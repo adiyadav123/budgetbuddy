@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
             secondary: TColor.secondary),
         useMaterial3: false,
       ),
-      home: ConfigPage(),
+      home: WelcomeView(),
     );
   }
 }

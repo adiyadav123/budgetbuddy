@@ -22,28 +22,20 @@ class ConfigPage extends StatefulWidget {
 }
 
 class _ConfigPageState extends State<ConfigPage> {
-  void checkUser() async {
-    FirebaseAuth auth = FirebaseAuth.instance;
-    User? user = auth.currentUser;
-    if (user != null) {
-      Get.to(() => HomeView(),
-          transition: Transition.fadeIn,
-          duration: const Duration(milliseconds: 1000));
-    }
-  }
-
   @override
   void initState() {
     super.initState();
-
-    checkUser();
   }
 
   TextEditingController nameController = TextEditingController();
   TextEditingController budgetController = TextEditingController();
 
-  String budget = "";
-  String name = "";
+  @override
+  void dispose() {
+    nameController.dispose();
+    budgetController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -91,11 +83,6 @@ class _ConfigPageState extends State<ConfigPage> {
                             borderRadius: BorderRadius.circular(15),
                           ),
                           child: TextField(
-                            onChanged: (text) {
-                              setState(() {
-                                name = text;
-                              });
-                            },
                             controller: nameController,
                             keyboardType: TextInputType.name,
                             decoration: const InputDecoration(
@@ -135,18 +122,6 @@ class _ConfigPageState extends State<ConfigPage> {
                             borderRadius: BorderRadius.circular(15),
                           ),
                           child: TextField(
-                            onChanged: (text) {
-                              setState(() {
-                                budget = text;
-                                budgetController.text =
-                                    NumberFormat.decimalPattern().format(
-                                        int.parse(text.replaceAll(',', '')));
-                                // Set the cursor at the end of the text.
-                                budgetController.selection =
-                                    TextSelection.fromPosition(TextPosition(
-                                        offset: budgetController.text.length));
-                              });
-                            },
                             controller: budgetController,
                             keyboardType: TextInputType.number,
                             decoration: const InputDecoration(
@@ -185,6 +160,10 @@ class _ConfigPageState extends State<ConfigPage> {
   }
 
   _getStarted() async {
+    print("hey");
+
+    String name = nameController.text;
+    String budget = budgetController.text;
     if (budget.isEmpty || name.isEmpty) {
       Get.snackbar(
           "Budget is empty", "Please enter your name and budget to continue",
@@ -197,6 +176,11 @@ class _ConfigPageState extends State<ConfigPage> {
       box.put("budget", budget);
       box.put("method", "hive");
       box.put("isSignedIn", "true");
+
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (context) => HomeView()),
+          (route) => false);
     }
   }
 }

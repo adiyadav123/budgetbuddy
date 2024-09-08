@@ -20,21 +20,12 @@ class SocialLogin extends StatefulWidget {
 }
 
 class _SocialLoginState extends State<SocialLogin> {
-  void checkUser() async {
-    FirebaseAuth auth = FirebaseAuth.instance;
-    User? user = auth.currentUser;
-    if (user != null) {
-      Get.to(() => HomeView(),
-          transition: Transition.fadeIn,
-          duration: const Duration(milliseconds: 1000));
-    }
-  }
+  
 
   @override
   void initState() {
     super.initState();
 
-    checkUser();
   }
 
   @override
@@ -142,7 +133,7 @@ class _SocialLoginState extends State<SocialLogin> {
           box.put("method", "firebase");
          
 
-          Get.to(() => HomeView(),
+          Get.to(() => SocialConfigPage(),
               transition: Transition.fadeIn,
               duration: const Duration(milliseconds: 1000));
         }

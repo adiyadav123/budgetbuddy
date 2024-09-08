@@ -15,11 +15,7 @@ class _HomeViewState extends State<HomeView> {
   void checkUser() async {
     FirebaseAuth auth = FirebaseAuth.instance;
     User? user = auth.currentUser;
-    if (user == null) {
-      Get.to(() => WelcomeView(),
-          transition: Transition.fadeIn,
-          duration: const Duration(milliseconds: 300));
-    }
+    if (user == null) {}
   }
 
   String email = "";
@@ -32,9 +28,6 @@ class _HomeViewState extends State<HomeView> {
     var box = await Hive.openBox('user');
     if (box.get('budget') == null || box.get('name') == null) {
       box.clear();
-      Get.to(() => WelcomeView(),
-          transition: Transition.fadeIn,
-          duration: const Duration(milliseconds: 300));
     } else {
       setState(() {
         budget = box.get('budget');
@@ -61,10 +54,17 @@ class _HomeViewState extends State<HomeView> {
           child: Column(
             children: [
               Text("Home Page"),
+              Text("Name: $name"),
+              Text("Email: $email"),
+              Text("Budget: $budget"),
+              Text("Method: $method"),
+              Text("Password: $password"),
               SizedBox(height: 10),
               ElevatedButton(
                   onPressed: () {
-                    _singOutAndRedirect();
+                    WidgetsBinding.instance.addPostFrameCallback((_) {
+                      _singOutAndRedirect();
+                    });
                   },
                   child: Text("Logout"))
             ],
@@ -78,16 +78,18 @@ class _HomeViewState extends State<HomeView> {
     if (method == "hive") {
       var box = await Hive.openBox('user');
       box.put("isSignedIn", "false");
-      Get.to(() => WelcomeView(),
-          transition: Transition.fadeIn,
-          duration: const Duration(milliseconds: 300));
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (context) => WelcomeView()),
+          (route) => false);
     } else {
       var box = await Hive.openBox('user');
       box.put("isSignedIn", "false");
       FirebaseAuth.instance.signOut();
-      Get.to(() => WelcomeView(),
-          transition: Transition.fadeIn,
-          duration: const Duration(milliseconds: 300));
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (context) => WelcomeView()),
+          (route) => false);
     }
   }
 }

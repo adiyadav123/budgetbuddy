@@ -22,21 +22,12 @@ class EmailLogin extends StatefulWidget {
 }
 
 class _EmailLoginState extends State<EmailLogin> {
-  void checkUser() async {
-    FirebaseAuth auth = FirebaseAuth.instance;
-    User? user = auth.currentUser;
-    if (user != null) {
-      Get.to(() => HomeView(),
-          transition: Transition.fadeIn,
-          duration: const Duration(milliseconds: 1000));
-    }
-  }
+  
 
   @override
   void initState() {
     super.initState();
 
-    checkUser();
   }
 
   TextEditingController emailController = TextEditingController();

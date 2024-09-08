@@ -22,28 +22,19 @@ class SocialConfigPage extends StatefulWidget {
 }
 
 class _SocialConfigPageState extends State<SocialConfigPage> {
-  void checkUser() async {
-    FirebaseAuth auth = FirebaseAuth.instance;
-    User? user = auth.currentUser;
-    if (user != null) {
-      Get.to(() => HomeView(),
-          transition: Transition.fadeIn,
-          duration: const Duration(milliseconds: 1000));
-    }
-  }
-
   @override
   void initState() {
     super.initState();
-
-    checkUser();
   }
 
   TextEditingController nameController = TextEditingController();
   TextEditingController budgetController = TextEditingController();
 
-  String budget = "";
-  String name = "";
+  void dispose() {
+    nameController.dispose();
+    budgetController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -91,11 +82,6 @@ class _SocialConfigPageState extends State<SocialConfigPage> {
                             borderRadius: BorderRadius.circular(15),
                           ),
                           child: TextField(
-                            onChanged: (text) {
-                              setState(() {
-                                name = text;
-                              });
-                            },
                             controller: nameController,
                             keyboardType: TextInputType.name,
                             decoration: const InputDecoration(
@@ -135,18 +121,6 @@ class _SocialConfigPageState extends State<SocialConfigPage> {
                             borderRadius: BorderRadius.circular(15),
                           ),
                           child: TextField(
-                            onChanged: (text) {
-                              setState(() {
-                                budget = text;
-                                budgetController.text =
-                                    NumberFormat.decimalPattern().format(
-                                        int.parse(text.replaceAll(',', '')));
-                                // Set the cursor at the end of the text.
-                                budgetController.selection =
-                                    TextSelection.fromPosition(TextPosition(
-                                        offset: budgetController.text.length));
-                              });
-                            },
                             controller: budgetController,
                             keyboardType: TextInputType.number,
                             decoration: const InputDecoration(
@@ -185,6 +159,8 @@ class _SocialConfigPageState extends State<SocialConfigPage> {
   }
 
   _getStarted() async {
+    String budget = budgetController.text;
+    String name = nameController.text;
     if (budget.isEmpty || name.isEmpty) {
       Get.snackbar(
           "Budget is empty", "Please enter your name and budget to continue",
@@ -197,6 +173,11 @@ class _SocialConfigPageState extends State<SocialConfigPage> {
       box.put("budget", budget);
       box.put("method", "firebase");
       box.put("isSignedIn", "true");
+
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (context) => HomeView()),
+          (route) => false);
     }
   }
 }
