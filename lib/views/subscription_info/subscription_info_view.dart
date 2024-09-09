@@ -152,7 +152,7 @@ class _SubscriptionInfoViewState extends State<SubscriptionInfoView> {
                             title: "Save",
                             onPressed: () {},
                             asset: "assets/img/secondary_btn.png",
-                            fontSize: 16,
+                            fontSize: 15,
                             fontWeight: FontWeight.w600,
                           )
                         ],
