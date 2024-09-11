@@ -17,7 +17,7 @@ class UpcomingBillRow extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         onTap: onPressed,
         child: Container(
-          height: 64,
+          height: 62,
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             border: Border.all(
@@ -29,7 +29,6 @@ class UpcomingBillRow extends StatelessWidget {
           child: Row(
             children: [
               Container(
-                height: 40,
                 width: 40,
                 padding: const EdgeInsets.all(4),
                 decoration: BoxDecoration(
@@ -46,12 +45,11 @@ class UpcomingBillRow extends StatelessWidget {
                           fontSize: 10,
                           fontWeight: FontWeight.w500),
                     ),
-
                     Text(
                       "25",
                       style: TextStyle(
                           color: TColor.gray30,
-                          fontSize: 14,
+                          fontSize: 12,
                           fontWeight: FontWeight.w500),
                     )
                   ],

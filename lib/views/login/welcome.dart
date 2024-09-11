@@ -25,7 +25,7 @@ class _WelcomeViewState extends State<WelcomeView> {
 
   void zoomIn() {
     setState(() {
-      _scale = 0.8;
+      _scale = 0.9;
     });
   }
 
