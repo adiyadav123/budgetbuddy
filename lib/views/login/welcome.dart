@@ -1,11 +1,15 @@
 import 'package:budgetbuddy/common/color_extension.dart';
 import 'package:budgetbuddy/common_widget/primary_button.dart';
 import 'package:budgetbuddy/common_widget/secondary_button.dart';
+import 'package:budgetbuddy/views/home/home_view.dart';
 import 'package:budgetbuddy/views/login/social_login.dart';
 import 'package:budgetbuddy/views/login/social_signin.dart';
+import 'package:budgetbuddy/views/main_tab/main_tab_view.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:hive_flutter/adapters.dart';
 
 class WelcomeView extends StatefulWidget {
   const WelcomeView({super.key});
@@ -16,6 +20,16 @@ class WelcomeView extends StatefulWidget {
 
 class _WelcomeViewState extends State<WelcomeView> {
   double _scale = 1.0;
+
+  void checkUser() async {
+    print("checking user");
+    var box = await Hive.openBox("user");
+    if (box.get("budget") != null) {
+      Get.to(() => MainTabView(),
+          transition: Transition.rightToLeftWithFade,
+          duration: const Duration(milliseconds: 500));
+    }
+  }
 
   void zoomOut() {
     setState(() {
@@ -33,6 +47,7 @@ class _WelcomeViewState extends State<WelcomeView> {
   void initState() {
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
+    checkUser();
   }
 
   @override

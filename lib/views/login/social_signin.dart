@@ -4,6 +4,7 @@ import 'package:budgetbuddy/views/login/config.dart';
 import 'package:budgetbuddy/views/login/email_signin.dart';
 import 'package:budgetbuddy/views/login/signin.dart';
 import 'package:budgetbuddy/views/login/social_config.dart';
+import 'package:budgetbuddy/views/main_tab/main_tab_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -22,6 +23,19 @@ class SocialSignIn extends StatefulWidget {
 }
 
 class _SocialSignInState extends State<SocialSignIn> {
+  void checkUser() async {
+    var box = await Hive.openBox("user");
+    if (box.get("budget") != null) {
+      Get.to(() => MainTabView(),
+          transition: Transition.fadeIn,
+          duration: const Duration(milliseconds: 1000));
+    } else {
+      Get.to(() => ConfigPage(),
+          transition: Transition.fadeIn,
+          duration: const Duration(milliseconds: 1000));
+    }
+  }
+
   @override
   void initState() {
     super.initState();
@@ -84,9 +98,7 @@ class _SocialSignInState extends State<SocialSignIn> {
                       title: "Continue without signing in",
                       asset: "assets/img/secondary_btn.png",
                       onPressed: () {
-                        Get.to(() => ConfigPage(),
-                            transition: Transition.rightToLeftWithFade,
-                            duration: const Duration(milliseconds: 1000));
+                        checkUser();
                       },
                       fontSize: 16,
                       fontWeight: FontWeight.w600),

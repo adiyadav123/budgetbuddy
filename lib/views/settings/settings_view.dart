@@ -1,4 +1,8 @@
+import 'package:budgetbuddy/views/login/config.dart';
+import 'package:budgetbuddy/views/main_tab/main_tab_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:hive_flutter/adapters.dart';
 
 import '../../common/color_extension.dart';
 import '../../common_widget/icon_item_row.dart';
@@ -12,6 +16,23 @@ class SettingsView extends StatefulWidget {
 
 class _SettingsViewState extends State<SettingsView> {
   bool isActive = false;
+
+  String name = "Aditya";
+  String mail = "drakewasinnocent@minor.com";
+
+  void checkUser() async {
+    var box = await Hive.openBox("user");
+    setState(() {
+      name = box.get("name");
+      mail = box.get("email") ?? "drakewasinnocent@minor.com";
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    checkUser();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +87,7 @@ class _SettingsViewState extends State<SettingsView> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Code For Any",
+                  name,
                   style: TextStyle(
                       color: TColor.white,
                       fontSize: 20,
@@ -81,7 +102,7 @@ class _SettingsViewState extends State<SettingsView> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "codeforany@gmail.com",
+                  mail,
                   style: TextStyle(
                       color: TColor.gray30,
                       fontSize: 12,
@@ -157,7 +178,6 @@ class _SettingsViewState extends State<SettingsView> {
                       ],
                     ),
                   ),
-
                   Padding(
                     padding: const EdgeInsets.only(top: 20, bottom: 8),
                     child: Text(
@@ -184,23 +204,19 @@ class _SettingsViewState extends State<SettingsView> {
                           icon: "assets/img/sorting.png",
                           value: "Date",
                         ),
-
                         IconItemRow(
                           title: "Summary",
                           icon: "assets/img/chart.png",
                           value: "Average",
                         ),
-
                         IconItemRow(
                           title: "Default currency",
                           icon: "assets/img/money.png",
-                          value: "USD (\$)",
+                          value: "USD (\₹)",
                         ),
-                        
                       ],
                     ),
                   ),
-
                   Padding(
                     padding: const EdgeInsets.only(top: 20, bottom: 8),
                     child: Text(
@@ -237,7 +253,6 @@ class _SettingsViewState extends State<SettingsView> {
                           icon: "assets/img/font.png",
                           value: "Inter",
                         ),
-                        
                       ],
                     ),
                   ),

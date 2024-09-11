@@ -63,23 +63,105 @@ class _HomeViewState extends State<HomeView> {
   String name = "";
   String budget = "";
   String subLength = "0";
-  String highestSub = "₹ 0";
-  String lowestSub = "₹ 0";
+  String highestSub = "0";
+  String lowestSub = "0";
+  String totalSpent = "0";
   List subArrHive = [];
+
+  TextEditingController budgetController = TextEditingController();
   void getBox() async {
     var box = await Hive.openBox("user");
     var subBox = await Hive.openBox("subscription");
     var highestBox = await Hive.openBox("highest");
     var lowestBox = await Hive.openBox("lowest");
+    var totalSpentt = await Hive.openBox("totalSpent");
     var subAr = subBox.values.toList();
+
+    if (box.get("budget") == null) {
+      WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+        showDialog(
+            context: context,
+            builder: (BuildContext context) {
+              return AlertDialog(
+                title: Text("Welcome to Budget Buddy"),
+                backgroundColor: TColor.gray70,
+                contentTextStyle: TextStyle(color: TColor.white),
+                titleTextStyle: TextStyle(color: TColor.white),
+                content: TextField(
+                  controller: budgetController,
+                  decoration: InputDecoration(
+                      hintText: "Enter your budget",
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20))),
+                ),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30)),
+                actions: [
+                  TextButton(
+                      onPressed: () {
+                        var box = Hive.box("user");
+                        box.put("budget", budgetController.text);
+                        Navigator.pop(context);
+                      },
+                      child: const Text("Set Budget")),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: const Text("Cancel"))
+                ],
+              );
+            });
+      });
+    }
 
     setState(() {
       name = box.get("name") as String? ?? "";
       budget = box.get("budget") as String? ?? "";
       subLength = subBox.length.toString();
-      highestSub = highestBox.get("highest") as String? ?? "₹ 0";
-      lowestSub = lowestBox.get("lowest") as String? ?? "₹ 0";
+      highestSub = highestBox.get("highest") as String? ?? "0";
+      lowestSub = lowestBox.get("lowest") as String? ?? "0";
       subArrHive = subAr;
+      totalSpent = totalSpentt.get("total") as String? ?? "0";
+    });
+  }
+
+  void setBudgetCustom() {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: const Text("Welcome to Budget Buddy"),
+              backgroundColor: TColor.gray70,
+              contentTextStyle: TextStyle(color: TColor.white),
+              titleTextStyle: TextStyle(color: TColor.white),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30)),
+              content: TextField(
+                controller: budgetController,
+                decoration: InputDecoration(
+                    hintText: "Enter your budget",
+                    hintStyle: TextStyle(color: TColor.white),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20))),
+              ),
+              actions: [
+                TextButton(
+                    onPressed: () {
+                      var box = Hive.box("user");
+                      box.put("budget", budgetController.text);
+                      Navigator.pop(context);
+                    },
+                    child: const Text("Set Budget")),
+                TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: const Text("Cancel"))
+              ],
+            );
+          });
     });
   }
 
@@ -154,12 +236,17 @@ class _HomeViewState extends State<HomeView> {
                       SizedBox(
                         height: media.width * 0.07,
                       ),
-                      Text(
-                        "${budget}",
-                        style: TextStyle(
-                            color: TColor.white,
-                            fontSize: 40,
-                            fontWeight: FontWeight.w700),
+                      GestureDetector(
+                        onTap: () {
+                          setBudgetCustom();
+                        },
+                        child: Text(
+                          "₹ $budget",
+                          style: TextStyle(
+                              color: TColor.white,
+                              fontSize: 40,
+                              fontWeight: FontWeight.w700),
+                        ),
                       ),
                       SizedBox(
                         height: media.width * 0.055,
@@ -209,8 +296,9 @@ class _HomeViewState extends State<HomeView> {
                           children: [
                             Expanded(
                               child: StatusButton(
-                                title: "Active subs",
-                                value: subLength,
+                                title: "Credits Left",
+                                value:
+                                    "₹ ${int.parse(budget) - int.parse(totalSpent)}",
                                 statusColor: TColor.secondary,
                                 onPressed: () {},
                               ),
@@ -221,7 +309,7 @@ class _HomeViewState extends State<HomeView> {
                             Expanded(
                               child: StatusButton(
                                 title: "Highest Txns",
-                                value: highestSub,
+                                value: "₹ $highestSub",
                                 statusColor: TColor.primary10,
                                 onPressed: () {},
                               ),
@@ -232,7 +320,7 @@ class _HomeViewState extends State<HomeView> {
                             Expanded(
                               child: StatusButton(
                                 title: "Lowest Txns",
-                                value: lowestSub,
+                                value: "₹ $lowestSub",
                                 statusColor: TColor.secondaryG,
                                 onPressed: () {},
                               ),
@@ -264,17 +352,6 @@ class _HomeViewState extends State<HomeView> {
                       },
                     ),
                   ),
-                  Expanded(
-                    child: SegmentButton(
-                      title: "Upcoming bills",
-                      isActive: !isSubscription,
-                      onTap: () {
-                        setState(() {
-                          isSubscription = !isSubscription;
-                        });
-                      },
-                    ),
-                  )
                 ],
               ),
             ),
