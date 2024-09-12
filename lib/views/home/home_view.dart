@@ -12,6 +12,8 @@ import '../../common_widget/upcoming_bill_row.dart';
 import '../settings/settings_view.dart';
 import '../subscription_info/subscription_info_view.dart';
 
+import 'package:intl/intl.dart';
+
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
@@ -22,27 +24,27 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   bool isSubscription = true;
   List subArr = [
-    {"name": "Spotify", "icon": "assets/img/spotify_logo.png", "price": "5.99"},
-    {
-      "name": "Microsoft OneDrive",
-      "icon": "assets/img/onedrive_logo.png",
-      "price": "29.99"
-    },
-    {
-      "name": "YouTube Premium",
-      "icon": "assets/img/youtube_logo.png",
-      "price": "18.99"
-    },
-    {
-      "name": "NetFlix",
-      "icon": "assets/img/netflix_logo.png",
-      "price": "15.00"
-    },
-    {
-      "name": "NetFlix",
-      "icon": "assets/img/netflix_logo.png",
-      "price": "15.00"
-    },
+    // {"name": "Spotify", "icon": "assets/img/spotify_logo.png", "price": "5.99"},
+    // {
+    //   "name": "Microsoft OneDrive",
+    //   "icon": "assets/img/onedrive_logo.png",
+    //   "price": "29.99"
+    // },
+    // {
+    //   "name": "YouTube Premium",
+    //   "icon": "assets/img/youtube_logo.png",
+    //   "price": "18.99"
+    // },
+    // {
+    //   "name": "NetFlix",
+    //   "icon": "assets/img/netflix_logo.png",
+    //   "price": "15.00"
+    // },
+    // {
+    //   "name": "NetFlix",
+    //   "icon": "assets/img/netflix_logo.png",
+    //   "price": "15.00"
+    // },
   ];
 
   List bilArr = [
@@ -61,11 +63,11 @@ class _HomeViewState extends State<HomeView> {
   ];
 
   String name = "";
-  String budget = "";
-  String subLength = "0";
-  String highestSub = "0";
-  String lowestSub = "0";
-  String totalSpent = "0";
+  int budget = 0;
+  int subLength = 0;
+  int highestSub = 0;
+  int lowestSub = 0;
+  int totalSpent = 0;
   List subArrHive = [];
 
   TextEditingController budgetController = TextEditingController();
@@ -117,12 +119,18 @@ class _HomeViewState extends State<HomeView> {
 
     setState(() {
       name = box.get("name") as String? ?? "";
-      budget = box.get("budget") as String? ?? "";
-      subLength = subBox.length.toString();
-      highestSub = highestBox.get("highest") as String? ?? "0";
-      lowestSub = lowestBox.get("lowest") as String? ?? "0";
-      subArrHive = subAr;
-      totalSpent = totalSpentt.get("total") as String? ?? "0";
+      budget = int.tryParse(box.get("budget")?.replaceAll(",", "") ?? "0") ?? 0;
+      subLength =
+          int.tryParse(subBox.length.toString().replaceAll(",", "")) ?? 0;
+      highestSub =
+          int.tryParse(highestBox.get("highest")?.replaceAll(",", "") ?? "0") ??
+              0;
+      lowestSub =
+          int.tryParse(lowestBox.get("lowest")?.replaceAll(",", "") ?? "0") ??
+              0;
+      totalSpent =
+          int.tryParse(totalSpentt.get("total")?.replaceAll(",", "") ?? "0") ??
+              0;
     });
   }
 
@@ -241,7 +249,7 @@ class _HomeViewState extends State<HomeView> {
                           setBudgetCustom();
                         },
                         child: Text(
-                          "₹ $budget",
+                          "₹ ${NumberFormat("#,##0").format(budget)}",
                           style: TextStyle(
                               color: TColor.white,
                               fontSize: 40,
@@ -298,7 +306,7 @@ class _HomeViewState extends State<HomeView> {
                               child: StatusButton(
                                 title: "Credits Left",
                                 value:
-                                    "₹ ${int.parse(budget) - int.parse(totalSpent)}",
+                                    "₹ ${NumberFormat("#,##0").format(budget - totalSpent)}",
                                 statusColor: TColor.secondary,
                                 onPressed: () {},
                               ),
@@ -309,7 +317,8 @@ class _HomeViewState extends State<HomeView> {
                             Expanded(
                               child: StatusButton(
                                 title: "Highest Txns",
-                                value: "₹ $highestSub",
+                                value:
+                                    "₹ ${NumberFormat("#,##0").format(highestSub)}",
                                 statusColor: TColor.primary10,
                                 onPressed: () {},
                               ),
@@ -320,7 +329,8 @@ class _HomeViewState extends State<HomeView> {
                             Expanded(
                               child: StatusButton(
                                 title: "Lowest Txns",
-                                value: "₹ $lowestSub",
+                                value:
+                                    "₹ ${NumberFormat("#,##0").format(lowestSub)}",
                                 statusColor: TColor.secondaryG,
                                 onPressed: () {},
                               ),
@@ -356,41 +366,55 @@ class _HomeViewState extends State<HomeView> {
               ),
             ),
             if (isSubscription)
-              ListView.builder(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
-                  physics: const NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  itemCount: subArr.length,
-                  itemBuilder: (context, index) {
-                    var sObj = subArr[index] as Map? ?? {};
+              subArr.isEmpty
+                  ? Center(
+                      child: Text(
+                        "No transactions added yet.",
+                        style: TextStyle(color: TColor.gray30),
+                      ),
+                    )
+                  : ListView.builder(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 0),
+                      physics: const NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: subArr.length,
+                      itemBuilder: (context, index) {
+                        var sObj = subArr[index] as Map? ?? {};
 
-                    return SubScriptionHomeRow(
-                      sObj: sObj,
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    SubscriptionInfoView(sObj: sObj)));
-                      },
-                    );
-                  }),
+                        return SubScriptionHomeRow(
+                          sObj: sObj,
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        SubscriptionInfoView(sObj: sObj)));
+                          },
+                        );
+                      }),
             if (!isSubscription)
-              ListView.builder(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
-                  physics: const NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  itemCount: bilArr.length,
-                  itemBuilder: (context, index) {
-                    var sObj = bilArr[index] as Map? ?? {};
+              bilArr.isEmpty
+                  ? Center(
+                      child: Text(
+                        "No transactions added yet.",
+                        style: TextStyle(color: TColor.gray30),
+                      ),
+                    )
+                  : ListView.builder(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 0),
+                      physics: const NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: bilArr.length,
+                      itemBuilder: (context, index) {
+                        var sObj = bilArr[index] as Map? ?? {};
 
-                    return UpcomingBillRow(
-                      sObj: sObj,
-                      onPressed: () {},
-                    );
-                  }),
+                        return UpcomingBillRow(
+                          sObj: sObj,
+                          onPressed: () {},
+                        );
+                      }),
           ],
         ),
       ),
