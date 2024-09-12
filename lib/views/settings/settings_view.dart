@@ -1,4 +1,5 @@
 import 'package:budgetbuddy/views/login/config.dart';
+import 'package:budgetbuddy/views/login/welcome.dart';
 import 'package:budgetbuddy/views/main_tab/main_tab_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -115,7 +116,23 @@ class _SettingsViewState extends State<SettingsView> {
             ),
             InkWell(
               borderRadius: BorderRadius.circular(15),
-              onTap: () {},
+              onTap: () async {
+                var box = await Hive.openBox("user");
+                var subBox = await Hive.openBox("subscription");
+                var highestBox = await Hive.openBox("highest");
+                var lowestBox = await Hive.openBox("lowest");
+                var totalSpentt = await Hive.openBox("totalSpent");
+
+                box.deleteFromDisk();
+                subBox.deleteFromDisk();
+                highestBox.deleteFromDisk();
+                lowestBox.deleteFromDisk();
+                totalSpentt.deleteFromDisk();
+
+                Get.offAll(() => WelcomeView(),
+                    transition: Transition.fade,
+                    duration: Duration(milliseconds: 500));
+              },
               child: Container(
                 padding: const EdgeInsets.all(6),
                 decoration: BoxDecoration(
@@ -126,7 +143,7 @@ class _SettingsViewState extends State<SettingsView> {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Text(
-                  "Edit profile",
+                  "Log out",
                   style: TextStyle(
                       color: TColor.white,
                       fontSize: 12,

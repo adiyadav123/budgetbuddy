@@ -2,6 +2,7 @@ import 'package:budgetbuddy/views/spending_budgets/spending_budgets_view.dart';
 import 'package:flutter/material.dart';
 import 'package:budgetbuddy/common/color_extension.dart';
 import 'package:get/get.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:hive_flutter/adapters.dart';
 
 import '../../common_widget/custom_arc_painter.dart';
@@ -68,7 +69,6 @@ class _HomeViewState extends State<HomeView> {
   int highestSub = 0;
   int lowestSub = 0;
   int totalSpent = 0;
-  List subArrHive = [];
 
   TextEditingController budgetController = TextEditingController();
   void getBox() async {
@@ -77,7 +77,19 @@ class _HomeViewState extends State<HomeView> {
     var highestBox = await Hive.openBox("highest");
     var lowestBox = await Hive.openBox("lowest");
     var totalSpentt = await Hive.openBox("totalSpent");
-    var subAr = subBox.values.toList();
+
+    List allVal = [
+      highestBox.get("highest"),
+      lowestBox.get("lowest"),
+      totalSpentt.get("totalSpent")
+    ];
+
+    print(allVal);
+
+    setState(() {
+      subArr = subBox.get("arr") ?? [];
+      print(subArr.length);
+    });
 
     if (box.get("budget") == null) {
       WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
@@ -117,20 +129,16 @@ class _HomeViewState extends State<HomeView> {
       });
     }
 
+    double high = highestBox.get("highest") as double? ?? 0;
+    double low = lowestBox.get("lowest") as double? ?? 0;
+
     setState(() {
       name = box.get("name") as String? ?? "";
       budget = int.tryParse(box.get("budget")?.replaceAll(",", "") ?? "0") ?? 0;
       subLength =
           int.tryParse(subBox.length.toString().replaceAll(",", "")) ?? 0;
-      highestSub =
-          int.tryParse(highestBox.get("highest")?.replaceAll(",", "") ?? "0") ??
-              0;
-      lowestSub =
-          int.tryParse(lowestBox.get("lowest")?.replaceAll(",", "") ?? "0") ??
-              0;
-      totalSpent =
-          int.tryParse(totalSpentt.get("total")?.replaceAll(",", "") ?? "0") ??
-              0;
+      highestSub = high.toInt();
+      lowestSub = low.toInt();
     });
   }
 
@@ -147,12 +155,14 @@ class _HomeViewState extends State<HomeView> {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30)),
               content: TextField(
+                style: TextStyle(color: TColor.white),
+                keyboardType: TextInputType.number,
                 controller: budgetController,
                 decoration: InputDecoration(
-                    hintText: "Enter your budget",
-                    hintStyle: TextStyle(color: TColor.white),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20))),
+                  focusColor: TColor.white,
+                  hintText: "Enter your budget",
+                  hintStyle: TextStyle(color: TColor.white),
+                ),
               ),
               actions: [
                 TextButton(
@@ -161,12 +171,16 @@ class _HomeViewState extends State<HomeView> {
                       box.put("budget", budgetController.text);
                       Navigator.pop(context);
                     },
-                    child: const Text("Set Budget")),
+                    child: Text(
+                      "Set Budget",
+                      style: TextStyle(color: TColor.gray30),
+                    )),
                 TextButton(
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
-                    child: const Text("Cancel"))
+                    child:
+                        Text("Cancel", style: TextStyle(color: TColor.gray30)))
               ],
             );
           });
@@ -244,7 +258,7 @@ class _HomeViewState extends State<HomeView> {
                       SizedBox(
                         height: media.width * 0.07,
                       ),
-                      GestureDetector(
+                      InkWell(
                         onTap: () {
                           setBudgetCustom();
                         },
@@ -260,7 +274,7 @@ class _HomeViewState extends State<HomeView> {
                         height: media.width * 0.055,
                       ),
                       Text(
-                        "This month bills",
+                        "Total txns: ${subArr.length}",
                         style: TextStyle(
                             color: TColor.gray40,
                             fontSize: 12,
@@ -388,8 +402,10 @@ class _HomeViewState extends State<HomeView> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) =>
-                                        SubscriptionInfoView(sObj: sObj)));
+                                    builder: (context) => SubscriptionInfoView(
+                                          sObj: sObj,
+                                          len: index,
+                                        )));
                           },
                         );
                       }),

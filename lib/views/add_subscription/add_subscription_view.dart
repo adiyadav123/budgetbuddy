@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:budgetbuddy/common/color_extension.dart';
 import 'package:budgetbuddy/common_widget/primary_button.dart';
 import 'package:budgetbuddy/common_widget/round_textfield.dart';
+import 'package:get/get.dart';
+import 'package:hive_flutter/adapters.dart';
+import 'package:intl/intl.dart';
 
 import '../../common_widget/image_button.dart';
 
@@ -15,19 +18,23 @@ class AddSubScriptionView extends StatefulWidget {
 
 class _AddSubScriptionViewState extends State<AddSubScriptionView> {
   TextEditingController txtDescription = TextEditingController();
+  TextEditingController txtName = TextEditingController();
+  int _current = 0;
 
-  List subArr = [
-    {"name": "HBO GO", "icon": "assets/img/hbo_logo.png"},
-    {"name": "Spotify", "icon": "assets/img/spotify_logo.png"},
-    {"name": "YouTube Premium", "icon": "assets/img/youtube_logo.png"},
+  List subArrr = [
+    {"name": "Entertainment", "icon": "assets/img/netflix_logo.png"},
+    {"name": "Medicine", "icon": "assets/img/medicine.png"},
+    {"name": "Security", "icon": "assets/img/camera.png"},
     {
-      "name": "Microsoft OneDrive",
-      "icon": "assets/img/onedrive_logo.png",
+      "name": "Housing",
+      "icon": "assets/img/housing.png",
     },
-    {"name": "NetFlix", "icon": "assets/img/netflix_logo.png"}
+    {"name": "General", "icon": "assets/img/store.png"}
   ];
 
-  double amountVal = 0.09;
+  double amountVal = 10;
+
+  TextEditingController txtAmount = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +85,7 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 20),
                       child: Text(
-                        "Add new\n subscription",
+                        "Add new\n transaction",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: TColor.white,
@@ -91,18 +98,23 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
                       height: media.width * 0.6,
                       child: CarouselSlider.builder(
                         options: CarouselOptions(
-                          autoPlay: false,
-                          aspectRatio: 1,
-                          enlargeCenterPage: true,
-                          enableInfiniteScroll: true,
-                          viewportFraction: 0.65,
-                          enlargeFactor: 0.4,
-                          enlargeStrategy: CenterPageEnlargeStrategy.zoom,
-                        ),
-                        itemCount: subArr.length,
+                            autoPlay: false,
+                            initialPage: 0,
+                            aspectRatio: 1,
+                            enlargeCenterPage: true,
+                            enableInfiniteScroll: true,
+                            viewportFraction: 0.65,
+                            enlargeFactor: 0.4,
+                            enlargeStrategy: CenterPageEnlargeStrategy.zoom,
+                            onPageChanged: (index, reason) {
+                              setState(() {
+                                _current = index;
+                              });
+                            }),
+                        itemCount: subArrr.length,
                         itemBuilder: (BuildContext context, int itemIndex,
                             int pageViewIndex) {
-                          var sObj = subArr[itemIndex] as Map? ?? {};
+                          var sObj = subArrr[itemIndex] as Map? ?? {};
 
                           return Container(
                             margin: const EdgeInsets.all(10),
@@ -136,6 +148,13 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
             Padding(
                 padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
                 child: RoundTextField(
+                  title: "Title",
+                  titleAlign: TextAlign.center,
+                  controller: txtName,
+                )),
+            Padding(
+                padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
+                child: RoundTextField(
                   title: "Description",
                   titleAlign: TextAlign.center,
                   controller: txtDescription,
@@ -148,7 +167,7 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
                   ImageButton(
                     image: "assets/img/minus.png",
                     onPressed: () {
-                      amountVal -= 0.1;
+                      amountVal -= 10;
 
                       if (amountVal < 0) {
                         amountVal = 0;
@@ -169,12 +188,50 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
                       const SizedBox(
                         height: 4,
                       ),
-                      Text(
-                        "\$${amountVal.toStringAsFixed(2)}",
-                        style: TextStyle(
-                            color: TColor.white,
-                            fontSize: 40,
-                            fontWeight: FontWeight.w700),
+                      InkWell(
+                        onTap: () {
+                          showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return AlertDialog(
+                                  title: Text("Enter amount"),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(20)),
+                                  content: TextField(
+                                    controller: txtAmount,
+                                    keyboardType: TextInputType.number,
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                        onPressed: () {
+                                          setState(() {
+                                            amountVal =
+                                                double.parse(txtAmount.text);
+                                          });
+                                          Navigator.pop(context);
+                                          setState(() {});
+                                        },
+                                        child: Text("Ok")),
+                                    TextButton(
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                        },
+                                        child: Text("Cancel")),
+                                  ],
+                                );
+                              });
+                        },
+                        child: Container(
+                          width: 200,
+                          child: Text(
+                            "₹ ${amountVal.toStringAsFixed(2)}",
+                            style: TextStyle(
+                                color: TColor.white,
+                                fontSize: 40,
+                                fontWeight: FontWeight.w700),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
                       ),
                       const SizedBox(
                         height: 8,
@@ -189,7 +246,7 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
                   ImageButton(
                     image: "assets/img/plus.png",
                     onPressed: () {
-                      amountVal += 0.1;
+                      amountVal += 10;
 
                       setState(() {});
                     },
@@ -199,8 +256,14 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
-              child:
-                  PrimaryButton(title: "Add this platform", onPressed: () {}, fontSize: 16, fontWeight: FontWeight.w600,),
+              child: PrimaryButton(
+                title: "Add this txn",
+                onPressed: () {
+                  _saveData();
+                },
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+              ),
             ),
             const SizedBox(
               height: 20,
@@ -209,5 +272,49 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
         ),
       ),
     );
+  }
+
+  _saveData() async {
+    if (txtAmount.text.isNotEmpty &&
+        txtName.text.isNotEmpty &&
+        txtDescription.text.isNotEmpty) {
+      var subBox = await Hive.openBox("subscription");
+      var highestBox = await Hive.openBox("highest");
+      var lowestBox = await Hive.openBox("lowest");
+      var totalBox = await Hive.openBox("totalSpent");
+
+      List existingSubArr = subBox.get('arr') ?? [];
+
+      List subArr = [
+        {
+          "name": txtName.text,
+          "icon": subArrr[_current]["icon"],
+          "price": amountVal,
+          "type": subArrr[_current]["name"],
+          "description": txtDescription.text,
+          "paymentTime": DateFormat('dd.MM.yyyy').format(DateTime.now())
+        }
+      ];
+
+      existingSubArr.addAll(subArr);
+
+      subBox.put("arr", existingSubArr);
+      double existingHighest = double.parse(highestBox.get('highest'));
+      if (amountVal >= existingHighest) {
+        highestBox.put('highest', amountVal);
+      }
+
+      double existingLowest = double.parse(lowestBox.get('lowest'));
+      if (amountVal <= existingLowest) {
+        lowestBox.put('lowest', amountVal);
+      }
+
+      double existingTotal = double.parse(totalBox.get('totalSpent'));
+      totalBox.put('totalSpent', existingTotal + amountVal);
+
+      Get.snackbar("Added", "Added a new transaction successfully!");
+    } else {
+      return Get.snackbar("Uh oh!", "Please fill all the fields");
+    }
   }
 }

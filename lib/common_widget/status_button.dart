@@ -42,12 +42,17 @@ class StatusButton extends StatelessWidget {
                       fontSize: 12,
                       fontWeight: FontWeight.w600),
                 ),
-                Text(
-                  value,
-                  style: TextStyle(
-                      color: TColor.white,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600),
+                Container(
+                  width: 100,
+                  alignment: Alignment.center,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                        color: TColor.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600),
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
               ],
             ),

@@ -30,6 +30,7 @@ class _ConfigPageState extends State<ConfigPage> {
 
   TextEditingController nameController = TextEditingController();
   TextEditingController budgetController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
 
   @override
   void dispose() {
@@ -137,8 +138,47 @@ class _ConfigPageState extends State<ConfigPage> {
                         )
                       ],
                     ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Email",
+                            style: TextStyle(
+                              color: TColor.gray50,
+                              fontSize: 14,
+                            )),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Container(
+                          width: double.maxFinite,
+                          height: 48,
+                          decoration: BoxDecoration(
+                            color: TColor.gray60.withOpacity(0.1),
+                            border: Border.all(
+                              color: TColor.gray70,
+                            ),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: TextField(
+                            controller: emailController,
+                            keyboardType: TextInputType.emailAddress,
+                            decoration: const InputDecoration(
+                              border: InputBorder.none,
+                              contentPadding: EdgeInsets.only(left: 15),
+                            ),
+                            style: TextStyle(
+                              color: TColor.white,
+                              fontSize: 14,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                     SizedBox(
-                      height: media.height * 0.4,
+                      height: media.height * 0.3,
                     ),
                     PrimaryButton(
                         fontSize: 15,
@@ -177,6 +217,7 @@ class _ConfigPageState extends State<ConfigPage> {
       box.put("budget", budget);
       box.put("method", "hive");
       box.put("isSignedIn", "true");
+      box.put("email", emailController.text);
 
       Navigator.pushAndRemoveUntil(
           context,

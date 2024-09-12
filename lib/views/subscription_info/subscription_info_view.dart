@@ -7,7 +7,9 @@ import '../../common_widget/item_row.dart';
 
 class SubscriptionInfoView extends StatefulWidget {
   final Map sObj;
-  const SubscriptionInfoView({super.key, required this.sObj});
+  final len;
+  const SubscriptionInfoView(
+      {super.key, required this.sObj, required this.len});
 
   @override
   State<SubscriptionInfoView> createState() => _SubscriptionInfoViewState();
@@ -121,10 +123,6 @@ class _SubscriptionInfoViewState extends State<SubscriptionInfoView> {
                                 ItemRow(
                                   title: "Name",
                                   value: widget.sObj["name"],
-                                ),
-                                ItemRow(
-                                  title: "Description",
-                                  value: "Music app",
                                 ),
                                 ItemRow(
                                   title: "Category",
