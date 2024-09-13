@@ -162,6 +162,11 @@ class _HomeViewState extends State<HomeView> {
     print("Percent Spent: $percentSpent");
     print("Graph Percent: $graphPercent");
     print("Graph width: $valueForGraph");
+
+    if (graphPercent <= 25) {
+      Get.snackbar("Heads up!", "You have used 75% of your budget!",
+          colorText: Colors.white, duration: const Duration(seconds: 5));
+    }
   }
 
   void setBudgetCustom() {
@@ -170,7 +175,8 @@ class _HomeViewState extends State<HomeView> {
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: Text("Current Budget is ₹ ${budget - totalSpent}"),
+              title: Text(
+                  "Current Budget is ₹ $budget and you have spent ₹ $totalSpent"),
               backgroundColor: TColor.gray70,
               contentTextStyle: TextStyle(color: TColor.white),
               titleTextStyle: TextStyle(color: TColor.white),

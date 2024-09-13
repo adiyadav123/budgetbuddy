@@ -33,6 +33,17 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
     {"name": "Food", "icon": "assets/img/store.png"}
   ];
 
+  List defaultSubArr = [
+    {"name": "Entertainment", "icon": "assets/img/netflix_logo.png"},
+    {"name": "Medicine", "icon": "assets/img/medicine.png"},
+    {"name": "Security", "icon": "assets/img/camera.png"},
+    {
+      "name": "Miscellaneous",
+      "icon": "assets/img/housing.png",
+    },
+    {"name": "Food", "icon": "assets/img/store.png"}
+  ];
+
   double amountVal = 10;
 
   TextEditingController txtAmount = TextEditingController();
@@ -42,39 +53,56 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
     var budget = box.get("budget");
     var totalSpent = await Hive.openBox("totalSpent");
     var categories = await Hive.openBox("categories");
+    var cat = categories.get("categories");
+    setState(() {
+      subArrr = cat ?? defaultSubArr;
+    });
 
-    double total = totalSpent.get("totalSpent");
+    double total = totalSpent.get("totalSpent") ?? 0;
     int intBudget = int.tryParse(budget.toString()) ?? 0;
     int intTotal = total.toInt();
+    double doubleBudget = double.tryParse(budget.toString()) ?? 0;
 
-    if (budget != null && total != null) {
-      double threshold = 0.75 * budget;
+    print(intBudget);
+    print(intTotal);
+
+    if (budget != null) {
+      double threshold = 0.75 * doubleBudget;
 
       if (total >= threshold) {
         Get.snackbar("Heads up!", "You have used 75% of your budget!");
 
         Get.defaultDialog(
-            title: "You have used 75% of your budget!",
-            content: Column(
-              children: [
-                Text(
-                    "You have used 75% of your budget of ₹ $budget. Consider cutting back in other areas or increase your savings target next month."),
-                const SizedBox(
-                  height: 20,
-                ),
-                PrimaryButton(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                  title: "Ok",
-                  onPressed: () {
-                    Get.back();
-                  },
-                )
-              ],
+            titleStyle: TextStyle(color: TColor.white),
+            backgroundColor: TColor.gray70,
+            content: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Column(
+                children: [
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    "You have used 75% of your budget of ₹ $budget. Consider cutting back in other areas or increase your savings target next month.",
+                    style: TextStyle(color: TColor.white),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  PrimaryButton(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    title: "Ok",
+                    onPressed: () {
+                      Get.back();
+                    },
+                  )
+                ],
+              ),
             ));
       }
 
-      if (total > budget) {
+      if (total > doubleBudget) {
         Get.snackbar("Uh oh!", "You have exceeded your budget!");
 
         Get.defaultDialog(
@@ -248,7 +276,7 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
                   Column(
                     children: [
                       Text(
-                        "Monthly price",
+                        "Cost",
                         style: TextStyle(
                             color: TColor.gray40,
                             fontSize: 12,
@@ -352,12 +380,14 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
       double bd = double.tryParse(budget) ?? 0;
       var lowestBox = await Hive.openBox("lowest");
       var totalBox = await Hive.openBox("totalSpent");
+      var totalSpent = totalBox.get("totalSpent") ?? "0";
+      var totalSpentStr = totalSpent.toString();
 
-      var am = double.tryParse(txtAmount.text) ?? 0;
-      var tt = totalBox.get('totalSpent') ?? 0;
-      var remaingBd = bd - tt;
+      double am = double.tryParse(txtAmount.text) ?? 0;
+      double tt = double.tryParse(totalSpentStr) ?? 0;
+      double remaingBd = bd - tt;
       if (am > remaingBd) {
-        var diff = am - remaingBd;
+        double diff = am - remaingBd;
         return Get.snackbar("Uh oh!",
             "You have exceeded your budget by ₹ $diff. Please reduce the amount, or increase your budget. This will cause an imbalance in your budget.",
             colorText: Colors.red, duration: const Duration(seconds: 10));

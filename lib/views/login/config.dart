@@ -211,18 +211,50 @@ class _ConfigPageState extends State<ConfigPage> {
           colorText: TColor.white);
     } else {
       List subArrr = [
-        {"name": "Entertainment", "icon": "assets/img/netflix_logo.png"},
-        {"name": "Medicine", "icon": "assets/img/medicine.png"},
-        {"name": "Security", "icon": "assets/img/camera.png"},
+        {
+          "name": "Entertainment",
+          "icon": "assets/img/netflix_logo.png",
+          "total_budget": "${double.parse(budget) * 0.10}",
+          "spend_amount": "0",
+          "left_amount": "${double.parse(budget) * 0.10}",
+          "color": TColor.secondaryG.value
+        },
+        {
+          "name": "Medicine",
+          "icon": "assets/img/medicine.png",
+          "total_budget": "${double.parse(budget) * 0.10}",
+          "spend_amount": "0",
+          "left_amount": "${double.parse(budget) * 0.10}",
+          "color": TColor.secondary50.value
+        },
+        {
+          "name": "Security",
+          "icon": "assets/img/camera.png",
+          "total_budget": "${double.parse(budget) * 0.10}",
+          "spend_amount": "0",
+          "left_amount": "${double.parse(budget) * 0.10}",
+          "color": TColor.primary10.value
+        },
         {
           "name": "Miscellaneous",
           "icon": "assets/img/housing.png",
+          "total_budget": "${double.parse(budget) * 0.10}",
+          "spend_amount": "0",
+          "left_amount": "${double.parse(budget) * 0.10}",
+          "color": Colors.yellow.value
         },
-        {"name": "Food", "icon": "assets/img/store.png"}
+        {
+          "name": "Food",
+          "icon": "assets/img/store.png",
+          "total_budget": "${double.parse(budget) * 0.60}",
+          "spend_amount": "0",
+          "left_amount": "${double.parse(budget) * 0.60}",
+          "color": Colors.blue.value
+        }
       ];
-      var box = await Hive.openBox("user");
-      var categoryBox = await Hive.openBox("category");
+      var categoryBox = await Hive.openBox("categories");
       categoryBox.put("categories", subArrr);
+      var box = await Hive.openBox("user");
       box.put("name", name);
       box.put("budget", budget);
       box.put("method", "hive");

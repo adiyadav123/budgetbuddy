@@ -1,6 +1,9 @@
+import 'package:budgetbuddy/views/main_tab/main_tab_view.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:budgetbuddy/common_widget/secondary_button.dart';
+import 'package:get/get.dart';
+import 'package:hive_flutter/adapters.dart';
 
 import '../../common/color_extension.dart';
 import '../../common_widget/item_row.dart';
@@ -16,6 +19,51 @@ class SubscriptionInfoView extends StatefulWidget {
 }
 
 class _SubscriptionInfoViewState extends State<SubscriptionInfoView> {
+  var paymentTime = "08.07.2023";
+  var category = "Enterteintment";
+
+  void getSubData() async {
+    var subBox = await Hive.openBox("subscription");
+    var subArr = subBox.get("arr");
+    var arrayOfData = subArr[widget.len];
+
+    setState(() {
+      paymentTime = arrayOfData["paymentTime"];
+      category = arrayOfData["type"];
+    });
+  }
+
+  void deleteSub() {
+    isWantToDelete = true;
+  }
+
+  void finallyDeleteSub() async {
+    if (isConfirmDelete) {
+      var subBox = await Hive.openBox("subscription");
+      var totalSpent = await Hive.openBox("totalSpent");
+
+      var subArr = subBox.get("arr");
+      var totalSpentValue = totalSpent.get("totalSpent");
+      double ts = double.parse(totalSpentValue.toString());
+      var itemPrice = widget.sObj["price"];
+      double finalTs = ts - double.parse(itemPrice.toString());
+      totalSpent.put("totalSpent", finalTs);
+      subArr.removeAt(widget.len);
+      subBox.put("arr", subArr);
+      Get.snackbar("Deleted", "Deleted this transaction successfully!",
+          colorText: TColor.white);
+    }
+  }
+
+  bool isWantToDelete = false;
+  bool isConfirmDelete = false;
+
+  @override
+  void initState() {
+    super.initState();
+    getSubData();
+  }
+
   @override
   Widget build(BuildContext context) {
     var media = MediaQuery.sizeOf(context);
@@ -59,13 +107,65 @@ class _SubscriptionInfoViewState extends State<SubscriptionInfoView> {
                                     color: TColor.gray30),
                               ),
                               Text(
-                                "Subscription info",
+                                "Transaction info",
                                 style: TextStyle(
                                     color: TColor.gray30, fontSize: 16),
                               ),
                               IconButton(
                                 onPressed: () {
-                                  Navigator.pop(context);
+                                  deleteSub();
+                                  Get.defaultDialog(
+                                    title: "Save changes",
+                                    backgroundColor: TColor.gray70,
+                                    titleStyle: TextStyle(
+                                        color: TColor.white,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w700),
+                                    content: Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 20),
+                                      child: Column(
+                                        children: [
+                                          Text(
+                                            "Are you sure you want to delete this subscription?",
+                                            style: TextStyle(
+                                                color: TColor.gray30,
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w500),
+                                          ),
+                                          const SizedBox(
+                                            height: 20,
+                                          ),
+                                          SecondaryButton(
+                                            title: "Cancel",
+                                            onPressed: () {
+                                              setState(() {
+                                                isConfirmDelete = false;
+                                              });
+                                              Navigator.pop(context);
+                                            },
+                                            asset:
+                                                "assets/img/secondary_btn.png",
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                          SecondaryButton(
+                                            title: "Delete",
+                                            onPressed: () {
+                                              setState(() {
+                                                isConfirmDelete = true;
+                                              });
+                                              Navigator.pop(context);
+                                            },
+                                            asset:
+                                                "assets/img/secondary_btn.png",
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w600,
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  );
                                 },
                                 icon: Image.asset("assets/img/Trash.png",
                                     width: 25,
@@ -126,19 +226,11 @@ class _SubscriptionInfoViewState extends State<SubscriptionInfoView> {
                                 ),
                                 ItemRow(
                                   title: "Category",
-                                  value: "Enterteintment",
+                                  value: category,
                                 ),
                                 ItemRow(
-                                  title: "First payment",
-                                  value: "08.07.2023",
-                                ),
-                                ItemRow(
-                                  title: "Reminder",
-                                  value: "Never",
-                                ),
-                                ItemRow(
-                                  title: "Currency",
-                                  value: "USD (\₹)",
+                                  title: "Paid on",
+                                  value: paymentTime,
                                 ),
                               ],
                             ),
@@ -148,7 +240,22 @@ class _SubscriptionInfoViewState extends State<SubscriptionInfoView> {
                           ),
                           SecondaryButton(
                             title: "Save",
-                            onPressed: () {},
+                            onPressed: () {
+                              if (isConfirmDelete) {
+                                finallyDeleteSub();
+                                Get.to(() => const MainTabView(),
+                                    transition: Transition.rightToLeftWithFade,
+                                    duration:
+                                        const Duration(milliseconds: 500));
+                              } else {
+                                Get.snackbar("Saved", "Saved this transaction!",
+                                    colorText: TColor.white);
+                                Get.to(() => const MainTabView(),
+                                    transition: Transition.rightToLeftWithFade,
+                                    duration:
+                                        const Duration(milliseconds: 500));
+                              }
+                            },
                             asset: "assets/img/secondary_btn.png",
                             fontSize: 15,
                             fontWeight: FontWeight.w600,

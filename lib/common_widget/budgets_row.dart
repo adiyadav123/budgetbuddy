@@ -10,8 +10,10 @@ class BudgetsRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var proVal = (double.tryParse(bObj["left_amount"]) ?? 0) /
+        (double.tryParse(bObj["total_budget"]) ?? 0);
 
-    var proVal = (double.tryParse(bObj["left_amount"]) ?? 0) / (double.tryParse(bObj["total_budget"]) ?? 0);
+        
 
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
@@ -19,7 +21,6 @@ class BudgetsRow extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         onTap: onPressed,
         child: Container(
-          
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             border: Border.all(
@@ -93,13 +94,15 @@ class BudgetsRow extends StatelessWidget {
                       ]),
                 ],
               ),
-
-              const SizedBox(height: 8,),
+              const SizedBox(
+                height: 8,
+              ),
               LinearProgressIndicator(
                 backgroundColor: TColor.gray60,
-                valueColor: AlwaysStoppedAnimation(bObj["color"]),
+                valueColor:
+                    AlwaysStoppedAnimation(Color(bObj["color"])),
                 minHeight: 3,
-                value: proVal ,
+                value: proVal,
               )
             ],
           ),

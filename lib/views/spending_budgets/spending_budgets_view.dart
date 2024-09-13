@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:budgetbuddy/common/color_extension.dart';
 import 'package:budgetbuddy/common_widget/budgets_row.dart';
 import 'package:budgetbuddy/common_widget/custom_arc_180_painter.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 import '../settings/settings_view.dart';
 
@@ -14,32 +15,71 @@ class SpendingBudgetsView extends StatefulWidget {
 }
 
 class _SpendingBudgetsViewState extends State<SpendingBudgetsView> {
+  List s = [];
+
   List budgetArr = [
     {
-      "name": "Auto & Transport",
-      "icon": "assets/img/auto_&_transport.png",
-      "spend_amount": "25.99",
-      "total_budget": "400",
-      "left_amount": "250.01",
-      "color": TColor.secondaryG
+      "name": "Entertainment",
+      "icon": "assets/img/netflix_logo.png",
+      "total_budget": "10000",
+      "spend_amount": "0",
+      "left_amount": "10000",
+      "color": TColor.secondaryG.value
     },
     {
-      "name": "Entertainment",
-      "icon": "assets/img/entertainment.png",
-      "spend_amount": "50.99",
-      "total_budget": "600",
-      "left_amount": "300.01",
-      "color": TColor.secondary50
+      "name": "Medicine",
+      "icon": "assets/img/medicine.png",
+      "total_budget": "10000",
+      "spend_amount": "0",
+      "left_amount": "10000",
+      "color": TColor.secondary50.value
     },
     {
       "name": "Security",
-      "icon": "assets/img/security.png",
-      "spend_amount": "5.99",
-      "total_budget": "600",
-      "left_amount": "250.01",
-      "color": TColor.primary10
+      "icon": "assets/img/camera.png",
+      "total_budget": "10000",
+      "spend_amount": "0",
+      "left_amount": "10000",
+      "color": TColor.primary10.value
     },
+    {
+      "name": "Miscellaneous",
+      "icon": "assets/img/housing.png",
+      "total_budget": "10000",
+      "spend_amount": "5000",
+      "left_amount": "5000",
+      "color": Colors.yellow.value
+    },
+    {
+      "name": "Food",
+      "icon": "assets/img/store.png",
+      "total_budget": "60000",
+      "spend_amount": "0",
+      "left_amount": "60000",
+      "color": Colors.blue.value
+    }
   ];
+
+  void checkData() async {
+    print("checking data");
+    var categoryBox = await Hive.openBox("categories");
+    var catArr = categoryBox.get("categories");
+
+    if (catArr != null) {
+      List<dynamic> categoryList = catArr as List;
+      print(categoryList);
+    } else {
+      print("no categories added");
+      categoryBox.put("categories", budgetArr);
+      print("categories added");
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    checkData();
+  }
 
   @override
   Widget build(BuildContext context) {
