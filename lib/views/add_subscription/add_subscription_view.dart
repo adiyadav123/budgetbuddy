@@ -36,6 +36,45 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
 
   TextEditingController txtAmount = TextEditingController();
 
+  void checkCurrentStat() async {
+    var box = await Hive.openBox("user");
+    var budget = box.get("budget");
+    var totalSpent = await Hive.openBox("totalSpent");
+    double total = totalSpent.get("totalSpent");
+    int intBudget = int.tryParse(budget.toString()) ?? 0;
+    int intTotal = total.toInt();
+
+    if (budget != null && total != null) {
+      if (total > budget) {
+        Get.snackbar("Uh oh!", "You have exceeded your budget!");
+        Get.defaultDialog(
+            title: "You have exceeded your budget!",
+            content: Column(
+              children: [
+                Text("You have exceeded your budget of ₹ $budget"),
+                const SizedBox(
+                  height: 20,
+                ),
+                PrimaryButton(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                  title: "Ok",
+                  onPressed: () {
+                    Get.back();
+                  },
+                )
+              ],
+            ));
+      }
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    checkCurrentStat();
+  }
+
   @override
   Widget build(BuildContext context) {
     var media = MediaQuery.sizeOf(context);
@@ -275,9 +314,7 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
   }
 
   _saveData() async {
-    if (txtAmount.text.isNotEmpty &&
-        txtName.text.isNotEmpty &&
-        txtDescription.text.isNotEmpty) {
+    if (txtAmount.text.isNotEmpty && txtDescription.text.isNotEmpty) {
       var subBox = await Hive.openBox("subscription");
       var highestBox = await Hive.openBox("highest");
       var lowestBox = await Hive.openBox("lowest");
@@ -299,18 +336,19 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
       existingSubArr.addAll(subArr);
 
       subBox.put("arr", existingSubArr);
-      double existingHighest = double.parse(highestBox.get('highest'));
-      if (amountVal >= existingHighest) {
+
+      var highestVal = highestBox.get('highest') ?? 0;
+      var lowestVal = lowestBox.get('lowest') ?? 0;
+      var totalVal = totalBox.get('totalSpent') ?? 0;
+
+      if (highestVal < amountVal) {
         highestBox.put('highest', amountVal);
       }
-
-      double existingLowest = double.parse(lowestBox.get('lowest'));
-      if (amountVal <= existingLowest) {
+      if (lowestVal == 0 || lowestVal > amountVal) {
         lowestBox.put('lowest', amountVal);
       }
 
-      double existingTotal = double.parse(totalBox.get('totalSpent'));
-      totalBox.put('totalSpent', existingTotal + amountVal);
+      totalBox.put('totalSpent', amountVal + totalVal);
 
       Get.snackbar("Added", "Added a new transaction successfully!");
     } else {

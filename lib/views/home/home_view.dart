@@ -84,11 +84,8 @@ class _HomeViewState extends State<HomeView> {
       totalSpentt.get("totalSpent")
     ];
 
-    print(allVal);
-
     setState(() {
       subArr = subBox.get("arr") ?? [];
-      print(subArr.length);
     });
 
     if (box.get("budget") == null) {
@@ -131,6 +128,7 @@ class _HomeViewState extends State<HomeView> {
 
     double high = highestBox.get("highest") as double? ?? 0;
     double low = lowestBox.get("lowest") as double? ?? 0;
+    double total = totalSpentt.get("totalSpent") as double? ?? 0;
 
     setState(() {
       name = box.get("name") as String? ?? "";
@@ -139,6 +137,7 @@ class _HomeViewState extends State<HomeView> {
           int.tryParse(subBox.length.toString().replaceAll(",", "")) ?? 0;
       highestSub = high.toInt();
       lowestSub = low.toInt();
+      totalSpent = total.toInt();
     });
   }
 
@@ -148,7 +147,7 @@ class _HomeViewState extends State<HomeView> {
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: const Text("Welcome to Budget Buddy"),
+              title: Text("Current Budget is ₹ ${budget - totalSpent}"),
               backgroundColor: TColor.gray70,
               contentTextStyle: TextStyle(color: TColor.white),
               titleTextStyle: TextStyle(color: TColor.white),
@@ -258,16 +257,20 @@ class _HomeViewState extends State<HomeView> {
                       SizedBox(
                         height: media.width * 0.07,
                       ),
-                      InkWell(
-                        onTap: () {
-                          setBudgetCustom();
-                        },
-                        child: Text(
-                          "₹ ${NumberFormat("#,##0").format(budget)}",
-                          style: TextStyle(
-                              color: TColor.white,
-                              fontSize: 40,
-                              fontWeight: FontWeight.w700),
+                      Container(
+                        width: 250,
+                        child: InkWell(
+                          onTap: () {
+                            setBudgetCustom();
+                          },
+                          child: Text(
+                            "₹ ${NumberFormat("#,##0").format(budget - totalSpent)}",
+                            style: TextStyle(
+                                color: TColor.white,
+                                fontSize: 40,
+                                fontWeight: FontWeight.w700),
+                            overflow: TextOverflow.ellipsis,
+                          ),
                         ),
                       ),
                       SizedBox(
@@ -431,6 +434,9 @@ class _HomeViewState extends State<HomeView> {
                           onPressed: () {},
                         );
                       }),
+            SizedBox(
+              height: 150,
+            ),
           ],
         ),
       ),

@@ -55,6 +55,8 @@ class SubScriptionHomeRow extends StatelessWidget {
                     fontSize: 14,
                     fontWeight: FontWeight.w600),
               )
+
+              
             ],
           ),
         ),
