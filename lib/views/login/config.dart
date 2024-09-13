@@ -208,8 +208,6 @@ class _ConfigPageState extends State<ConfigPage> {
     if (budget.isEmpty || name.isEmpty) {
       Get.snackbar(
           "Budget is empty", "Please enter your name and budget to continue",
-          snackPosition: SnackPosition.BOTTOM,
-          backgroundColor: TColor.gray80,
           colorText: TColor.white);
     } else {
       var box = await Hive.openBox("user");
