@@ -48,6 +48,18 @@ class _HomeViewState extends State<HomeView> {
     // },
   ];
 
+  String formatNumber(int num) {
+    if (num >= 10000000) {
+      return '${(num / 10000000).toStringAsFixed(2)} Cr';
+    } else if (num >= 100000) {
+      return '${(num / 100000).toStringAsFixed(2)} L';
+    } else if (num >= 1000) {
+      return '${(num / 1000).toStringAsFixed(2)} K';
+    } else {
+      return num.toString();
+    }
+  }
+
   List bilArr = [
     {"name": "Spotify", "date": DateTime(2023, 07, 25), "price": "5.99"},
     {
@@ -69,6 +81,10 @@ class _HomeViewState extends State<HomeView> {
   int highestSub = 0;
   int lowestSub = 0;
   int totalSpent = 0;
+
+  int percentSpent = 0;
+  int graphPercent = 0;
+  int valueForGraph = 220;
 
   TextEditingController budgetController = TextEditingController();
   void getBox() async {
@@ -138,7 +154,14 @@ class _HomeViewState extends State<HomeView> {
       highestSub = high.toInt();
       lowestSub = low.toInt();
       totalSpent = total.toInt();
+
+      percentSpent = ((total / budget) * 100).toInt();
+      graphPercent = 100 - percentSpent;
+      valueForGraph = (270 * graphPercent) ~/ 100;
     });
+    print("Percent Spent: $percentSpent");
+    print("Graph Percent: $graphPercent");
+    print("Graph width: $valueForGraph");
   }
 
   void setBudgetCustom() {
@@ -220,7 +243,7 @@ class _HomeViewState extends State<HomeView> {
                         height: media.width * 0.72,
                         child: CustomPaint(
                           painter: CustomArcPainter(
-                            end: 220,
+                            end: valueForGraph.toDouble(),
                           ),
                         ),
                       ),
@@ -259,12 +282,13 @@ class _HomeViewState extends State<HomeView> {
                       ),
                       Container(
                         width: 250,
+                        alignment: Alignment.center,
                         child: InkWell(
                           onTap: () {
                             setBudgetCustom();
                           },
                           child: Text(
-                            "₹ ${NumberFormat("#,##0").format(budget - totalSpent)}",
+                            "₹ ${formatNumber(budget)}",
                             style: TextStyle(
                                 color: TColor.white,
                                 fontSize: 40,

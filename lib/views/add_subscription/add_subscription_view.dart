@@ -1,3 +1,4 @@
+import 'package:budgetbuddy/views/main_tab/main_tab_view.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:budgetbuddy/common/color_extension.dart';
@@ -26,10 +27,10 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
     {"name": "Medicine", "icon": "assets/img/medicine.png"},
     {"name": "Security", "icon": "assets/img/camera.png"},
     {
-      "name": "Housing",
+      "name": "Miscellaneous",
       "icon": "assets/img/housing.png",
     },
-    {"name": "General", "icon": "assets/img/store.png"}
+    {"name": "Food", "icon": "assets/img/store.png"}
   ];
 
   double amountVal = 10;
@@ -40,13 +41,42 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
     var box = await Hive.openBox("user");
     var budget = box.get("budget");
     var totalSpent = await Hive.openBox("totalSpent");
+    var categories = await Hive.openBox("categories");
+
     double total = totalSpent.get("totalSpent");
     int intBudget = int.tryParse(budget.toString()) ?? 0;
     int intTotal = total.toInt();
 
     if (budget != null && total != null) {
+      double threshold = 0.75 * budget;
+
+      if (total >= threshold) {
+        Get.snackbar("Heads up!", "You have used 75% of your budget!");
+
+        Get.defaultDialog(
+            title: "You have used 75% of your budget!",
+            content: Column(
+              children: [
+                Text(
+                    "You have used 75% of your budget of ₹ $budget. Consider cutting back in other areas or increase your savings target next month."),
+                const SizedBox(
+                  height: 20,
+                ),
+                PrimaryButton(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                  title: "Ok",
+                  onPressed: () {
+                    Get.back();
+                  },
+                )
+              ],
+            ));
+      }
+
       if (total > budget) {
         Get.snackbar("Uh oh!", "You have exceeded your budget!");
+
         Get.defaultDialog(
             title: "You have exceeded your budget!",
             content: Column(
@@ -317,8 +347,21 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
     if (txtAmount.text.isNotEmpty && txtDescription.text.isNotEmpty) {
       var subBox = await Hive.openBox("subscription");
       var highestBox = await Hive.openBox("highest");
+      var userBox = await Hive.openBox("user");
+      var budget = userBox.get("budget");
+      double bd = double.tryParse(budget) ?? 0;
       var lowestBox = await Hive.openBox("lowest");
       var totalBox = await Hive.openBox("totalSpent");
+
+      var am = double.tryParse(txtAmount.text) ?? 0;
+      var tt = totalBox.get('totalSpent') ?? 0;
+      var remaingBd = bd - tt;
+      if (am > remaingBd) {
+        var diff = am - remaingBd;
+        return Get.snackbar("Uh oh!",
+            "You have exceeded your budget by ₹ $diff. Please reduce the amount, or increase your budget. This will cause an imbalance in your budget.",
+            colorText: Colors.red, duration: const Duration(seconds: 10));
+      }
 
       List existingSubArr = subBox.get('arr') ?? [];
 
@@ -351,6 +394,10 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
       totalBox.put('totalSpent', amountVal + totalVal);
 
       Get.snackbar("Added", "Added a new transaction successfully!");
+
+      Get.to(() => const MainTabView(),
+          transition: Transition.leftToRightWithFade,
+          duration: const Duration(milliseconds: 500));
     } else {
       return Get.snackbar("Uh oh!", "Please fill all the fields");
     }

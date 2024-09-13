@@ -167,7 +167,19 @@ class _SocialConfigPageState extends State<SocialConfigPage> {
           "Budget is empty", "Please enter your name and budget to continue",
           colorText: TColor.white);
     } else {
+      List subArrr = [
+        {"name": "Entertainment", "icon": "assets/img/netflix_logo.png"},
+        {"name": "Medicine", "icon": "assets/img/medicine.png"},
+        {"name": "Security", "icon": "assets/img/camera.png"},
+        {
+          "name": "Miscellaneous",
+          "icon": "assets/img/housing.png",
+        },
+        {"name": "Food", "icon": "assets/img/store.png"}
+      ];
       var box = await Hive.openBox("user");
+      var categoryBox = await Hive.openBox("category");
+      categoryBox.put("categories", subArrr);
       box.put("name", name);
       box.put("budget", budget);
       box.put("method", "firebase");
