@@ -17,7 +17,6 @@ class SubScriptionHomeRow extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         onTap: onPressed,
         child: Container(
-          height: 64,
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             border: Border.all(
@@ -31,7 +30,6 @@ class SubScriptionHomeRow extends StatelessWidget {
               Image.asset(
                 sObj["icon"],
                 width: 40,
-                height: 40,
               ),
               const SizedBox(
                 width: 8,
@@ -55,8 +53,6 @@ class SubScriptionHomeRow extends StatelessWidget {
                     fontSize: 14,
                     fontWeight: FontWeight.w600),
               )
-
-              
             ],
           ),
         ),

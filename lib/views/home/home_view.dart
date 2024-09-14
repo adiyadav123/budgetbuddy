@@ -199,9 +199,9 @@ class _HomeViewState extends State<HomeView> {
                       var lowest = await Hive.openBox("lowest");
                       var highest = await Hive.openBox("highest");
                       var totalSpent = await Hive.openBox("totalSpent");
-                      lowest.put("lowest", 0);
-                      highest.put("highest", 0);
-                      totalSpent.put("totalSpent", 0);
+                      lowest.put("lowest", 0.0);
+                      highest.put("highest", 0.0);
+                      totalSpent.put("totalSpent", 0.0);
                       box.put("budget", budgetController.text);
 
                       Navigator.pop(context);
@@ -430,7 +430,6 @@ class _HomeViewState extends State<HomeView> {
                   : ListView.builder(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 20, vertical: 0),
-                      physics: const NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
                       itemCount: subArr.length,
                       itemBuilder: (context, index) {
