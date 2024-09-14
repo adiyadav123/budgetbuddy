@@ -54,6 +54,7 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
     var totalSpent = await Hive.openBox("totalSpent");
     var categories = await Hive.openBox("categories");
     var cat = categories.get("categories");
+
     setState(() {
       subArrr = cat ?? defaultSubArr;
     });
@@ -94,7 +95,7 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
                     fontWeight: FontWeight.w600,
                     title: "Ok",
                     onPressed: () {
-                      Get.back();
+                      Navigator.pop(context);
                     },
                   )
                 ],

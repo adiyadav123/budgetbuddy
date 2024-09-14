@@ -188,7 +188,7 @@ class _ConfigPageState extends State<ConfigPage> {
                           _getStarted();
                         }),
                     const SizedBox(
-                      height: 80,
+                      height: 10,
                     ),
                   ],
                 ),
