@@ -194,9 +194,16 @@ class _HomeViewState extends State<HomeView> {
               ),
               actions: [
                 TextButton(
-                    onPressed: () {
-                      var box = Hive.box("user");
+                    onPressed: () async {
+                      var box = await Hive.openBox("user");
+                      var lowest = await Hive.openBox("lowest");
+                      var highest = await Hive.openBox("highest");
+                      var totalSpent = await Hive.openBox("totalSpent");
+                      lowest.put("lowest", 0);
+                      highest.put("highest", 0);
+                      totalSpent.put("totalSpent", 0);
                       box.put("budget", budgetController.text);
+
                       Navigator.pop(context);
                     },
                     child: Text(
