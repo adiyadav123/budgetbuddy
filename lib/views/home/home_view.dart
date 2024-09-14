@@ -110,7 +110,7 @@ class _HomeViewState extends State<HomeView> {
             context: context,
             builder: (BuildContext context) {
               return AlertDialog(
-                title: Text("Welcome to Budget Buddy"),
+                title: const Text("Welcome to Budget Buddy"),
                 backgroundColor: TColor.gray70,
                 contentTextStyle: TextStyle(color: TColor.white),
                 titleTextStyle: TextStyle(color: TColor.white),
@@ -264,7 +264,7 @@ class _HomeViewState extends State<HomeView> {
                         padding: const EdgeInsets.only(right: 10),
                         child: Row(
                           children: [
-                            Spacer(),
+                           const Spacer(),
                             IconButton(
                                 onPressed: () {
                                   Navigator.push(
@@ -327,7 +327,7 @@ class _HomeViewState extends State<HomeView> {
                         onTap: () {
                           Get.to(() => const SpendingBudgetsView(),
                               transition: Transition.leftToRightWithFade,
-                              duration: Duration(milliseconds: 500));
+                              duration: const Duration(milliseconds: 500));
                         },
                         child: Container(
                           padding: const EdgeInsets.all(8),
@@ -470,7 +470,7 @@ class _HomeViewState extends State<HomeView> {
                           onPressed: () {},
                         );
                       }),
-            SizedBox(
+           const SizedBox(
               height: 150,
             ),
           ],
