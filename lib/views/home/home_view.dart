@@ -2,7 +2,6 @@ import 'package:budgetbuddy/views/spending_budgets/spending_budgets_view.dart';
 import 'package:flutter/material.dart';
 import 'package:budgetbuddy/common/color_extension.dart';
 import 'package:get/get.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:hive_flutter/adapters.dart';
 
 import '../../common_widget/custom_arc_painter.dart';
