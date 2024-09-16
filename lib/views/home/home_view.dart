@@ -427,57 +427,35 @@ class _HomeViewState extends State<HomeView> {
                 ],
               ),
             ),
-            if (isSubscription)
-              subArr.isEmpty
-                  ? Center(
-                      child: Text(
-                        "No transactions added yet.",
-                        style: TextStyle(color: TColor.gray30),
-                      ),
-                    )
-                  : ListView.builder(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 0),
-                      shrinkWrap: true,
-                      itemCount: subArr.length,
-                      itemBuilder: (context, index) {
-                        var sObj = subArr[index] as Map? ?? {};
+            subArr.isEmpty
+                ? Center(
+                    child: Text(
+                      "No transactions added yet.",
+                      style: TextStyle(color: TColor.gray30),
+                    ),
+                  )
+                : ListView.builder(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+                    physics: const ScrollPhysics(),
+                    shrinkWrap: true,
+                    itemCount: subArr.length,
+                    itemBuilder: (context, index) {
+                      var sObj = subArr[index] as Map? ?? {};
 
-                        return SubScriptionHomeRow(
-                          sObj: sObj,
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => SubscriptionInfoView(
-                                          sObj: sObj,
-                                          len: index,
-                                        )));
-                          },
-                        );
-                      }),
-            if (!isSubscription)
-              bilArr.isEmpty
-                  ? Center(
-                      child: Text(
-                        "No transactions added yet.",
-                        style: TextStyle(color: TColor.gray30),
-                      ),
-                    )
-                  : ListView.builder(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 0),
-                      physics: const NeverScrollableScrollPhysics(),
-                      shrinkWrap: true,
-                      itemCount: bilArr.length,
-                      itemBuilder: (context, index) {
-                        var sObj = bilArr[index] as Map? ?? {};
-
-                        return UpcomingBillRow(
-                          sObj: sObj,
-                          onPressed: () {},
-                        );
-                      }),
+                      return SubScriptionHomeRow(
+                        sObj: sObj,
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SubscriptionInfoView(
+                                        sObj: sObj,
+                                        len: index,
+                                      )));
+                        },
+                      );
+                    }),
             const SizedBox(
               height: 150,
             ),

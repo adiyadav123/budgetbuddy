@@ -375,7 +375,7 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
   }
 
   _saveData() async {
-    if (txtAmount.text.isNotEmpty) {
+    if (txtAmount.text.isNotEmpty && txtName.text.isNotEmpty) {
       var subBox = await Hive.openBox("subscription");
       var highestBox = await Hive.openBox("highest");
       var userBox = await Hive.openBox("user");
