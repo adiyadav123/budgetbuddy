@@ -25,7 +25,7 @@ class _MainTabViewState extends State<MainTabView> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
   }
 
   @override

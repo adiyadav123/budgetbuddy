@@ -214,25 +214,25 @@ class _ConfigPageState extends State<ConfigPage> {
         {
           "name": "Entertainment",
           "icon": "assets/img/netflix_logo.png",
-          "total_budget": "${double.parse(budget) * 0.10}",
+          "total_budget": "${double.parse(budget) * 0.8}",
           "spend_amount": "0",
-          "left_amount": "${double.parse(budget) * 0.10}",
+          "left_amount": "${double.parse(budget) * 0.8}",
           "color": TColor.secondaryG.value
         },
         {
           "name": "Medicine",
           "icon": "assets/img/medicine.png",
-          "total_budget": "${double.parse(budget) * 0.10}",
+          "total_budget": "${double.parse(budget) * 0.3}",
           "spend_amount": "0",
-          "left_amount": "${double.parse(budget) * 0.10}",
+          "left_amount": "${double.parse(budget) * 0.3}",
           "color": TColor.secondary50.value
         },
         {
           "name": "Security",
           "icon": "assets/img/camera.png",
-          "total_budget": "${double.parse(budget) * 0.10}",
+          "total_budget": "${double.parse(budget) * 0.12}",
           "spend_amount": "0",
-          "left_amount": "${double.parse(budget) * 0.10}",
+          "left_amount": "${double.parse(budget) * 0.12}",
           "color": TColor.primary10.value
         },
         {
@@ -246,9 +246,9 @@ class _ConfigPageState extends State<ConfigPage> {
         {
           "name": "Others",
           "icon": "assets/img/store.png",
-          "total_budget": "${double.parse(budget) * 0.60}",
+          "total_budget": "${double.parse(budget) * 0.4}",
           "spend_amount": "0",
-          "left_amount": "${double.parse(budget) * 0.60}",
+          "left_amount": "${double.parse(budget) * 0.4}",
           "color": Colors.blue.value
         }
       ];
