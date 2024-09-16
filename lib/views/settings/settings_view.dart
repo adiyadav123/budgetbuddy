@@ -7,6 +7,7 @@ import 'package:hive_flutter/adapters.dart';
 
 import '../../common/color_extension.dart';
 import '../../common_widget/icon_item_row.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SettingsView extends StatefulWidget {
   const SettingsView({super.key});
@@ -243,18 +244,21 @@ class _SettingsViewState extends State<SettingsView> {
                       color: TColor.gray60.withOpacity(0.2),
                       borderRadius: BorderRadius.circular(16),
                     ),
-                    child: const Column(
+                    child: Column(
                       children: [
-                        IconItemRow(
-                          title: "Github",
-                          icon: "assets/img/github.png",
-                          value: "Check Github Repo",
+                        InkWell(
+                          onTap: () {
+                            _redirectToGithub();
+                          },
+                          child: const IconItemRow(
+                            title: "Github",
+                            icon: "assets/img/github.png",
+                            value: "Check Github Repo",
+                          ),
                         ),
                       ],
                     ),
                   ),
-
-                  
                 ],
               ),
             )
@@ -262,5 +266,10 @@ class _SettingsViewState extends State<SettingsView> {
         ),
       ),
     );
+  }
+
+  _redirectToGithub() {
+    var url = Uri.parse("https://github.com/adiyadav123/budgetbuddy");
+    launchUrl(url);
   }
 }

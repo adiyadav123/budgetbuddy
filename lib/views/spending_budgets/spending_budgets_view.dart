@@ -68,6 +68,9 @@ class _SpendingBudgetsViewState extends State<SpendingBudgetsView> {
     if (catArr != null) {
       List<dynamic> categoryList = catArr as List;
       print(categoryList);
+      setState(() {
+        budgetArr = categoryList;
+      });
     } else {
       print("no categories added");
       categoryBox.put("categories", budgetArr);

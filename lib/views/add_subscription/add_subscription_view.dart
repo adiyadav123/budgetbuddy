@@ -425,6 +425,29 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
 
       totalBox.put('totalSpent', amountVal + totalVal);
 
+      // update category
+
+      String itemCategory = subArrr[_current]["name"];
+      var categoryBox = await Hive.openBox("categories");
+
+      List catArr = categoryBox.get("categories") ?? [];
+
+      for (var category in catArr) {
+        if (category["name"] == itemCategory) {
+          double spendAmount = double.tryParse(category["spend_amount"]) ?? 0;
+          double leftAmount = double.tryParse(category["left_amount"]) ?? 0;
+
+          spendAmount += am;
+          leftAmount -= am;
+
+          category["spend_amount"] = spendAmount.toString();
+          category["left_amount"] = leftAmount.toString();
+        }
+      }
+
+      categoryBox.put("categories", catArr);
+
+
       Get.snackbar("Added", "Added a new transaction successfully!",
           colorText: TColor.white);
 

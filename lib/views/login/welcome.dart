@@ -25,7 +25,7 @@ class _WelcomeViewState extends State<WelcomeView> {
     print("checking user");
     var box = await Hive.openBox("user");
     if (box.get("budget") != null) {
-      Get.to(() => MainTabView(),
+      Get.offAll(() => MainTabView(),
           transition: Transition.rightToLeftWithFade,
           duration: const Duration(milliseconds: 500));
     }

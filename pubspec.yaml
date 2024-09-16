@@ -47,6 +47,8 @@ dependencies:
   calendar_agenda: ^0.0.2+3
   dotted_border: ^2.1.0
   card_swiper: ^3.0.1
+  flutter_inappwebview: ^6.0.0
+  url_launcher: ^6.3.0
 
 dev_dependencies:
   flutter_test:
