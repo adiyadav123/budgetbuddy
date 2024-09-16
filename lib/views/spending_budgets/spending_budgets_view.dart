@@ -65,6 +65,8 @@ class _SpendingBudgetsViewState extends State<SpendingBudgetsView> {
     var categoryBox = await Hive.openBox("categories");
     var catArr = categoryBox.get("categories");
 
+    
+
     if (catArr != null) {
       List<dynamic> categoryList = catArr as List;
       print(categoryList);

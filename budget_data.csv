@@ -1,0 +1,846 @@
+Category,Total Budget,Spend Amount,Left Amount,Overspent (Label),Advice
+Entertainment,4635748.0,1000000.0,3635748.0,0,Consider exploring cheaper or free entertainment options to save budget.
+Entertainment,4635748.0,500000.0,4135748.0,0,Great job managing entertainment expenses. Continue tracking spending to stay on budget.
+Entertainment,4635748.0,600000.0,4035748.0,0,Monitor entertainment expenses closely to avoid overspending in the future.
+Entertainment,4635748.0,750000.0,3885748.0,0,Consider setting a monthly cap on entertainment spending to stay within budget.
+Entertainment,4635748.0,1200000.0,3435748.0,1,Reevaluate entertainment expenses; consider reducing non-essential spending.
+Medicine,1738405.5,500000.0,1238405.5,0,Monitor medicine purchases and consider comparing prices for better deals.
+Medicine,1738405.5,800000.0,938405.5,0,Keep up with your budget management for medicine expenses; consider bulk buying where possible.
+Medicine,1738405.5,1200000.0,538405.5,0,Ensure you are utilizing your budget effectively; explore generic options to save more.
+Medicine,1738405.5,1500000.0,238405.5,0,Watch your medicine expenses closely; consider consulting with a healthcare provider for cost-saving advice.
+Medicine,1738405.5,2000000.0,-262594.5,1,Review and adjust your medicine budget; look for cost-effective alternatives.
+Security,695362.2,100000.0,595362.2,0,Security spending is under control. Consider investing in additional safety measures if necessary.
+Security,695362.2,200000.0,495362.2,0,Well managed security budget. Regularly check for updates on security systems.
+Security,695362.2,250000.0,445362.2,0,Review security spending to ensure it meets your needs without exceeding the budget.
+Security,695362.2,300000.0,395362.2,0,Continue to manage security expenses well. Evaluate if additional investments are required.
+Security,695362.2,350000.0,345362.2,0,Security expenses are well-controlled. Reassess periodically for any necessary upgrades.
+Food & Drinks,579468.5,50000.0,529468.5,0,Good job on managing food and drink expenses. Keep tracking to ensure continued balance.
+Food & Drinks,579468.5,100000.0,479468.5,0,Monitor food and drink spending to stay on track. Consider budgeting for special occasions.
+Food & Drinks,579468.5,150000.0,429468.5,0,Manage food expenses carefully. Plan for grocery shopping and dining out to stay within budget.
+Food & Drinks,579468.5,200000.0,379468.5,0,Consider reducing dining out or non-essential food purchases to stay within budget.
+Food & Drinks,579468.5,250000.0,329468.5,0,Track and plan food expenses to avoid overspending. Look for deals and discounts.
+Others,2317874.0,2000000.0,317874.0,0,Good management of other expenses. Ensure to review and adjust budget as needed.
+Others,2317874.0,2100000.0,217874.0,0,Monitor "Others" category closely to stay within budget. Consider reducing discretionary spending.
+Others,2317874.0,2200000.0,117874.0,0,Evaluate spending in this category and adjust budget if necessary to prevent overspending.
+Others,2317874.0,2300000.0,-82126.0,1,Review and cut back on spending in the "Others" category. Prioritize essential expenses.
+Others,2317874.0,2400000.0,-82126.0,1,Revisit and reduce non-essential expenses in the "Others" category to stay within budget.
+Entertainment,4635748.0,1300000.0,3335748.0,0,Manage entertainment spending well; consider allocating some of this budget to future months.
+Entertainment,4635748.0,1700000.0,2935748.0,0,Good control on entertainment spending; keep monitoring for any large purchases.
+Entertainment,4635748.0,2300000.0,2335748.0,0,Consider investing in long-term entertainment options to balance the budget.
+Entertainment,4635748.0,2800000.0,1835748.0,0,Stay within budget limits and ensure non-essential entertainment is minimized.
+Entertainment,4635748.0,3500000.0,1135748.0,0,Excellent management of entertainment expenses. Continue the same approach.
+Entertainment,4635748.0,4000000.0,635748.0,0,Consider reducing non-essential entertainment expenses to save more.
+Entertainment,4635748.0,4500000.0,135748.0,0,Great job balancing entertainment expenses. Keep up the good work!
+Entertainment,4635748.0,4700000.0,-64574.0,1,You have overspent in entertainment. Review your spending and cut back in the coming months.
+Entertainment,4635748.0,5000000.0,-364252.0,1,Reevaluate entertainment spending to avoid future overspending.
+Entertainment,4635748.0,5200000.0,-564252.0,1,Consider reducing subscription services or one-time purchases to balance your budget.
+Medicine,1738405.5,1000000.0,738405.5,0,Good control on medicine expenses. Consider buying generic to save more.
+Medicine,1738405.5,1500000.0,238405.5,0,Your medicine budget is on track. Evaluate needs to avoid unnecessary purchases.
+Medicine,1738405.5,2000000.0,-262594.5,1,Review your medicine costs and consider reducing unnecessary prescriptions.
+Medicine,1738405.5,1800000.0,-62005.5,1,Monitor medicine costs to prevent future overspending.
+Medicine,1738405.5,2200000.0,-462594.5,1,Look for affordable alternatives and consult a healthcare provider.
+Medicine,1738405.5,1600000.0,138405.5,0,Well-managed medicine expenses. Continue monitoring for best prices.
+Medicine,1738405.5,1700000.0,38405.5,0,Keep an eye on future medicine costs to ensure no overspending.
+Medicine,1738405.5,1200000.0,538405.5,0,Consider buying in bulk or generic alternatives for additional savings.
+Medicine,1738405.5,1400000.0,338405.5,0,Medicine expenses are within limits. Great job managing them.
+Medicine,1738405.5,1000000.0,738405.5,0,Excellent control on medicine spending. Stay consistent.
+Security,695362.2,300000.0,395362.2,0,Security spending is on track. Keep monitoring your systems for upgrades.
+Security,695362.2,250000.0,445362.2,0,Well-managed security budget. Consider upgrading when needed.
+Security,695362.2,400000.0,295362.2,0,You are managing security expenses well. Ensure to balance with other needs.
+Security,695362.2,600000.0,95362.2,0,Good management of security. You may consider investing in advanced systems.
+Security,695362.2,200000.0,495362.2,0,Security budget is under control. Continue regular assessments.
+Security,695362.2,500000.0,195362.2,0,Security expenses are in check. Consider future upgrades if required.
+Security,695362.2,100000.0,595362.2,0,Low security expenses. Make sure this doesnt compromise safety.
+Security,695362.2,450000.0,245362.2,0,Security budget is well balanced. Keep a consistent track of future costs.
+Security,695362.2,350000.0,345362.2,0,Maintain security spending ensuring your current setup meets your needs.
+Security,695362.2,550000.0,145362.2,0,Security budget is controlled. Ensure all expenses are necessary.
+Food & Drinks,579468.5,400000.0,179468.5,0,Good management of food expenses. Plan for future dining out or groceries.
+Food & Drinks,579468.5,500000.0,79468.5,0,Consider cutting back on non-essential food items to save more.
+Food & Drinks,579468.5,550000.0,29468.5,0,Food budget is nearly exhausted. Plan carefully for the rest of the month.
+Food & Drinks,579468.5,600000.0,-20531.5,1,Youve overspent on food. Consider reducing takeout or dining out.
+Food & Drinks,579468.5,450000.0,129468.5,0,Good control on food spending. Track closely to avoid overspending.
+Food & Drinks,579468.5,475000.0,104468.5,0,Stay on track with your food expenses. Plan meals to avoid last-minute purchases.
+Food & Drinks,579468.5,525000.0,54468.5,0,Great job managing food and drinks. Keep an eye on future costs.
+Food & Drinks,579468.5,575000.0,4468.5,0,Food budget is almost used up. Plan ahead to avoid overspending.
+Food & Drinks,579468.5,650000.0,-70531.5,1,Reduce dining out and focus on home-cooked meals to stay within budget.
+Food & Drinks,579468.5,620000.0,-40531.5,1,Reevaluate food expenses and avoid non-essential spending.
+Others,2317874.0,2000000.0,317874.0,0,Well managed. Keep an eye on non-essential expenses.
+Others,2317874.0,2100000.0,217874.0,0,Good job managing your expenses in the "Others" category. Stay consistent.
+Others,2317874.0,2200000.0,117874.0,0,Monitor "Others" category closely to stay within budget.
+Others,2317874.0,2400000.0,-82126.0,1,Review and adjust your spending in the "Others" category to avoid future issues.
+Others,2317874.0,2600000.0,-282126.0,1,Look for ways to cut non-essential spending in this category.
+Others,2317874.0,2300000.0,17874.0,0,Great control on spending. Make sure to keep monitoring this category.
+Others,2317874.0,2700000.0,-382126.0,1,Reevaluate and reduce unnecessary expenses in "Others" to stay within budget.
+Others,2317874.0,2000000.0,317874.0,0,Maintain control over spending. Reassess needs and cut non-essentials.
+Others,2317874.0,2250000.0,67874.0,0,Continue to monitor spending in this category to ensure budget alignment.
+Others,2317874.0,2800000.0,-482126.0,1,You have overspent. Take steps to reduce spending and rebalance your budget.
+Entertainment,4635748.0,5300000.0,-664252.0,1,Significantly overspent. Cut back on entertainment and review budget allocations.
+Entertainment,4635748.0,5400000.0,-764252.0,1,Consider reducing entertainment expenses drastically to avoid future issues.
+Entertainment,4635748.0,5500000.0,-864252.0,1,Reevaluate your entertainment budget and adjust spending habits.
+Entertainment,4635748.0,5600000.0,-964252.0,1,Significant overspending. Prioritize reducing entertainment costs immediately.
+Entertainment,4635748.0,5700000.0,-1064252.0,1,Review and drastically cut down on entertainment expenses.
+Entertainment,4635748.0,5800000.0,-1164252.0,1,Immediate action needed to curb entertainment spending and align with budget.
+Entertainment,4635748.0,5900000.0,-1264252.0,1,Major overspending. Reassess and adjust your entertainment budget significantly.
+Entertainment,4635748.0,6000000.0,-1364252.0,1,Drastic reduction in entertainment expenses required to meet budget goals.
+Entertainment,4635748.0,6100000.0,-1464252.0,1,Overhaul spending habits to reduce entertainment costs and adhere to budget.
+Entertainment,4635748.0,6200000.0,-1564252.0,1,Consider setting strict limits on entertainment spending to stay within budget.
+Medicine,1738405.5,1100000.0,638405.5,0,Well-managed medicine expenses. Consider continuing with current spending habits.
+Medicine,1738405.5,1300000.0,438405.5,0,Monitor and adjust medicine budget as needed to avoid overspending.
+Medicine,1738405.5,1400000.0,338405.5,0,Maintain effective management of medicine expenses to stay within budget.
+Medicine,1738405.5,1500000.0,238405.5,0,Good job managing medicine costs. Keep tracking and look for savings opportunities.
+Medicine,1738405.5,1600000.0,138405.5,0,Your medicine expenses are well within limits. Continue monitoring to avoid overspending.
+Medicine,1738405.5,1700000.0,38405.5,0,Manage future medicine expenses carefully to stay on budget.
+Medicine,1738405.5,1800000.0,-62005.5,1,Reassess your medicine budget to reduce overspending. Look for affordable options.
+Medicine,1738405.5,1900000.0,-126594.5,1,Consider reducing medicine costs and exploring cost-saving alternatives.
+Medicine,1738405.5,2000000.0,-262594.5,1,Significant overspending. Review and adjust medicine expenses to stay within budget.
+Medicine,1738405.5,2100000.0,-398594.5,1,Immediate review and cutback on medicine expenses needed to avoid future overspending.
+Security,695362.2,600000.0,95362.2,0,Security spending is on track. Keep monitoring to maintain budget alignment.
+Security,695362.2,650000.0,45362.2,0,Good management of security budget. Continue to monitor for any necessary adjustments.
+Security,695362.2,700000.0,-47537.8,1,Significant overspending. Review security expenses and cut back where possible.
+Security,695362.2,750000.0,-55537.8,1,Reevaluate security spending and consider reducing non-essential costs.
+Security,695362.2,800000.0,-65537.8,1,Adjust your security budget to avoid further overspending.
+Security,695362.2,850000.0,-75537.8,1,Immediate action required to reduce security expenses and stay within budget.
+Security,695362.2,900000.0,-85537.8,1,Reassess and cut down on security spending significantly.
+Security,695362.2,950000.0,-95537.8,1,Consider major reductions in security expenses to align with budget goals.
+Security,695362.2,1000000.0,-105537.8,1,Overhaul security budget to address significant overspending.
+Security,695362.2,1050000.0,-115537.8,1,Drastic reduction in security spending needed to meet budget.
+Food & Drinks,579468.5,60000.0,519468.5,0,Well managed food expenses. Continue tracking to maintain budget.
+Food & Drinks,579468.5,70000.0,509468.5,0,Good control on food spending. Plan ahead for the rest of the month.
+Food & Drinks,579468.5,80000.0,499468.5,0,Monitor future food expenses to stay within budget.
+Food & Drinks,579468.5,90000.0,489468.5,0,Continue tracking food expenses to ensure alignment with budget.
+Food & Drinks,579468.5,100000.0,479468.5,0,Great job managing food and drink costs. Keep monitoring to avoid overspending.
+Food & Drinks,579468.5,110000.0,469468.5,0,Manage food expenses carefully to maintain budget balance.
+Food & Drinks,579468.5,120000.0,459468.5,0,Track and plan for future food spending to avoid overspending.
+Food & Drinks,579468.5,130000.0,449468.5,0,Monitor closely and adjust food spending to stay within budget.
+Food & Drinks,579468.5,140000.0,439468.5,0,Good management of food expenses. Continue tracking and budgeting.
+Food & Drinks,579468.5,150000.0,429468.5,0,Ensure ongoing control of food spending to maintain budget alignment.
+Others,2317874.0,2000000.0,317874.0,0,Continue managing "Others" category effectively. Monitor closely.
+Others,2317874.0,2100000.0,217874.0,0,Good job managing "Others" expenses. Review and adjust as needed.
+Others,2317874.0,2200000.0,117874.0,0,Stay on top of "Others" category spending to avoid overspending.
+Others,2317874.0,2300000.0,17874.0,0,Manage "Others" category spending to ensure budget alignment.
+Others,2317874.0,2400000.0,-82126.0,1,Reevaluate spending in "Others" and cut back on non-essential expenses.
+Others,2317874.0,2500000.0,-182126.0,1,Consider reducing expenses in the "Others" category to avoid overspending.
+Others,2317874.0,2600000.0,-282126.0,1,Significant overspending in "Others". Review and adjust budget accordingly.
+Others,2317874.0,2700000.0,-382126.0,1,Immediate reduction in "Others" category needed to stay within budget.
+Others,2317874.0,2800000.0,-482126.0,1,Cut non-essential expenses in "Others" category to address overspending.
+Others,2317874.0,2900000.0,-582126.0,1,Reassess and reduce "Others" expenses to prevent further overspending.
+Entertainment,4635748.0,6300000.0,-1664252.0,1,Review and significantly reduce entertainment expenses to prevent future overspending.
+Entertainment,4635748.0,6400000.0,-1764252.0,1,Immediate reduction in entertainment spending needed to meet budget goals.
+Entertainment,4635748.0,6500000.0,-1864252.0,1,Significant overspending. Reevaluate and cut back on entertainment expenses.
+Entertainment,4635748.0,6600000.0,-1964252.0,1,Drastic reduction in entertainment spending required to avoid further budget issues.
+Entertainment,4635748.0,6700000.0,-2064252.0,1,Consider reviewing and reducing entertainment expenses significantly.
+Entertainment,4635748.0,6800000.0,-2164252.0,1,Significant overspend. Implement a stricter budget for entertainment.
+Entertainment,4635748.0,6900000.0,-2264252.0,1,Review your budget and reduce entertainment spending to avoid overspending.
+Entertainment,4635748.0,7000000.0,-2364252.0,1,Major adjustment needed in entertainment budget to address overspending.
+Entertainment,4635748.0,7100000.0,-2464252.0,1,Immediate action required to curb entertainment expenses.
+Entertainment,4635748.0,7200000.0,-2564252.0,1,Drastically reduce entertainment spending to align with budget.
+Medicine,1738405.5,2200000.0,-462594.5,1,Significant overspending. Seek cost-saving alternatives for medicines.
+Medicine,1738405.5,2300000.0,-562594.5,1,Immediate review and reduction of medicine expenses needed to stay on track.
+Medicine,1738405.5,2400000.0,-662594.5,1,Consider cutting back on non-essential medicines and seeking affordable options.
+Medicine,1738405.5,2500000.0,-762594.5,1,Reevaluate your medicine budget and adjust spending to avoid future issues.
+Medicine,1738405.5,2600000.0,-862594.5,1,Significant reduction in medicine expenses required. Review and cut back.
+Medicine,1738405.5,2700000.0,-962594.5,1,Immediate action needed to control medicine spending and align with budget.
+Medicine,1738405.5,2800000.0,-1062594.5,1,Consider reducing medicine expenses significantly to avoid further overspending.
+Medicine,1738405.5,2900000.0,-1162594.5,1,Drastic review and cutback needed for medicine expenses to stay within budget.
+Medicine,1738405.5,3000000.0,-1262594.5,1,Reevaluate and significantly reduce medicine expenses to prevent overspending.
+Medicine,1738405.5,3100000.0,-1362594.5,1,Drastic reduction and review of medicine costs required to align with budget.
+Security,695362.2,1100000.0,-405637.8,1,Significant overspending in security. Review and cut back on expenses.
+Security,695362.2,1150000.0,-454637.8,1,Reevaluate and reduce security spending to stay within budget.
+Security,695362.2,1200000.0,-505637.8,1,Immediate reduction in security expenses needed. Review and adjust budget.
+Security,695362.2,1250000.0,-555637.8,1,Consider significant cutbacks in security expenses to align with budget goals.
+Security,695362.2,1300000.0,-605637.8,1,Major review and reduction in security budget required to prevent overspending.
+Security,695362.2,1350000.0,-655637.8,1,Immediate action needed to control security expenses and avoid further issues.
+Security,695362.2,1400000.0,-705637.8,1,Drastic reduction in security expenses necessary to stay within budget.
+Security,695362.2,1450000.0,-755637.8,1,Reevaluate and significantly cut security costs to avoid overspending.
+Security,695362.2,1500000.0,-805637.8,1,Consider major adjustments in security spending to align with budget.
+Security,695362.2,1550000.0,-855637.8,1,Immediate action required to control security expenses and avoid overspending.
+Food & Drinks,579468.5,160000.0,419468.5,0,Good control of food and drink expenses. Continue monitoring closely.
+Food & Drinks,579468.5,170000.0,409468.5,0,Manage food spending effectively to stay within budget.
+Food & Drinks,579468.5,180000.0,399468.5,0,Continue tracking food expenses to maintain budget balance.
+Food & Drinks,579468.5,190000.0,389468.5,0,Keep monitoring food and drink expenses to avoid overspending.
+Food & Drinks,579468.5,200000.0,379468.5,0,Manage your food budget effectively to ensure alignment with overall budget.
+Food & Drinks,579468.5,210000.0,369468.5,0,Good management of food spending. Stay consistent with budget monitoring.
+Food & Drinks,579468.5,220000.0,359468.5,0,Monitor future food expenses closely to prevent overspending.
+Food & Drinks,579468.5,230000.0,349468.5,0,Keep a close watch on food expenses to stay within budget.
+Food & Drinks,579468.5,240000.0,339468.5,0,Great job managing food and drink costs. Continue with current budget practices.
+Food & Drinks,579468.5,250000.0,329468.5,0,Manage food expenses carefully to ensure no overspending.
+Others,2317874.0,2900000.0,-582126.0,1,Significant overspending in "Others". Review and cut back on expenses.
+Others,2317874.0,3000000.0,-682126.0,1,Reevaluate and reduce "Others" category spending to prevent overspending.
+Others,2317874.0,3100000.0,-782126.0,1,Immediate action needed to control "Others" category expenses.
+Others,2317874.0,3200000.0,-882126.0,1,Drastic reduction in "Others" spending required to align with budget.
+Others,2317874.0,3300000.0,-982126.0,1,Major review and cutback needed in "Others" category to stay within budget.
+Others,2317874.0,3400000.0,-1082126.0,1,Immediate review and adjustment of "Others" expenses necessary.
+Others,2317874.0,3500000.0,-1182126.0,1,Consider reducing "Others" expenses significantly to avoid overspending.
+Others,2317874.0,3600000.0,-1282126.0,1,Reassess and reduce "Others" expenses to align with budget.
+Others,2317874.0,3700000.0,-1382126.0,1,Significant cutbacks needed in "Others" category to stay on track.
+Others,2317874.0,3800000.0,-1482126.0,1,Drastically reduce "Others" category spending to align with budget goals.
+Entertainment,4635748.0,7300000.0,-2664252.0,1,Review and drastically cut entertainment expenses to avoid severe overspending.
+Entertainment,4635748.0,7400000.0,-2764252.0,1,Immediate action required to bring entertainment spending back within budget.
+Entertainment,4635748.0,7500000.0,-2864252.0,1,Consider significant reductions in entertainment spending to align with budget goals.
+Entertainment,4635748.0,7600000.0,-2964252.0,1,Drastically adjust entertainment budget to address overspending.
+Entertainment,4635748.0,7700000.0,-3064252.0,1,Immediate review and cutback in entertainment expenses needed.
+Entertainment,4635748.0,7800000.0,-3164252.0,1,Consider substantial reductions in entertainment spending to stay within budget.
+Entertainment,4635748.0,7900000.0,-3264252.0,1,Major reduction in entertainment budget necessary to prevent further overspending.
+Entertainment,4635748.0,8000000.0,-3364252.0,1,Reassess and significantly cut down on entertainment expenses.
+Entertainment,4635748.0,8100000.0,-3464252.0,1,Drastic adjustments needed in entertainment spending to align with budget.
+Entertainment,4635748.0,8200000.0,-3564252.0,1,Immediate action required to control and reduce entertainment expenses.
+Medicine,1738405.5,3200000.0,-1462594.5,1,Significant overspending on medicine. Seek cost-effective alternatives.
+Medicine,1738405.5,3300000.0,-1562594.5,1,Reevaluate medicine expenses and consider reducing costs significantly.
+Medicine,1738405.5,3400000.0,-1662594.5,1,Immediate action needed to address medicine budget overspending.
+Medicine,1738405.5,3500000.0,-1762594.5,1,Consider major reductions in medicine spending to stay on budget.
+Medicine,1738405.5,3600000.0,-1862594.5,1,Drastically reduce medicine expenses to prevent further overspending.
+Medicine,1738405.5,3700000.0,-1962594.5,1,Immediate review and adjustment of medicine expenses needed.
+Medicine,1738405.5,3800000.0,-2062594.5,1,Significant cutbacks required in medicine expenses to align with budget.
+Medicine,1738405.5,3900000.0,-2162594.5,1,Consider reducing medicine costs substantially to address overspending.
+Medicine,1738405.5,4000000.0,-2262594.5,1,Drastic review and reduction of medicine expenses needed to stay within budget.
+Medicine,1738405.5,4100000.0,-2362594.5,1,Immediate reduction in medicine spending required to prevent future issues.
+Security,695362.2,1600000.0,-904637.8,1,Significant overspending in security. Review and cut back expenses.
+Security,695362.2,1650000.0,-954637.8,1,Reevaluate security budget and consider reducing costs significantly.
+Security,695362.2,1700000.0,-1005637.8,1,Immediate action needed to address overspending in security category.
+Security,695362.2,1750000.0,-1055637.8,1,Consider major reductions in security expenses to stay within budget.
+Security,695362.2,1800000.0,-1105637.8,1,Drastic adjustment needed for security budget to prevent further overspending.
+Security,695362.2,1850000.0,-1155637.8,1,Immediate review and cutback required for security expenses.
+Security,695362.2,1900000.0,-1205637.8,1,Significant reductions needed in security spending to align with budget.
+Security,695362.2,1950000.0,-1255637.8,1,Consider cutting security expenses significantly to avoid overspending.
+Security,695362.2,2000000.0,-1305637.8,1,Major review and reduction in security expenses needed to stay on track.
+Security,695362.2,2050000.0,-1355637.8,1,Immediate action required to reduce security spending and adhere to budget.
+Food & Drinks,579468.5,260000.0,319468.5,0,Good management of food expenses. Continue tracking to stay on budget.
+Food & Drinks,579468.5,270000.0,309468.5,0,Manage food spending effectively to prevent overspending.
+Food & Drinks,579468.5,280000.0,299468.5,0,Monitor food expenses closely to maintain budget alignment.
+Food & Drinks,579468.5,290000.0,289468.5,0,Keep a close watch on food and drink costs to stay within budget.
+Food & Drinks,579468.5,300000.0,279468.5,0,Continue managing food expenses effectively to avoid overspending.
+Food & Drinks,579468.5,310000.0,269468.5,0,Monitor future food expenses to ensure alignment with budget.
+Food & Drinks,579468.5,320000.0,259468.5,0,Good control of food expenses. Keep tracking to avoid overspending.
+Food & Drinks,579468.5,330000.0,249468.5,0,Manage food spending carefully to stay within budget limits.
+Food & Drinks,579468.5,340000.0,239468.5,0,Effective management of food and drink costs. Continue with current practices.
+Food & Drinks,579468.5,350000.0,229468.5,0,Keep monitoring food expenses to ensure budget alignment.
+Others,2317874.0,3900000.0,-1582126.0,1,Significant overspending in "Others". Reevaluate and cut back on expenses.
+Others,2317874.0,4000000.0,-1682126.0,1,Consider reducing "Others" category expenses significantly to stay within budget.
+Others,2317874.0,4100000.0,-1782126.0,1,Immediate review and drastic cutbacks needed in "Others" category spending.
+Others,2317874.0,4200000.0,-1882126.0,1,Reassess and significantly reduce "Others" category expenses to align with budget.
+Others,2317874.0,4300000.0,-1982126.0,1,Major reductions needed in "Others" spending to avoid further overspending.
+Others,2317874.0,4400000.0,-2082126.0,1,Immediate action required to control "Others" category expenses.
+Others,2317874.0,4500000.0,-2182126.0,1,Drastic reduction and review of "Others" spending necessary to stay within budget.
+Others,2317874.0,4600000.0,-2282126.0,1,Significant cutbacks needed in "Others" category to prevent overspending.
+Others,2317874.0,4700000.0,-2382126.0,1,Reevaluate and drastically reduce "Others" expenses to align with budget goals.
+Others,2317874.0,4800000.0,-2482126.0,1,Immediate reduction in "Others" category expenses required to prevent further issues.
+Entertainment,4635748.0,6200000.0,-1564252.0,1,Review and reduce entertainment expenses to prevent overspending.
+Entertainment,4635748.0,6100000.0,-1464252.0,1,Significant reduction needed in entertainment spending to align with budget.
+Entertainment,4635748.0,6000000.0,-1364252.0,1,Drastically reduce entertainment expenses to avoid further overspending.
+Entertainment,4635748.0,5900000.0,-1264252.0,1,Immediate action required to cut entertainment costs and stay on track.
+Entertainment,4635748.0,5800000.0,-1164252.0,1,Consider reducing entertainment spending to align with budget goals.
+Entertainment,4635748.0,5700000.0,-1064252.0,1,Review and adjust entertainment expenses to stay within budget.
+Entertainment,4635748.0,5600000.0,-964252.0,1,Immediate cutbacks needed in entertainment spending to prevent overspending.
+Entertainment,4635748.0,5500000.0,-856252.0,1,Reevaluate entertainment budget and reduce expenses to avoid future issues.
+Entertainment,4635748.0,5400000.0,-746252.0,1,Significant reduction needed in entertainment spending to align with budget.
+Entertainment,4635748.0,5300000.0,-636252.0,1,Immediate review and reduction of entertainment expenses required.
+Medicine,1738405.5,1500000.0,238405.5,0,Good control of medicine spending. Continue monitoring to stay within budget.
+Medicine,1738405.5,1400000.0,338405.5,0,Well-managed medicine expenses. Keep up the good work.
+Medicine,1738405.5,1300000.0,438405.5,0,Excellent management of medicine costs. Continue with current spending habits.
+Medicine,1738405.5,1200000.0,538405.5,0,Great job managing medicine expenses. Maintain this level of spending.
+Medicine,1738405.5,1100000.0,638405.5,0,Well balanced spending on medicine. Keep tracking expenses closely.
+Medicine,1738405.5,1000000.0,738405.5,0,Good job keeping medicine spending under control. Continue monitoring.
+Medicine,1738405.5,900000.0,838405.5,0,Excellent management of medicine costs. Stay consistent with current practices.
+Medicine,1738405.5,800000.0,938405.5,0,Great job with medicine expenses. Continue with effective budgeting.
+Medicine,1738405.5,700000.0,1038405.5,0,Good management of medicine expenses. Keep up the careful spending.
+Medicine,1738405.5,600000.0,1138405.5,0,Excellent control of medicine spending. Continue to monitor expenses closely.
+Security,695362.2,1300000.0,-605637.8,1,Significant overspending in security. Consider reviewing and reducing expenses.
+Security,695362.2,1250000.0,-555637.8,1,Immediate action needed to cut security expenses to align with budget.
+Security,695362.2,1200000.0,-505637.8,1,Consider reducing security costs to avoid further overspending.
+Security,695362.2,1150000.0,-454637.8,1,Review and adjust security budget to prevent overspending.
+Security,695362.2,1100000.0,-405637.8,1,Drastically reduce security spending to stay within budget.
+Security,695362.2,1050000.0,-355637.8,1,Immediate review and cutback needed for security expenses.
+Security,695362.2,1000000.0,-305637.8,1,Consider significant reductions in security expenses to align with budget.
+Security,695362.2,950000.0,-255637.8,1,Reevaluate security spending and reduce costs to stay on track.
+Security,695362.2,900000.0,-205637.8,1,Immediate reduction in security expenses needed to prevent overspending.
+Security,695362.2,850000.0,-155637.8,1,Review and cut back on security expenses to align with budget.
+Food & Drinks,579468.5,300000.0,279468.5,0,Excellent control of food and drink expenses. Continue with current budget practices.
+Food & Drinks,579468.5,290000.0,289468.5,0,Good management of food spending. Maintain this level of control.
+Food & Drinks,579468.5,280000.0,299468.5,0,Well-managed food expenses. Keep monitoring to stay within budget.
+Food & Drinks,579468.5,270000.0,309468.5,0,Great job managing food and drink costs. Continue tracking expenses closely.
+Food & Drinks,579468.5,260000.0,319468.5,0,Good control of food spending. Stay consistent with current budgeting practices.
+Food & Drinks,579468.5,250000.0,329468.5,0,Excellent management of food expenses. Keep up the good work.
+Food & Drinks,579468.5,240000.0,339468.5,0,Great job keeping food and drink spending under control.
+Food & Drinks,579468.5,230000.0,349468.5,0,Well balanced food and drink expenses. Continue monitoring closely.
+Food & Drinks,579468.5,220000.0,359468.5,0,Good management of food expenses. Maintain this level of spending.
+Food & Drinks,579468.5,210000.0,369468.5,0,Excellent control of food spending. Continue with effective budgeting practices.
+Others,2317874.0,1600000.0,718874.0,0,Good control of "Others" category expenses. Keep up the effective management.
+Others,2317874.0,1500000.0,818874.0,0,Well-managed "Others" spending. Continue monitoring to stay on track.
+Others,2317874.0,1400000.0,918874.0,0,Excellent management of "Others" expenses. Maintain this level of spending.
+Others,2317874.0,1300000.0,1018874.0,0,Great job with "Others" category expenses. Keep up the good work.
+Others,2317874.0,1200000.0,1118874.0,0,Well controlled spending in "Others" category. Continue with current practices.
+Others,2317874.0,1100000.0,1218874.0,0,Good management of "Others" expenses. Maintain effective budgeting.
+Others,2317874.0,1000000.0,1318874.0,0,Excellent control of "Others" category spending. Continue to monitor expenses closely.
+Others,2317874.0,900000.0,1418874.0,0,Great job managing "Others" expenses. Keep up the good work.
+Others,2317874.0,800000.0,1518874.0,0,Well balanced spending in "Others" category. Continue effective management.
+Others,2317874.0,700000.0,1618874.0,0,Good control of "Others" expenses. Maintain this level of spending.
+Entertainment,4635748.0,6200000.0,-1564252.0,1,Review and reduce entertainment expenses to prevent overspending.
+Entertainment,4635748.0,6100000.0,-1464252.0,1,Significant reduction needed in entertainment spending to align with budget.
+Entertainment,4635748.0,6000000.0,-1364252.0,1,Drastically reduce entertainment expenses to avoid further overspending.
+Entertainment,4635748.0,5900000.0,-1264252.0,1,Immediate action required to cut entertainment costs and stay on track.
+Entertainment,4635748.0,5800000.0,-1164252.0,1,Consider reducing entertainment spending to align with budget goals.
+Entertainment,4635748.0,5700000.0,-1064252.0,1,Review and adjust entertainment expenses to stay within budget.
+Entertainment,4635748.0,5600000.0,-964252.0,1,Immediate cutbacks needed in entertainment spending to prevent overspending.
+Entertainment,4635748.0,5500000.0,-856252.0,1,Reevaluate entertainment budget and reduce expenses to avoid future issues.
+Entertainment,4635748.0,5400000.0,-746252.0,1,Significant reduction needed in entertainment spending to align with budget.
+Entertainment,4635748.0,5300000.0,-636252.0,1,Immediate review and reduction of entertainment expenses required.
+Entertainment,4635748.0,5000000.0,-1355748.0,1,Reevaluate and cut down entertainment expenses to prevent overspending.
+Entertainment,4635748.0,4900000.0,-1455748.0,1,Immediate reduction in entertainment budget required to stay on track.
+Entertainment,4635748.0,4800000.0,-1555748.0,1,Consider significant cutbacks in entertainment expenses to align with budget.
+Entertainment,4635748.0,4700000.0,-1655748.0,1,Drastic action needed to control entertainment spending.
+Entertainment,4635748.0,4600000.0,-1755748.0,1,Immediate review and adjustment required for entertainment expenses.
+Entertainment,4635748.0,4500000.0,-1855748.0,1,Consider major reductions in entertainment spending to stay within budget.
+Entertainment,4635748.0,4400000.0,-1955748.0,1,Drastically reduce entertainment expenses to avoid further overspending.
+Entertainment,4635748.0,4300000.0,-2055748.0,1,Reevaluate and cut back on entertainment expenses immediately.
+Medicine,1738405.5,1500000.0,238405.5,0,Good control of medicine spending. Continue monitoring to stay within budget.
+Medicine,1738405.5,1400000.0,338405.5,0,Well-managed medicine expenses. Keep up the good work.
+Medicine,1738405.5,1300000.0,438405.5,0,Excellent management of medicine costs. Continue with current spending habits.
+Medicine,1738405.5,1200000.0,538405.5,0,Great job managing medicine expenses. Maintain this level of spending.
+Medicine,1738405.5,1100000.0,638405.5,0,Well balanced spending on medicine. Continue monitoring closely.
+Medicine,1738405.5,1000000.0,738405.5,0,Good job keeping medicine spending under control. Continue monitoring.
+Medicine,1738405.5,900000.0,838405.5,0,Excellent management of medicine costs. Stay consistent with current practices.
+Medicine,1738405.5,800000.0,938405.5,0,Great job with medicine expenses. Continue with effective budgeting.
+Medicine,1738405.5,700000.0,1038405.5,0,Good management of medicine expenses. Keep up the careful spending.
+Medicine,1738405.5,600000.0,1138405.5,0,Excellent control of medicine spending. Continue to monitor expenses closely.
+Medicine,1738405.5,3200000.0,-1462594.5,1,Significant overspending on medicine. Seek cost-effective alternatives.
+Medicine,1738405.5,3300000.0,-1562594.5,1,Reevaluate medicine expenses and consider reducing costs significantly.
+Medicine,1738405.5,3400000.0,-1662594.5,1,Immediate action needed to address medicine budget overspending.
+Medicine,1738405.5,3500000.0,-1762594.5,1,Consider major reductions in medicine spending to stay on budget.
+Medicine,1738405.5,3600000.0,-1862594.5,1,Drastically reduce medicine expenses to prevent further overspending.
+Medicine,1738405.5,3700000.0,-1962594.5,1,Immediate review and adjustment of medicine expenses needed.
+Medicine,1738405.5,3800000.0,-2062594.5,1,Significant cutbacks required in medicine expenses to align with budget.
+Medicine,1738405.5,3900000.0,-2162594.5,1,Consider reducing medicine costs substantially to address overspending.
+Medicine,1738405.5,4000000.0,-2262594.5,1,Drastic review and reduction of medicine expenses needed to stay within budget.
+Medicine,1738405.5,4100000.0,-2362594.5,1,Immediate reduction in medicine spending required to prevent future issues.
+Security,695362.2,1300000.0,-605637.8,1,Significant overspending in security. Consider reviewing and reducing expenses.
+Security,695362.2,1250000.0,-555637.8,1,Immediate action needed to cut security expenses to align with budget.
+Security,695362.2,1200000.0,-505637.8,1,Consider reducing security costs to avoid further overspending.
+Security,695362.2,1150000.0,-454637.8,1,Review and adjust security budget to prevent overspending.
+Security,695362.2,1100000.0,-405637.8,1,Drastically reduce security spending to stay within budget.
+Security,695362.2,1050000.0,-355637.8,1,Immediate review and cutback needed for security expenses.
+Security,695362.2,1000000.0,-305637.8,1,Consider significant reductions in security expenses to align with budget.
+Security,695362.2,950000.0,-255637.8,1,Reevaluate security spending and reduce costs to stay on track.
+Security,695362.2,900000.0,-205637.8,1,Immediate reduction in security expenses needed to prevent overspending.
+Security,695362.2,850000.0,-155637.8,1,Review and cut back on security expenses to align with budget.
+Security,695362.2,1600000.0,904637.8,0,Good control of security expenses. Keep monitoring to stay on budget.
+Security,695362.2,1500000.0,904637.8,0,Well-managed security expenses. Continue with effective budgeting.
+Security,695362.2,1400000.0,704637.8,0,Excellent management of security costs. Maintain this level of spending.
+Security,695362.2,1300000.0,904637.8,0,Great job managing security expenses. Continue with current practices.
+Security,695362.2,1200000.0,904637.8,0,Well balanced spending in security. Continue to track expenses closely.
+Security,695362.2,1100000.0,904637.8,0,Good job keeping security spending under control. Keep up the good work.
+Security,695362.2,1000000.0,904637.8,0,Excellent control of security expenses. Continue with current budgeting.
+Security,695362.2,900000.0,904637.8,0,Great job with security expenses. Maintain effective management.
+Security,695362.2,800000.0,904637.8,0,Well managed security spending. Keep up the effective tracking.
+Security,695362.2,700000.0,904637.8,0,Good management of security expenses. Continue monitoring closely.
+Food & Drinks,579468.5,300000.0,279468.5,0,Excellent control of food and drink expenses. Continue with current budget practices.
+Food & Drinks,579468.5,290000.0,289468.5,0,Good management of food spending. Maintain this level of control.
+Food & Drinks,579468.5,280000.0,299468.5,0,Well-managed food expenses. Keep monitoring to stay within budget.
+Food & Drinks,579468.5,270000.0,309468.5,0,Great job managing food and drink costs. Continue tracking expenses closely.
+Food & Drinks,579468.5,260000.0,319468.5,0,Good control of food spending. Stay consistent with current budgeting practices.
+Food & Drinks,579468.5,250000.0,329468.5,0,Excellent management of food expenses. Keep up the good work.
+Food & Drinks,579468.5,240000.0,339468.5,0,Great job keeping food and drink spending under control.
+Food & Drinks,579468.5,230000.0,349468.5,0,Well balanced food and drink expenses. Continue monitoring closely.
+Food & Drinks,579468.5,220000.0,359468.5,0,Good management of food expenses. Maintain this level of spending.
+Food & Drinks,579468.5,210000.0,369468.5,0,Excellent control of food spending. Continue with effective budgeting practices.
+Food & Drinks,579468.5,400000.0,-200531.5,1,Significant overspending on food and drinks. Consider adjusting budget and reducing expenses.
+Food & Drinks,579468.5,410000.0,-210531.5,1,Immediate action needed to address overspending on food and drinks.
+Food & Drinks,579468.5,420000.0,-220531.5,1,Reevaluate and cut down food and drink expenses to prevent further overspending.
+Food & Drinks,579468.5,430000.0,-230531.5,1,Consider substantial reductions in food and drink spending to align with budget.
+Food & Drinks,579468.5,440000.0,-240531.5,1,Immediate review and adjustment required to control food and drink expenses.
+Food & Drinks,579468.5,450000.0,-250531.5,1,Significant cutbacks needed in food and drink spending to stay within budget.
+Food & Drinks,579468.5,460000.0,-260531.5,1,Drastically reduce food and drink expenses to prevent overspending.
+Food & Drinks,579468.5,470000.0,-270531.5,1,Immediate reduction in food and drink spending required to address overspending.
+Food & Drinks,579468.5,480000.0,-280531.5,1,Reevaluate and cut back on food and drink expenses to stay on track.
+Food & Drinks,579468.5,490000.0,-290531.5,1,Consider significant reductions in food and drink spending to align with budget.
+Others,2317874.0,1600000.0,718874.0,0,Good control of "Others" category expenses. Keep up the effective management.
+Others,2317874.0,1500000.0,818874.0,0,Well-managed "Others" spending. Continue monitoring to stay on track.
+Others,2317874.0,1400000.0,918874.0,0,Excellent management of "Others" expenses. Maintain this level of spending.
+Others,2317874.0,1300000.0,1018874.0,0,Great job with "Others" category expenses. Keep up the good work.
+Others,2317874.0,1200000.0,1118874.0,0,Well controlled spending in "Others" category. Continue with current practices.
+Others,2317874.0,1100000.0,1218874.0,0,Good management of "Others" expenses. Maintain effective budgeting.
+Others,2317874.0,1000000.0,1318874.0,0,Excellent control of "Others" category spending. Continue to monitor expenses closely.
+Others,2317874.0,900000.0,1418874.0,0,Great job managing "Others" expenses. Keep up the good work.
+Others,2317874.0,800000.0,1518874.0,0,Well balanced spending in "Others" category. Continue effective management.
+Others,2317874.0,700000.0,1618874.0,0,Good control of "Others" expenses. Maintain this level of spending.
+Others,2317874.0,2000000.0,187874.0,1,Significant overspending in "Others" category. Consider reviewing and adjusting budget.
+Others,2317874.0,2100000.0,-210126.0,1,Immediate action needed to address overspending in "Others" category.
+Others,2317874.0,2200000.0,-39126.0,1,Reevaluate and reduce "Others" category expenses to align with budget.
+Others,2317874.0,2300000.0,-81926.0,1,Consider substantial reductions in "Others" expenses to avoid further overspending.
+Others,2317874.0,2400000.0,-168126.0,1,Immediate review and adjustment required to control "Others" expenses.
+Others,2317874.0,2500000.0,-236126.0,1,Significant cutbacks needed in "Others" expenses to stay within budget.
+Others,2317874.0,2600000.0,-306126.0,1,Drastically reduce "Others" expenses to prevent further overspending.
+Others,2317874.0,2700000.0,-376126.0,1,Immediate reduction in "Others" spending required to address overspending.
+Others,2317874.0,2800000.0,-446126.0,1,Reevaluate and cut back on "Others" category expenses to stay on track.
+Others,2317874.0,2900000.0,-516126.0,1,Consider significant reductions in "Others" expenses to align with budget.
+Others,2317874.0,3000000.0,-586126.0,1,Immediate review and adjustment required for "Others" expenses.
+Entertainment,4635748.0,4700000.0,-64452.0,1,Significant overspending on entertainment. Reevaluate budget and reduce expenses.
+Entertainment,4635748.0,4600000.0,35748.0,0,Good control of entertainment spending. Maintain current practices.
+Entertainment,4635748.0,4500000.0,135748.0,0,Excellent management of entertainment expenses. Keep up the good work.
+Entertainment,4635748.0,4400000.0,235748.0,0,Well balanced spending in entertainment. Continue effective budgeting.
+Entertainment,4635748.0,4300000.0,335748.0,0,Great job managing entertainment expenses. Stay consistent with current practices.
+Entertainment,4635748.0,4200000.0,435748.0,0,Good control over entertainment spending. Maintain this level of budgeting.
+Entertainment,4635748.0,4100000.0,535748.0,0,Excellent management of entertainment budget. Keep monitoring closely.
+Entertainment,4635748.0,4000000.0,635748.0,0,Well managed entertainment expenses. Continue with current budgeting approach.
+Entertainment,4635748.0,3900000.0,735748.0,0,Great control over entertainment spending. Keep up the good work.
+Entertainment,4635748.0,3800000.0,835748.0,0,Excellent control of entertainment expenses. Maintain this level of spending.
+Medicine,1738405.5,1800000.0,-61883.0,1,Significant overspending on medicine. Consider cost-effective alternatives.
+Medicine,1738405.5,1700000.0,38405.5,0,Good management of medicine expenses. Keep up the effective budgeting.
+Medicine,1738405.5,1600000.0,138405.5,0,Excellent control of medicine spending. Continue monitoring closely.
+Medicine,1738405.5,1500000.0,238405.5,0,Well balanced spending on medicine. Maintain this level of control.
+Medicine,1738405.5,1400000.0,338405.5,0,Great job managing medicine expenses. Stay consistent with current practices.
+Medicine,1738405.5,1300000.0,438405.5,0,Good control of medicine spending. Keep monitoring closely.
+Medicine,1738405.5,1200000.0,538405.5,0,Excellent management of medicine expenses. Continue with current practices.
+Medicine,1738405.5,1100000.0,638405.5,0,Well managed medicine expenses. Maintain this level of budgeting.
+Medicine,1738405.5,1000000.0,738405.5,0,Great control over medicine spending. Keep up the good work.
+Medicine,1738405.5,900000.0,838405.5,0,Excellent control of medicine expenses. Continue with current budgeting approach.
+Security,695362.2,700000.0,-46462.2,1,Overspending on security. Immediate review and reduction needed.
+Security,695362.2,600000.0,95362.2,0,Good control of security expenses. Maintain current budgeting practices.
+Security,695362.2,500000.0,195362.2,0,Excellent management of security budget. Continue monitoring closely.
+Security,695362.2,400000.0,295362.2,0,Well balanced spending on security. Keep up the good work.
+Security,695362.2,300000.0,395362.2,0,Great job managing security expenses. Stay consistent with current practices.
+Security,695362.2,200000.0,495362.2,0,Good control of security spending. Maintain this level of budgeting.
+Security,695362.2,100000.0,595362.2,0,Excellent management of security expenses. Continue with current practices.
+Security,695362.2,90000.0,605362.2,0,Well managed security expenses. Keep up the good work.
+Security,695362.2,80000.0,615362.2,0,Great control over security spending. Maintain this level of budgeting.
+Security,695362.2,70000.0,625362.2,0,Excellent control of security expenses. Continue monitoring closely.
+Food & Drinks,579468.5,300000.0,279468.5,0,Good control of food and drink spending. Stay consistent with current practices.
+Food & Drinks,579468.5,290000.0,289468.5,0,Excellent management of food and drink expenses. Keep up the good work.
+Food & Drinks,579468.5,280000.0,299468.5,0,Great job keeping food and drink spending under control.
+Food & Drinks,579468.5,270000.0,309468.5,0,Well balanced food and drink expenses. Continue monitoring closely.
+Food & Drinks,579468.5,260000.0,319468.5,0,Good management of food expenses. Maintain this level of spending.
+Food & Drinks,579468.5,250000.0,329468.5,0,Excellent control of food spending. Continue with effective budgeting practices.
+Food & Drinks,579468.5,400000.0,-200531.5,1,Significant overspending on food and drinks. Consider adjusting budget and reducing expenses.
+Food & Drinks,579468.5,410000.0,-210531.5,1,Immediate action needed to address overspending on food and drinks.
+Food & Drinks,579468.5,420000.0,-220531.5,1,Reevaluate and cut down food and drink expenses to prevent further overspending.
+Food & Drinks,579468.5,430000.0,-230531.5,1,Consider substantial reductions in food and drink spending to align with budget.
+Others,2317874.0,1800000.0,518874.0,0,Good control of "Others" category expenses. Keep up the effective management.
+Others,2317874.0,1700000.0,618874.0,0,Well-managed "Others" spending. Continue monitoring to stay on track.
+Others,2317874.0,1600000.0,718874.0,0,Excellent management of "Others" expenses. Maintain this level of spending.
+Others,2317874.0,1500000.0,818874.0,0,Great job with "Others" category expenses. Keep up the good work.
+Others,2317874.0,1400000.0,918874.0,0,Well controlled spending in "Others" category. Continue with current practices.
+Others,2317874.0,1300000.0,1018874.0,0,Good management of "Others" expenses. Maintain effective budgeting.
+Others,2317874.0,2000000.0,187874.0,1,Significant overspending in "Others" category. Consider reviewing and adjusting budget.
+Others,2317874.0,2100000.0,-210126.0,1,Immediate action needed to address overspending in "Others" category.
+Others,2317874.0,2200000.0,-39126.0,1,Reevaluate and reduce "Others" category expenses to align with budget.
+Others,2317874.0,2300000.0,-81926.0,1,Consider substantial reductions in "Others" expenses to avoid further overspending.
+Others,2317874.0,2400000.0,-168126.0,1,Immediate review and adjustment required to control "Others" expenses.
+Others,2317874.0,2500000.0,-236126.0,1,Significant cutbacks needed in "Others" expenses to stay within budget.
+Others,2317874.0,2600000.0,-306126.0,1,Drastically reduce "Others" expenses to prevent further overspending.
+Others,2317874.0,2700000.0,-376126.0,1,Immediate reduction in "Others" spending required to address overspending.
+Others,2317874.0,2800000.0,-446126.0,1,Reevaluate and cut back on "Others" category expenses to stay on track.
+Others,2317874.0,2900000.0,-516126.0,1,Consider significant reductions in "Others" expenses to align with budget.
+Others,2317874.0,3000000.0,-586126.0,1,Immediate review and adjustment required for "Others" expenses.
+Entertainment,4635748.0,6200000.0,-156252.0,1,🎬 Time to hit pause on entertainment spending! Try to cut back a bit to stay on track. 😊
+Entertainment,4635748.0,6100000.0,-146252.0,1,🛑 Entertainment expenses are getting high! Consider reducing costs for a better budget balance. 👍
+Entertainment,4635748.0,6000000.0,-136252.0,1,💸 Entertainment spending is a bit over. Let’s trim it down to keep things in check. 🧮
+Entertainment,4635748.0,5900000.0,-126252.0,1,🎭 Time to review your entertainment budget. A little reduction will go a long way! 💪
+Entertainment,4635748.0,5800000.0,-116252.0,1,🎉 Entertainment overspending alert! Let’s aim for a little less fun to stay within budget. 🛠️
+Entertainment,4635748.0,5700000.0,-106252.0,1,🎈 Fun’s great but let’s cut back a bit on entertainment to balance the budget. 😊
+Entertainment,4635748.0,5600000.0,-96252.0,1,🎬 Entertainment expenses are a bit high. Time for a small budget tweak! 👍
+Entertainment,4635748.0,5500000.0,-84652.0,1,🎉 Keep an eye on your entertainment spending. A little adjustment can help you stay on track! 💡
+Entertainment,4635748.0,5400000.0,-72652.0,1,🎭 Entertainment spending is over budget. Try reducing it slightly for better balance. 🛠️
+Entertainment,4635748.0,5300000.0,-60652.0,1,🛑 Review entertainment expenses and cut back a bit to stay within your budget. 💪
+Medicine,1738405.5,1900000.0,-262594.5,1,💊 Medicine costs are a bit high. Try exploring affordable options to stay on track. 🌟
+Medicine,1738405.5,1800000.0,-18894.5,0,🎉 Great job managing your medicine budget! Keep up the good work. 👍
+Medicine,1738405.5,1700000.0,38405.5,0,🌟 Excellent job on keeping medicine expenses under control. Keep it up! 🎉
+Medicine,1738405.5,1600000.0,138405.5,0,👏 Awesome work managing your medicine budget. Continue with this smart spending! 💪
+Medicine,1738405.5,1500000.0,238405.5,0,🎯 Well balanced spending on medicine. Keep monitoring to stay on top! 🌟
+Medicine,1738405.5,1400000.0,338405.5,0,👌 Fantastic job with your medicine budget. Keep this up for great results! 🌟
+Medicine,1738405.5,1300000.0,438405.5,0,💪 Excellent control of medicine expenses. Continue with this approach! 🎉
+Medicine,1738405.5,1200000.0,538405.5,0,🎉 Great job on managing medicine spending. Keep up the effective budgeting! 🌟
+Medicine,1738405.5,1100000.0,638405.5,0,👏 Awesome work controlling medicine expenses. Maintain this great effort! 💪
+Medicine,1738405.5,1000000.0,738405.5,0,🌟 Well managed medicine budget! Continue with these effective strategies. 🎉
+Security,695362.2,700000.0,-46462.2,1,🚨 Security budget is over. Time to make some adjustments to stay on track. 🌟
+Security,695362.2,600000.0,95362.2,0,👍 Good job managing security expenses. Keep it up! 🎉
+Security,695362.2,500000.0,195362.2,0,🌟 Excellent control of security spending. Continue with this approach! 👏
+Security,695362.2,400000.0,295362.2,0,🎯 Well balanced spending on security. Keep up the good work! 💪
+Security,695362.2,300000.0,395362.2,0,👌 Great job managing security expenses. Stay consistent with this budget! 🌟
+Security,695362.2,200000.0,495362.2,0,👏 Fantastic job with security expenses. Maintain this great control! 🎉
+Security,695362.2,100000.0,595362.2,0,🌟 Excellent management of security spending. Keep it up! 💪
+Security,695362.2,90000.0,605362.2,0,🎉 Well managed security budget! Continue with these smart practices. 👏
+Security,695362.2,80000.0,615362.2,0,🎯 Great control over security expenses. Keep up the effective budgeting! 🌟
+Security,695362.2,70000.0,625362.2,0,👍 Excellent control of security spending. Continue with this approach! 🎉
+Food & Drinks,579468.5,300000.0,279468.5,0,🌟 Great job managing food and drink expenses. Keep up the good work! 👏
+Food & Drinks,579468.5,290000.0,289468.5,0,🎉 Excellent control of food and drink spending. Keep it up! 💪
+Food & Drinks,579468.5,280000.0,299468.5,0,👌 Fantastic job with food and drink budget. Maintain this approach! 🌟
+Food & Drinks,579468.5,270000.0,309468.5,0,👏 Well balanced spending on food and drinks. Keep monitoring! 💪
+Food & Drinks,579468.5,260000.0,319468.5,0,🌟 Great job controlling food expenses. Stay consistent with this budget! 🎉
+Food & Drinks,579468.5,250000.0,329468.5,0,🎯 Excellent management of food spending. Continue with this effective approach! 👏
+Food & Drinks,579468.5,400000.0,-200531.5,1,🍽️ Food expenses are high. Try adjusting your budget and finding cost-effective options. 🌟
+Food & Drinks,579468.5,410000.0,-210531.5,1,🚨 Time to review and reduce food and drink expenses to balance your budget. 👍
+Food & Drinks,579468.5,420000.0,-220531.5,1,💸 Food spending is over budget. Consider making adjustments to avoid overspending. 😊
+Food & Drinks,579468.5,430000.0,-230531.5,1,🛠️ Reevaluate food and drink expenses. A little cutback can help keep things balanced. 🎯
+Food & Drinks,579468.5,440000.0,-240531.5,1,🍴 Time to trim down food and drink spending. Small changes can make a big difference! 💪
+Food & Drinks,579468.5,450000.0,-250531.5,1,🚨 Food budget needs adjustment. Try to cut back a bit to stay on track. 🌟
+Food & Drinks,579468.5,460000.0,-260531.5,1,🛠️ Consider reducing food expenses to avoid overspending. Keep budgeting smart! 🎉
+Food & Drinks,579468.5,470000.0,-270531.5,1,💡 Review food spending and adjust your budget for better balance. 👍
+Food & Drinks,579468.5,480000.0,-280531.5,1,🍽️ Food expenses are a bit high. Try to cut back to stay within budget. 😊
+Food & Drinks,579468.5,490000.0,-290531.5,1,🛠️ Immediate action needed to address overspending on food and drinks. 💪
+Food & Drinks,579468.5,500000.0,-300531.5,1,🍴 Reevaluate and reduce food expenses to align with your budget. 🌟
+Others,2317874.0,1800000.0,518874.0,0,👏 Great control of "Others" expenses. Keep up the good work! 🎉
+Others,2317874.0,1700000.0,618874.0,0,🌟 Excellent management of "Others" category. Maintain this level of spending! 👍
+Others,2317874.0,1600000.0,718874.0,0,🎯 Well balanced spending in "Others." Keep up the effective budgeting! 💪
+Others,2317874.0,1500000.0,818874.0,0,👌 Great job managing "Others" expenses. Stay consistent with this approach! 🌟
+Others,2317874.0,1400000.0,918874.0,0,👏 Excellent control of "Others" expenses. Continue with this great effort! 🎉
+Others,2317874.0,1300000.0,1018874.0,0,🌟 Well managed "Others" budget. Keep monitoring to stay on track! 👍
+Others,2317874.0,2000000.0,187874.0,1,🚨 Overspending alert for "Others" category. Time for budget adjustments! 💡
+Others,2317874.0,2100000.0,-210126.0,1,🛠️ Immediate review needed for "Others" expenses to address overspending. 🌟
+Others,2317874.0,2200000.0,-39126.0,1,💸 Consider reducing "Others" expenses to align with your budget. 😊
+Others,2317874.0,2300000.0,-81926.0,1,🍾 Review and cut back on "Others" expenses to prevent further overspending. 🎯
+Others,2317874.0,2400000.0,-168126.0,1,🚨 Significant adjustments needed for "Others" expenses. Keep an eye on your budget! 💪
+Others,2317874.0,2500000.0,-236126.0,1,🛠️ Immediate reduction in "Others" expenses required to stay within budget. 🌟
+Others,2317874.0,2600000.0,-306126.0,1,💡 Reevaluate and cut back on "Others" expenses to avoid further overspending. 👍
+Others,2317874.0,2700000.0,-376126.0,1,🍽️ Significant cutbacks needed for "Others" category. Stay on top of your spending! 🌟
+Others,2317874.0,2800000.0,-446126.0,1,🚨 Immediate review and adjustment needed for "Others" spending. Keep budgeting smart! 💪
+Others,2317874.0,2900000.0,-516126.0,1,🛠️ Consider reducing "Others" expenses to align with your budget. 🌟
+Others,2317874.0,3000000.0,-586126.0,1,🍾 Significant reductions needed in "Others" expenses. Review and adjust your budget! 😊
+Entertainment,4635748.0,6200000.0,-156252.0,1,🎬 Uh-oh! Looks like your entertainment budget is feeling a bit overstretched. Let’s give it a little break and save some cash! 😅
+Entertainment,4635748.0,6100000.0,-146252.0,1,🛑 Entertainment spending is high! Time for a budget hug and a little cutback to keep things cozy. 😊
+Entertainment,4635748.0,6000000.0,-136252.0,1,💸 Oh no! Your entertainment expenses are on the rise. Time to trim the fun a bit and save some bucks! 🌟
+Entertainment,4635748.0,5900000.0,-126252.0,1,🎭 Let’s dial down the entertainment expenses a notch. A little less fun now means more savings later! 😎
+Entertainment,4635748.0,5800000.0,-116252.0,1,🎉 Time for a quick entertainment budget check! A sprinkle of savings could keep your budget dancing! 💃
+Entertainment,4635748.0,5700000.0,-96252.0,1,🎈 Your entertainment budget is a bit over. Let’s give it a small trim to keep things on track! 🎯
+Entertainment,4635748.0,5600000.0,-84652.0,1,🎬 Entertainment expenses are a tad high. Let’s cut back a little to keep your wallet happy! 🕺
+Entertainment,4635748.0,5500000.0,-72652.0,1,🎉 Oops entertainment costs are up. Let’s reel it in and save some cash for future fun! 🤑
+Entertainment,4635748.0,5400000.0,-60652.0,1,🎭 Your entertainment spending is over budget. Time to cut back and save for more exciting times ahead! 🌈
+Entertainment,4635748.0,5300000.0,-60652.0,1,🛑 Let’s put a little pause on the entertainment budget and save up for the next big adventure! 🏆
+Medicine,1738405.5,1900000.0,-262594.5,1,💊 Medicine budget is feeling a bit stretched. Let’s find some budget-friendly options to keep it healthy! 🌟
+Medicine,1738405.5,1800000.0,-18894.5,0,🎉 Great job managing your medicine budget! Keep up the fantastic work and stay awesome! 💪
+Medicine,1738405.5,1700000.0,38405.5,0,🌟 You’re a budget superstar with your medicine expenses! Keep shining bright! 🌟
+Medicine,1738405.5,1600000.0,138405.5,0,👏 You’ve got this! Your medicine spending is spot-on. Keep that budget magic going! ✨
+Medicine,1738405.5,1500000.0,238405.5,0,🎯 Medicine budget on point! Keep this up and stay fabulous! 💪
+Medicine,1738405.5,1400000.0,338405.5,0,👌 You’re rocking your medicine budget! Continue with this winning strategy! 🎉
+Medicine,1738405.5,1300000.0,438405.5,0,👏 Fantastic job controlling medicine costs. Keep up the amazing work! 💫
+Medicine,1738405.5,1200000.0,538405.5,0,🎉 You’re doing an awesome job with medicine expenses. Keep up the great budgeting! 🌟
+Medicine,1738405.5,1100000.0,638405.5,0,🌟 Medicine budget looks great! Keep rocking that budget like a pro! 💪
+Medicine,1738405.5,1000000.0,738405.5,0,👏 Your medicine budget is looking fantastic! Keep up the incredible work! 🎉
+Security,695362.2,700000.0,-46462.2,1,🚨 Security budget needs a little TLC. Let’s adjust and make sure you’re safe and sound! 🌟
+Security,695362.2,600000.0,95362.2,0,👍 Security expenses are in tip-top shape! Keep up the great work and stay secure! 🛡️
+Security,695362.2,500000.0,195362.2,0,🌟 Excellent job with your security spending. Keep up the amazing work! 🎉
+Security,695362.2,400000.0,295362.2,0,🎯 Your security budget is on point! Keep up the good work and stay safe! 💪
+Security,695362.2,300000.0,395362.2,0,👌 Great job managing your security budget. Keep up the fabulous work! 🌟
+Security,695362.2,200000.0,495362.2,0,👏 You’re a security budgeting champion! Keep up the excellent work! 🎉
+Security,695362.2,100000.0,595362.2,0,🌟 You’ve mastered your security expenses! Continue with this stellar budgeting! 💪
+Security,695362.2,90000.0,605362.2,0,🎉 Awesome job with your security spending! Keep up the great work! 🛡️
+Security,695362.2,80000.0,615362.2,0,🎯 You’re doing an amazing job with security expenses. Keep it up! 🌟
+Security,695362.2,70000.0,625362.2,0,👏 Your security budget is looking fantastic! Keep it up and stay safe! 🎉
+Food & Drinks,579468.5,300000.0,279468.5,0,🌟 You’re a food budgeting genius! Keep enjoying those meals while saving smart! 🍽️
+Food & Drinks,579468.5,290000.0,289468.5,0,🎉 Great job on managing food and drink expenses. Keep that delicious budgeting going! 🍴
+Food & Drinks,579468.5,280000.0,299468.5,0,👌 You’ve got food budgeting down to a science! Keep up the tasty work! 🌟
+Food & Drinks,579468.5,270000.0,309468.5,0,👏 Fantastic job with your food and drink budget. Enjoy your meals and save smart! 🍽️
+Food & Drinks,579468.5,260000.0,319468.5,0,🎉 Your food and drink budget is on point! Keep savoring those savings! 🌟
+Food & Drinks,579468.5,250000.0,329468.5,0,🌟 Excellent job controlling food costs. Keep enjoying your meals while saving smart! 🍴
+Food & Drinks,579468.5,400000.0,-200531.5,1,🍽️ Looks like your food budget is a bit high. Time for a tasty adjustment to keep things balanced! 🌟
+Food & Drinks,579468.5,410000.0,-210531.5,1,🚨 Food expenses are a bit over. Let’s cook up a plan to save more and eat well! 🍲
+Food & Drinks,579468.5,420000.0,-220531.5,1,💸 Time for a little food budget fix. Cut back a bit to keep those savings cooking! 🌟
+Food & Drinks,579468.5,430000.0,-230531.5,1,🛠️ Food expenses are getting high. Let’s add some savings seasoning to balance it out! 🍴
+Food & Drinks,579468.5,440000.0,-240531.5,1,🍴 Time to trim down the food expenses. A little tweak will make your budget taste better! 🌟
+Food & Drinks,579468.5,450000.0,-250531.5,1,🚨 Let’s put a pinch of savings into your food budget to keep things balanced and tasty! 🍽️
+Food & Drinks,579468.5,460000.0,-260531.5,1,🛠️ Food budget alert! Time to cut back a bit to make sure you’re saving smart! 🌟
+Food & Drinks,579468.5,470000.0,-270531.5,1,💡 Time to make some changes to your food budget. A little adjustment will help keep things sweet! 🍴
+Food & Drinks,579468.5,480000.0,-280531.5,1,🍽️ Let’s take a bite out of those food expenses and save more for future meals! 🌟
+Food & Drinks,579468.5,490000.0,-290531.5,1,🛠️ Your food expenses are a bit high. Let’s find a tasty way to cut back and save! 🍲
+Others,2317874.0,1800000.0,518874.0,0,👏 You’re a superstar with "Others" expenses! Keep up the fabulous work and stay awesome! 🌟
+Others,2317874.0,1700000.0,618874.0,0,🌟 Great job managing "Others" expenses! Keep up the fantastic work! 🎉
+Others,2317874.0,1600000.0,718874.0,0,🎉 You’re doing an amazing job with "Others" expenses. Keep it up! 🌈
+Others,2317874.0,1500000.0,818874.0,0,👏 Your budget for "Others" is on point! Keep up the great work and enjoy those savings! 💪
+Others,2317874.0,1400000.0,918874.0,0,🌟 Excellent job with "Others" expenses. Keep shining bright and saving smart! 🎉
+Others,2317874.0,1300000.0,1018874.0,0,🎉 You’re a budgeting champ for "Others"! Keep up the amazing work! 🌟
+Others,2317874.0,1200000.0,1118874.0,0,👌 "Others" expenses are perfectly managed! Keep it up and stay awesome! 🎉
+Others,2317874.0,1100000.0,1218874.0,0,👏 You’re rocking the "Others" budget! Keep up the great work and enjoy those savings! 🌟
+Others,2317874.0,1000000.0,1318874.0,0,🎉 "Others" expenses are in great shape! Keep up the fantastic budgeting! 🌈
+Others,2317874.0,900000.0,1418874.0,0,🌟 You’re a pro with "Others" expenses! Keep up the stellar work! 🎉
+Others,2317874.0,800000.0,1518874.0,0,🎉 Excellent job with your "Others" budget! Keep up the fantastic work and enjoy your savings! 🌟
+Others,2317874.0,700000.0,1618874.0,0,🌟 You’re managing "Others" expenses like a superstar! Keep it up! 🎉
+Others,2317874.0,600000.0,1718874.0,0,🎉 Great job on managing "Others" expenses! Keep up the awesome work! 🌟
+Others,2317874.0,500000.0,1818874.0,0,👏 Your "Others" budget is looking fantastic! Keep up the amazing work! 🎉
+Others,2317874.0,400000.0,1918874.0,0,🌟 You’re doing a stellar job with "Others" expenses. Keep it up and enjoy the savings! 🎉
+Others,2317874.0,300000.0,2018874.0,0,🎉 Excellent management of "Others" budget! Keep shining and saving! 🌟
+Others,2317874.0,200000.0,2118874.0,0,🎉 You’re rocking the "Others" budget! Keep up the great work and enjoy those savings! 🌟
+Others,2317874.0,100000.0,2218874.0,0,🌟 Fantastic job with "Others" expenses! Keep up the awesome work! 🎉
+Others,2317874.0,90000.0,2228874.0,0,🎉 Great job managing "Others" expenses! Keep up the stellar work! 🌟
+Others,2317874.0,80000.0,2238874.0,0,🌟 You’re a budget superstar for "Others"! Keep up the fantastic work! 🎉
+Others,2317874.0,70000.0,2248874.0,0,🎉 Excellent job with "Others" expenses! Keep up the great work and enjoy the savings! 🌟
+Others,2317874.0,60000.0,2258874.0,0,🌟 You’re managing "Others" expenses like a pro! Keep it up! 🎉
+Others,2317874.0,50000.0,2268874.0,0,🎉 Fantastic job with "Others" budget! Keep it up and stay awesome! 🌟
+Others,2317874.0,40000.0,2278874.0,0,🌟 Great job managing "Others" expenses! Keep up the stellar work! 🎉
+Others,2317874.0,30000.0,2288874.0,0,🎉 You’re doing an amazing job with "Others" expenses. Keep it up! 🌟
+Others,2317874.0,20000.0,2298874.0,0,🎉 Excellent job with "Others" budget! Keep up the great work and enjoy those savings! 🌟
+Others,2317874.0,10000.0,2308874.0,0,🌟 You’re rocking the "Others" budget! Keep up the fabulous work! 🎉
+Others,2317874.0,0.0,2317874.0,0,🎉 You’ve nailed it with "Others" expenses! Keep shining and saving! 🌟
+Others,2317874.0,3000000.0,-683126.0,1,🚨 Oh no! Time to take a closer look at "Others" expenses and make some adjustments. Let’s fix this! 💪
+Others,2317874.0,3100000.0,-782126.0,1,💡 Time to review those "Others" expenses and make some budget-friendly tweaks! You’ve got this! 🌟
+Others,2317874.0,3200000.0,-881126.0,1,🛠️ Let’s make some adjustments to "Others" spending to keep things on track. You’re doing great! 🌈
+Others,2317874.0,3300000.0,-980126.0,1,🍽️ Time to cut back on "Others" expenses a bit. A little tweak can make a big difference! 🌟
+Others,2317874.0,3400000.0,-1078126.0,1,🚨 Budget alert for "Others"! Let’s find some ways to trim down and save smart! 💪
+Others,2317874.0,3500000.0,-1178126.0,1,💡 Time for some adjustments in "Others" expenses. Let’s make it easier on your budget! 🌟
+Others,2317874.0,3600000.0,-1278126.0,1,🛠️ Time to review and adjust "Others" spending. A little effort will keep your budget happy! 🌈
+Others,2317874.0,3700000.0,-1378126.0,1,🍴 Your "Others" budget needs a little love. Time for some tasty adjustments to keep things balanced! 🌟
+Others,2317874.0,3800000.0,-1478126.0,1,🚨 Time to give "Others" expenses a little trim. Adjustments will keep your budget in shape! 💪
+Others,2317874.0,3900000.0,-1578126.0,1,💡 Let’s make some changes to your "Others" spending. A little adjustment will go a long way! 🌈
+Others,2317874.0,4000000.0,-1678126.0,1,🛠️ Your "Others" budget needs a tweak. Adjustments will help you stay on track and save! 🎯
+Others,2317874.0,4100000.0,-1778126.0,1,🍽️ Time to adjust your "Others" budget. A bit of trimming will keep things balanced and bright! 🌟
+Entertainment,15000.0,20000.0,-5000.0,1,🎬 Your entertainment budget is feeling a bit stretched. Let’s trim it a little and save some cash! 😅
+Entertainment,15000.0,19000.0,-4000.0,1,🛑 Entertainment expenses are high! A little budget hug will help keep things cozy. 😊
+Entertainment,15000.0,18000.0,-3000.0,1,💸 Oops! Entertainment costs are rising. Time to cut back a bit and save some bucks! 🌟
+Entertainment,15000.0,17000.0,-2000.0,1,🎭 Let’s dial down those entertainment expenses a notch. A little adjustment means more savings later! 😎
+Entertainment,15000.0,16000.0,-1000.0,1,🎉 Time for a quick entertainment budget check! A small cutback will keep your wallet happy! 💃
+Entertainment,15000.0,15000.0,0.0,0,🌟 Perfectly balanced entertainment budget! Keep enjoying the fun and saving smart! 🎉
+Entertainment,15000.0,14000.0,1000.0,0,👏 You’ve got this! Entertainment budget is under control. Keep up the great work! 😎
+Entertainment,15000.0,13000.0,2000.0,0,🎉 Great job managing your entertainment expenses! Keep it up and enjoy the savings! 🌟
+Entertainment,15000.0,12000.0,3000.0,0,🌟 Excellent job with your entertainment budget! Keep shining and saving! 💃
+Entertainment,15000.0,11000.0,4000.0,0,🎉 Your entertainment budget is on point! Keep enjoying your fun and saving smart! 🌟
+Entertainment,15000.0,10000.0,5000.0,0,👏 You’re a superstar with entertainment expenses! Keep up the fantastic work and save more! 🎉
+Medicine,20000.0,22000.0,-2000.0,1,💊 Medicine budget is a bit over. Let’s find some budget-friendly options to keep it healthy! 🌟
+Medicine,20000.0,21000.0,-1000.0,1,🛑 Time to adjust your medicine expenses a bit. A small tweak will help keep things balanced! 😊
+Medicine,20000.0,20000.0,0.0,0,🎉 Your medicine budget is perfectly balanced! Keep up the great work and stay awesome! 💪
+Medicine,20000.0,19000.0,1000.0,0,🌟 Excellent job managing your medicine expenses! Keep shining bright and saving smart! 🌟
+Medicine,20000.0,18000.0,2000.0,0,🎉 You’re a champ with your medicine budget! Keep up the fantastic work! 👏
+Medicine,20000.0,17000.0,3000.0,0,🎉 Great job controlling your medicine expenses! Keep up the awesome work! 🌟
+Medicine,20000.0,16000.0,4000.0,0,👏 You’re doing a stellar job with medicine expenses. Keep up the great work! 🌈
+Medicine,20000.0,15000.0,5000.0,0,🌟 Fantastic job with your medicine budget! Keep up the fabulous work! 🎉
+Medicine,20000.0,14000.0,6000.0,0,🎉 You’re a medicine budgeting pro! Keep up the fantastic work and enjoy those savings! 🌟
+Medicine,20000.0,13000.0,7000.0,0,🌟 Excellent job with your medicine expenses! Keep it up and stay fabulous! 👏
+Security,50000.0,55000.0,-5000.0,1,🚨 Security budget needs a little TLC. Let’s adjust and make sure you’re safe and sound! 🌟
+Security,50000.0,54000.0,-4000.0,1,🛑 Time to review your security budget. A small adjustment will help keep things in check! 😊
+Security,50000.0,53000.0,-3000.0,1,💡 Security expenses are a bit high. Let’s trim down to save more and stay secure! 🌟
+Security,50000.0,52000.0,-2000.0,1,🛠️ Let’s tweak your security budget a bit. Small changes can make a big difference! 🌟
+Security,50000.0,51000.0,-1000.0,1,🎯 Time to adjust your security expenses slightly. Let’s keep things balanced and safe! 🌈
+Security,50000.0,50000.0,0.0,0,🎉 Perfectly managed security budget! Keep up the fantastic work and stay safe! 🌟
+Security,50000.0,49000.0,1000.0,0,👏 You’ve got your security expenses under control! Keep up the excellent work! 🌟
+Security,50000.0,48000.0,2000.0,0,🌟 Excellent job managing your security expenses! Keep up the great work and stay secure! 🛡️
+Security,50000.0,47000.0,3000.0,0,🎉 Great job with your security budget! Keep it up and stay fabulous! 🌟
+Security,50000.0,46000.0,4000.0,0,👏 Your security budget is on point! Keep up the stellar work and stay safe! 🌈
+Security,50000.0,45000.0,5000.0,0,🌟 You’re managing security expenses like a pro! Keep it up and stay awesome! 🎉
+Food & Drinks,80000.0,85000.0,-5000.0,1,🍽️ Food budget is a bit over. Time for a tasty adjustment to keep things balanced! 🌟
+Food & Drinks,80000.0,84000.0,-4000.0,1,🎉 Food expenses are high! Let’s trim down a bit and keep saving smart! 🌈
+Food & Drinks,80000.0,83000.0,-3000.0,1,💡 Oops! Time for a little adjustment to your food budget. A small tweak will save more! 🍴
+Food & Drinks,80000.0,82000.0,-2000.0,1,🛠️ Food expenses are a bit high. Let’s make some adjustments to keep things on track! 🌟
+Food & Drinks,80000.0,81000.0,-1000.0,1,🎉 Time for a quick food budget fix! A little cutback will keep your savings cooking! 🍽️
+Food & Drinks,80000.0,80000.0,0.0,0,🌟 Perfectly balanced food budget! Keep enjoying your meals and saving smart! 🎉
+Food & Drinks,80000.0,79000.0,1000.0,0,🎉 Great job managing your food expenses! Keep up the tasty work and enjoy those savings! 🌟
+Food & Drinks,80000.0,78000.0,2000.0,0,🌟 Excellent job with your food budget! Keep shining and saving! 🍴
+Food & Drinks,80000.0,77000.0,3000.0,0,🎉 Your food budget is on point! Keep up the fantastic work and savor those savings! 🌟
+Food & Drinks,80000.0,76000.0,4000.0,0,👏 You’re a superstar with your food expenses! Keep up the great work and stay fabulous! 🌟
+Food & Drinks,80000.0,75000.0,5000.0,0,🌟 Excellent job controlling your food costs! Keep up the amazing work! 🍽️
+Others,120000.0,130000.0,-10000.0,1,🚨 Time to review your "Others" expenses. A little adjustment will help keep things in balance! 💪
+Others,120000.0,125000.0,-5000.0,1,💡 Your "Others" budget is a bit high. Let’s trim it down to save more and stay on track! 🌟
+Others,120000.0,120000.0,0.0,0,🎉 Perfectly managed "Others" expenses! Keep up the great work and enjoy those savings! 🌟
+Others,120000.0,115000.0,5000.0,0,🌟 Great job controlling "Others" expenses! Keep up the fabulous work and enjoy the savings! 🎉
+Others,120000.0,110000.0,10000.0,0,👏 Excellent job with "Others" budget! Keep up the fantastic work and stay awesome! 🌟
+Others,120000.0,105000.0,15000.0,0,🎉 You’re a pro with "Others" expenses! Keep up the amazing work and enjoy those savings! 🌈
+Others,120000.0,100000.0,20000.0,0,🌟 Fantastic job managing "Others" expenses! Keep up the great work! 🎉
+Others,120000.0,95000.0,25000.0,0,👏 Your "Others" budget is looking fantastic! Keep up the excellent work and enjoy those savings! 🌟
+Others,120000.0,90000.0,30000.0,0,🎉 You’re doing an amazing job with "Others" expenses! Keep up the fantastic work! 🌟
+Others,120000.0,85000.0,35000.0,0,🌟 Excellent job with your "Others" budget! Keep up the great work and enjoy the savings! 🎉
+Others,120000.0,80000.0,40000.0,0,🎉 Your "Others" expenses are perfectly managed! Keep it up and stay awesome! 🌟
+Others,120000.0,75000.0,45000.0,0,👏 You’re a superstar with "Others" budget! Keep up the fantastic work and enjoy the savings! 🌈
+Entertainment,25000.0,26000.0,-1000.0,1,🎉 Entertainment expenses are a bit high. Let’s adjust and keep the fun going! 🌟
+Entertainment,25000.0,25000.0,0.0,0,🌟 Perfectly balanced entertainment budget! Keep enjoying the fun and saving smart! 🎉
+Entertainment,25000.0,24000.0,1000.0,0,👏 Great job managing your entertainment budget! Keep it up and enjoy those savings! 🌟
+Entertainment,25000.0,23000.0,2000.0,0,🌟 Excellent job with your entertainment expenses! Keep up the great work and enjoy the savings! 🎉
+Entertainment,25000.0,22000.0,3000.0,0,🎉 Your entertainment budget is on point! Keep it up and stay fabulous! 🌟
+Entertainment,25000.0,21000.0,4000.0,0,👏 Fantastic job managing your entertainment expenses! Keep up the amazing work! 🎉
+Entertainment,25000.0,20000.0,5000.0,0,🌟 Great job with your entertainment budget! Keep up the fabulous work and enjoy the savings! 🌟
+Entertainment,25000.0,19000.0,6000.0,0,🎉 You’re a pro with your entertainment expenses! Keep it up and stay awesome! 🌟
+Entertainment,25000.0,18000.0,7000.0,0,👏 Excellent job with entertainment budget! Keep up the great work and enjoy the savings! 🎉
+Entertainment,25000.0,17000.0,8000.0,0,🌟 Your entertainment expenses are perfectly managed! Keep it up and stay fabulous! 🎉
+Medicine,30000.0,31000.0,-1000.0,1,💊 Medicine budget is a bit high. Let’s adjust and keep it healthy! 🌟
+Medicine,30000.0,30000.0,0.0,0,🎉 Perfectly balanced medicine budget! Keep up the great work and stay healthy! 💪
+Medicine,30000.0,29000.0,1000.0,0,🌟 Excellent job with your medicine expenses! Keep up the great work and enjoy those savings! 🎉
+Medicine,30000.0,28000.0,2000.0,0,🎉 You’re doing a fantastic job with your medicine budget! Keep it up and stay fabulous! 🌟
+Medicine,30000.0,27000.0,3000.0,0,👏 Great job managing your medicine expenses! Keep up the fantastic work! 🎉
+Medicine,30000.0,26000.0,4000.0,0,🌟 Excellent job with your medicine budget! Keep it up and stay awesome! 🎉
+Medicine,30000.0,25000.0,5000.0,0,🎉 Your medicine expenses are perfectly managed! Keep up the amazing work! 🌟
+Medicine,30000.0,24000.0,6000.0,0,👏 You’re a superstar with your medicine budget! Keep up the fantastic work! 🎉
+Medicine,30000.0,23000.0,7000.0,0,🌟 Excellent job with your medicine expenses! Keep it up and stay fabulous! 🎉
+Medicine,30000.0,22000.0,8000.0,0,🎉 Great job with your medicine budget! Keep up the great work and enjoy the savings! 🌟
+Medicine,30000.0,21000.0,9000.0,0,👏 You’re managing your medicine expenses like a pro! Keep up the fabulous work! 🌟
+Security,60000.0,62000.0,-2000.0,1,🚨 Security budget needs a little adjustment. Let’s make sure you’re safe and sound! 🌟
+Security,60000.0,61000.0,-1000.0,1,💡 Time to tweak your security expenses a bit. A small adjustment will help keep things in check! 🎯
+Security,60000.0,60000.0,0.0,0,🎉 Perfectly managed security budget! Keep up the great work and stay secure! 🌟
+Security,60000.0,59000.0,1000.0,0,👏 Great job with your security expenses! Keep it up and stay fabulous! 🌟
+Security,60000.0,58000.0,2000.0,0,🎉 Excellent job managing your security budget! Keep up the fantastic work and stay safe! 🌟
+Security,60000.0,57000.0,3000.0,0,🌟 You’re a pro with your security expenses! Keep up the great work! 🎉
+Security,60000.0,56000.0,4000.0,0,👏 Your security budget is perfectly managed! Keep it up and stay awesome! 🌟
+Security,60000.0,55000.0,5000.0,0,🎉 Great job managing your security expenses! Keep up the fabulous work! 🌟
+Security,60000.0,54000.0,6000.0,0,🌟 You’re managing your security budget like a champ! Keep up the amazing work! 🎉
+Security,60000.0,53000.0,7000.0,0,👏 Excellent job with your security expenses! Keep it up and stay fabulous! 🎉
+Security,60000.0,52000.0,8000.0,0,🌟 Fantastic job with your security budget! Keep up the great work and stay awesome! 🎉
+Food & Drinks,90000.0,95000.0,-5000.0,1,🍽️ Food budget is a bit high. Let’s trim it down and keep saving smart! 🌟
+Food & Drinks,90000.0,94000.0,-4000.0,1,🎉 Food expenses are a bit over. Time for a tasty adjustment to keep things balanced! 🌟
+Food & Drinks,90000.0,93000.0,-3000.0,1,💡 Oops! Food costs are rising. A little tweak will help save more! 🌟
+Food & Drinks,90000.0,92000.0,-2000.0,1,🛠️ Food expenses are high. Let’s adjust to keep things on track! 🌟
+Food & Drinks,90000.0,91000.0,-1000.0,1,🎉 Time for a quick food budget fix! A little cutback will help save more! 🌟
+Food & Drinks,90000.0,90000.0,0.0,0,🌟 Perfectly balanced food budget! Keep enjoying your meals and saving smart! 🎉
+Food & Drinks,90000.0,89000.0,1000.0,0,🎉 Great job managing your food expenses! Keep up the tasty work and enjoy those savings! 🌟
+Food & Drinks,90000.0,88000.0,2000.0,0,👏 Excellent job with your food budget! Keep up the fantastic work and enjoy those savings! 🌟
+Food & Drinks,90000.0,87000.0,3000.0,0,🌟 Your food budget is looking great! Keep up the fabulous work and enjoy the savings! 🎉
+Food & Drinks,90000.0,86000.0,4000.0,0,🎉 You’re doing a fantastic job with your food expenses! Keep it up and stay awesome! 🌟
+Food & Drinks,90000.0,85000.0,5000.0,0,👏 Excellent job with your food budget! Keep up the great work and enjoy those savings! 🌟
+Others,100000.0,105000.0,-5000.0,1,🚨 Time for a review of "Others" expenses. A little adjustment will help keep things in balance! 🌟
+Others,100000.0,104000.0,-4000.0,1,💡 Your "Others" budget is a bit high. Let’s trim it down to save more and stay on track! 🎯
+Others,100000.0,103000.0,-3000.0,1,🛠️ Oops! "Others" expenses are high. Time for a little adjustment to save more! 🌟
+Others,100000.0,102000.0,-2000.0,1,🎉 Time to adjust your "Others" expenses a bit. Small changes can make a big difference! 🌈
+Others,100000.0,101000.0,-1000.0,1,👏 Your "Others" budget is high. A quick tweak will help keep things balanced! 🌟
+Others,100000.0,100000.0,0.0,0,🎉 Perfectly balanced "Others" budget! Keep up the great work and enjoy those savings! 🌟
+Others,100000.0,99000.0,1000.0,0,🌟 Great job with "Others" expenses! Keep up the fantastic work and enjoy the savings! 🎉
+Others,100000.0,98000.0,2000.0,0,👏 Excellent job managing "Others" budget! Keep up the fabulous work! 🌟
+Others,100000.0,97000.0,3000.0,0,🎉 Your "Others" expenses are under control! Keep up the great work and enjoy the savings! 🌟
+Others,100000.0,96000.0,4000.0,0,🌟 You’re doing an amazing job with "Others" budget! Keep it up and stay fabulous! 🎉
+Others,100000.0,95000.0,5000.0,0,🎉 Fantastic job with "Others" expenses! Keep up the excellent work and enjoy those savings! 🌟
+Entertainment,30000.0,31000.0,-1000.0,1,🎉 Whoa there! Entertainment went a bit over. Let's dial it down a notch and keep the fun going! 🌟
+Entertainment,30000.0,29000.0,1000.0,0,🌟 Perfect balance! Enjoy your entertainment and keep saving those bucks! 🎉
+Entertainment,30000.0,28000.0,2000.0,0,👏 You’re rocking it with your entertainment budget! Keep up the great work! 🌟
+Entertainment,30000.0,27000.0,3000.0,0,🎉 Fantastic job managing your entertainment expenses! Keep the fun alive and the savings high! 🌈
+Entertainment,30000.0,26000.0,4000.0,0,🌟 You’re a superstar with entertainment expenses! Keep it up and enjoy your savings! 🎉
+Entertainment,30000.0,25000.0,5000.0,0,👏 Great job with your entertainment budget! Keep it up and stay fabulous! 🌟
+Entertainment,30000.0,24000.0,6000.0,0,🎉 Your entertainment budget is looking great! Keep the fun rolling and the savings growing! 🌟
+Entertainment,30000.0,23000.0,7000.0,0,🌟 You’re managing your entertainment budget like a pro! Keep it up and enjoy those savings! 🎉
+Entertainment,30000.0,22000.0,8000.0,0,🎉 Excellent job with your entertainment expenses! Keep up the fantastic work and stay awesome! 🌟
+Entertainment,30000.0,21000.0,9000.0,0,👏 You’re doing an amazing job with your entertainment budget! Keep it up and enjoy the savings! 🎉
+Medicine,30000.0,31000.0,-1000.0,1,💊 Medicine budget is a bit high. Let’s adjust and stay healthy! 🌟
+Medicine,30000.0,30000.0,0.0,0,🎉 Perfectly balanced medicine budget! Keep up the great work and stay healthy! 💪
+Medicine,30000.0,29000.0,1000.0,0,🌟 Excellent job managing your medicine expenses! Keep up the great work and enjoy those savings! 🎉
+Medicine,30000.0,28000.0,2000.0,0,🎉 You’re doing a fantastic job with your medicine budget! Keep it up and stay fabulous! 🌟
+Medicine,30000.0,27000.0,3000.0,0,👏 Great job managing your medicine expenses! Keep up the fantastic work! 🎉
+Medicine,30000.0,26000.0,4000.0,0,🌟 Excellent job with your medicine budget! Keep it up and stay awesome! 🎉
+Medicine,30000.0,25000.0,5000.0,0,🎉 Your medicine expenses are perfectly managed! Keep up the amazing work! 🌟
+Medicine,30000.0,24000.0,6000.0,0,👏 You’re a superstar with your medicine budget! Keep up the fantastic work! 🎉
+Medicine,30000.0,23000.0,7000.0,0,🌟 Excellent job with your medicine expenses! Keep it up and stay fabulous! 🎉
+Medicine,30000.0,22000.0,8000.0,0,🎉 Great job with your medicine budget! Keep up the great work and enjoy the savings! 🌟
+Security,60000.0,62000.0,-2000.0,1,🚨 Security budget needs a little adjustment. Let’s make sure you’re safe and sound! 🌟
+Security,60000.0,61000.0,-1000.0,1,💡 Time to tweak your security expenses a bit. A small adjustment will help keep things in check! 🎯
+Security,60000.0,60000.0,0.0,0,🎉 Perfectly managed security budget! Keep up the great work and stay secure! 🌟
+Security,60000.0,59000.0,1000.0,0,👏 Great job with your security expenses! Keep it up and stay fabulous! 🌟
+Security,60000.0,58000.0,2000.0,0,🎉 Excellent job managing your security budget! Keep up the fantastic work and stay safe! 🌟
+Security,60000.0,57000.0,3000.0,0,🌟 You’re a pro with your security expenses! Keep up the great work! 🎉
+Security,60000.0,56000.0,4000.0,0,👏 Your security budget is perfectly managed! Keep it up and stay awesome! 🌟
+Security,60000.0,55000.0,5000.0,0,🎉 Great job managing your security expenses! Keep up the fabulous work! 🌟
+Security,60000.0,54000.0,6000.0,0,🌟 You’re managing your security budget like a champ! Keep up the amazing work! 🎉
+Security,60000.0,53000.0,7000.0,0,👏 Excellent job with your security expenses! Keep it up and stay fabulous! 🎉
+Food & Drinks,90000.0,95000.0,-5000.0,1,🍽️ Food budget is a bit high. Let’s trim it down and keep saving smart! 🌟
+Food & Drinks,90000.0,94000.0,-4000.0,1,🎉 Food expenses are a bit over. Time for a tasty adjustment to keep things balanced! 🌟
+Food & Drinks,90000.0,93000.0,-3000.0,1,💡 Oops! Food costs are rising. A little tweak will help save more! 🌟
+Food & Drinks,90000.0,92000.0,-2000.0,1,🛠️ Food expenses are high. Let’s adjust to keep things on track! 🌟
+Food & Drinks,90000.0,91000.0,-1000.0,1,🎉 Time for a quick food budget fix! A little cutback will help save more! 🌟
+Food & Drinks,90000.0,90000.0,0.0,0,🌟 Perfectly balanced food budget! Keep enjoying your meals and saving smart! 🎉
+Food & Drinks,90000.0,89000.0,1000.0,0,🎉 Great job managing your food expenses! Keep up the tasty work and enjoy those savings! 🌟
+Food & Drinks,90000.0,88000.0,2000.0,0,👏 Excellent job with your food budget! Keep up the fantastic work and enjoy those savings! 🌟
+Food & Drinks,90000.0,87000.0,3000.0,0,🌟 Your food budget is looking great! Keep up the fabulous work and enjoy the savings! 🎉
+Food & Drinks,90000.0,86000.0,4000.0,0,🎉 You’re doing a fantastic job with your food expenses! Keep it up and stay awesome! 🌟
+Food & Drinks,90000.0,85000.0,5000.0,0,👏 Excellent job with your food budget! Keep up the great work and enjoy those savings! 🌟
+Others,100000.0,105000.0,-5000.0,1,🚨 Time for a review of "Others" expenses. A little adjustment will help keep things in balance! 🌟
+Others,100000.0,104000.0,-4000.0,1,💡 Your "Others" budget is a bit high. Let’s trim it down to save more and stay on track! 🎯
+Others,100000.0,103000.0,-3000.0,1,🛠️ Oops! "Others" expenses are high. Time for a little adjustment to save more! 🌟
+Others,100000.0,102000.0,-2000.0,1,🎉 Time to adjust your "Others" expenses a bit. Small changes can make a big difference! 🌈
+Others,100000.0,101000.0,-1000.0,1,👏 Your "Others" budget is high. A quick tweak will help keep things balanced! 🌟
+Others,100000.0,100000.0,0.0,0,🎉 Perfectly balanced "Others" budget! Keep up the great work and enjoy those savings! 🌟
+Others,100000.0,99000.0,1000.0,0,🌟 Great job with "Others" expenses! Keep up the fantastic work and enjoy the savings! 🎉
+Others,100000.0,98000.0,2000.0,0,👏 Excellent job managing "Others" budget! Keep up the fabulous work! 🌟
+Others,100000.0,97000.0,3000.0,0,🎉 Your "Others" expenses are under control! Keep up the great work and enjoy the savings! 🌟
+Others,100000.0,96000.0,4000.0,0,🌟 You’re doing an amazing job with "Others" budget! Keep it up and stay fabulous! 🎉
+Others,100000.0,95000.0,5000.0,0,🎉 Fantastic job with "Others" expenses! Keep up the excellent work and enjoy those savings! 🌟
+Entertainment,50000.0,51000.0,-1000.0,1,🎉 Whoa there! Entertainment expenses are a bit high. Let’s adjust and keep the fun going! 🌟
+Entertainment,50000.0,50000.0,0.0,0,🌟 Perfectly balanced entertainment budget! Enjoy the fun and keep saving those bucks! 🎉
+Entertainment,50000.0,49000.0,1000.0,0,👏 Excellent job managing your entertainment expenses! Keep up the great work! 🌟
+Entertainment,50000.0,48000.0,2000.0,0,🎉 Fantastic job with entertainment budgeting! Keep the fun alive and enjoy the savings! 🌈
+Entertainment,50000.0,47000.0,3000.0,0,🌟 You’re managing your entertainment budget like a pro! Keep up the great work! 🎉
+Entertainment,50000.0,46000.0,4000.0,0,👏 Great job with your entertainment budget! Keep it up and stay fabulous! 🌟
+Entertainment,50000.0,45000.0,5000.0,0,🎉 Your entertainment budget is looking great! Keep enjoying the fun and saving smart! 🌟
+Entertainment,50000.0,44000.0,6000.0,0,🌟 You’re doing an amazing job with your entertainment expenses! Keep up the fantastic work! 🎉
+Entertainment,50000.0,43000.0,7000.0,0,🎉 Excellent job managing your entertainment budget! Keep it up and enjoy the savings! 🌟
+Entertainment,50000.0,42000.0,8000.0,0,👏 Fantastic job with your entertainment expenses! Keep it up and stay awesome! 🌟
+Medicine,20000.0,21000.0,-1000.0,1,💊 Medicine expenses are a bit high. Let’s tweak it and stay healthy! 🌟
+Medicine,20000.0,20000.0,0.0,0,🎉 Perfectly balanced medicine budget! Keep up the great work and stay healthy! 💪
+Medicine,20000.0,19000.0,1000.0,0,🌟 Excellent job managing your medicine expenses! Keep it up and enjoy those savings! 🎉
+Medicine,20000.0,18000.0,2000.0,0,🎉 You’re doing a fantastic job with your medicine budget! Keep it up and stay fabulous! 🌟
+Medicine,20000.0,17000.0,3000.0,0,👏 Great job managing your medicine expenses! Keep up the fantastic work! 🎉
+Medicine,20000.0,16000.0,4000.0,0,🌟 Excellent job with your medicine budget! Keep it up and stay awesome! 🎉
+Medicine,20000.0,15000.0,5000.0,0,🎉 Your medicine expenses are perfectly managed! Keep up the amazing work! 🌟
+Medicine,20000.0,14000.0,6000.0,0,👏 You’re a superstar with your medicine budget! Keep up the fantastic work! 🎉
+Medicine,20000.0,13000.0,7000.0,0,🌟 Excellent job with your medicine expenses! Keep it up and stay fabulous! 🎉
+Medicine,20000.0,12000.0,8000.0,0,🎉 Great job with your medicine budget! Keep up the great work and enjoy those savings! 🌟
+Security,40000.0,41000.0,-1000.0,1,🚨 Security expenses are a bit high. Time to make a small adjustment! 🌟
+Security,40000.0,40000.0,0.0,0,🎉 Perfectly managed security budget! Keep up the great work and stay safe! 🌟
+Security,40000.0,39000.0,1000.0,0,👏 Great job with your security expenses! Keep it up and stay fabulous! 🌟
+Security,40000.0,38000.0,2000.0,0,🎉 Excellent job managing your security budget! Keep up the fantastic work and stay safe! 🌟
+Security,40000.0,37000.0,3000.0,0,🌟 You’re a pro with your security expenses! Keep up the great work! 🎉
+Security,40000.0,36000.0,4000.0,0,👏 Your security budget is perfectly managed! Keep it up and stay awesome! 🌟
+Security,40000.0,35000.0,5000.0,0,🎉 Great job managing your security expenses! Keep up the fabulous work! 🌟
+Security,40000.0,34000.0,6000.0,0,🌟 You’re managing your security budget like a champ! Keep up the amazing work! 🎉
+Security,40000.0,33000.0,7000.0,0,👏 Excellent job with your security expenses! Keep it up and stay fabulous! 🎉
+Security,40000.0,32000.0,8000.0,0,🎉 Great job with your security budget! Keep up the great work and enjoy those savings! 🌟
+Food & Drinks,70000.0,72000.0,-2000.0,1,🍽️ Food expenses are a bit high. Let’s make a tasty adjustment and keep saving smart! 🌟
+Food & Drinks,70000.0,71000.0,-1000.0,1,💡 Time to adjust your food budget a little. Small changes can make a big difference! 🌟
+Food & Drinks,70000.0,70000.0,0.0,0,🎉 Perfectly balanced food budget! Enjoy your meals and keep saving those bucks! 🌟
+Food & Drinks,70000.0,69000.0,1000.0,0,🎉 Excellent job managing your food expenses! Keep up the great work and enjoy the savings! 🌟
+Food & Drinks,70000.0,68000.0,2000.0,0,👏 Great job with your food budget! Keep up the fantastic work and enjoy those savings! 🎉
+Food & Drinks,70000.0,67000.0,3000.0,0,🌟 You’re doing a fantastic job with your food expenses! Keep it up and stay awesome! 🎉
+Food & Drinks,70000.0,66000.0,4000.0,0,🎉 Excellent job with your food budget! Keep up the great work and enjoy those savings! 🌟
+Food & Drinks,70000.0,65000.0,5000.0,0,👏 Your food expenses are perfectly managed! Keep up the fabulous work! 🎉
+Food & Drinks,70000.0,64000.0,6000.0,0,🌟 You’re managing your food budget like a champ! Keep up the amazing work! 🎉
+Food & Drinks,70000.0,63000.0,7000.0,0,🎉 Excellent job with your food expenses! Keep it up and stay fabulous! 🌟
+Food & Drinks,70000.0,62000.0,8000.0,0,👏 Great job with your food budget! Keep up the great work and enjoy those savings! 🎉
+Others,50000.0,52000.0,-2000.0,1,🚨 Time for a quick review of your "Others" expenses. A small tweak will help keep things in balance! 🌟
+Others,50000.0,51000.0,-1000.0,1,💡 Your "Others" budget is a bit high. Let’s make a tasty adjustment to save more! 🎯
+Others,50000.0,50000.0,0.0,0,🎉 Perfectly balanced "Others" budget! Keep up the great work and enjoy those savings! 🌟
+Others,50000.0,49000.0,1000.0,0,🌟 Great job managing your "Others" expenses! Keep up the fantastic work and enjoy the savings! 🎉
+Others,50000.0,48000.0,2000.0,0,👏 Excellent job with your "Others" budget! Keep it up and stay fabulous! 🌟
+Others,50000.0,47000.0,3000.0,0,🎉 Your "Others" budget is looking great! Keep up the amazing work and enjoy the savings! 🌟
+Others,50000.0,46000.0,4000.0,0,🌟 You’re managing your "Others" budget like a pro! Keep up the great work! 🎉
+Others,50000.0,45000.0,5000.0,0,👏 Excellent job with your "Others" expenses! Keep it up and stay fabulous! 🎉
+Others,50000.0,44000.0,6000.0,0,🎉 Great job with your "Others" budget! Keep up the great work and enjoy those savings! 🌟
+Others,50000.0,43000.0,7000.0,0,🌟 You’re doing an amazing job with "Others" expenses! Keep it up and stay fabulous! 🎉
+Others,50000.0,42000.0,8000.0,0,👏 Fantastic job with your "Others" budget! Keep up the great work and enjoy those savings! 🎉
+Entertainment,25000.0,26000.0,-1000.0,1,🎉 Entertainment expenses are a bit high. Time for a fun adjustment! 🌟
+Entertainment,25000.0,25000.0,0.0,0,🌟 Perfectly balanced entertainment budget! Enjoy the fun and keep saving those bucks! 🎉
+Entertainment,25000.0,24000.0,1000.0,0,👏 Great job managing your entertainment expenses! Keep up the fantastic work! 🌟
+Entertainment,25000.0,23000.0,2000.0,0,🎉 Excellent job with your entertainment budget! Keep enjoying and saving smart! 🌈
+Entertainment,25000.0,22000.0,3000.0,0,🌟 You’re doing an amazing job with your entertainment expenses! Keep up the great work! 🎉
+Entertainment,25000.0,21000.0,4000.0,0,👏 Fantastic job with your entertainment budget! Keep up the excellent work! 🌟
+Entertainment,25000.0,20000.0,5000.0,0,🎉 Your entertainment budget is looking great! Enjoy the fun and keep saving smart! 🌟
+Entertainment,25000.0,19000.0,6000.0,0,🌟 Excellent job managing your entertainment expenses! Keep it up and stay fabulous! 🎉
+Entertainment,25000.0,18000.0,7000.0,0,👏 Great job with your entertainment budget! Keep up the great work and enjoy those savings! 🌟
+Entertainment,25000.0,17000.0,8000.0,0,🎉 You’re doing an amazing job with your entertainment budget! Keep up the fantastic work! 🌟
+Medicine,10000.0,11000.0,-1000.0,1,💊 Medicine expenses are a bit high. A small tweak will help keep things balanced! 🌟
+Medicine,10000.0,10000.0,0.0,0,🎉 Perfectly balanced medicine budget! Keep up the great work and stay healthy! 💪
+Medicine,10000.0,9000.0,1000.0,0,🌟 Great job managing your medicine expenses! Keep it up and enjoy those savings! 🎉
+Medicine,10000.0,8000.0,2000.0,0,👏 Excellent job with your medicine budget! Keep it up and stay fabulous! 🌟
+Medicine,10000.0,7000.0,3000.0,0,🎉 You’re doing an amazing job with your medicine budget! Keep up the great work! 🌟
+Medicine,10000.0,6000.0,4000.0,0,🌟 Great job managing your medicine expenses! Keep up the fantastic work! 🎉
+Medicine,10000.0,5000.0,5000.0,0,👏 Excellent job with your medicine budget! Keep it up and enjoy those savings! 🌟
+Medicine,10000.0,4000.0,6000.0,0,🎉 Your medicine expenses are perfectly managed! Keep up the fantastic work! 🌟
+Medicine,10000.0,3000.0,7000.0,0,🌟 You’re doing a fantastic job with your medicine budget! Keep up the great work! 🎉
+Medicine,10000.0,2000.0,8000.0,0,👏 Excellent job with your medicine expenses! Keep up the fabulous work! 🌟
+Security,20000.0,21000.0,-1000.0,1,🚨 Security expenses are a bit high. A small adjustment will help keep things in balance! 🌟
+Security,20000.0,20000.0,0.0,0,🎉 Perfectly managed security budget! Keep up the great work and stay safe! 🌟
+Security,20000.0,19000.0,1000.0,0,🌟 Excellent job managing your security expenses! Keep it up and stay fabulous! 🎉
+Security,20000.0,18000.0,2000.0,0,👏 Great job with your security budget! Keep it up and enjoy the savings! 🌟
+Security,20000.0,17000.0,3000.0,0,🎉 You’re doing an amazing job with your security expenses! Keep up the great work! 🌟
+Security,20000.0,16000.0,4000.0,0,🌟 Excellent job with your security budget! Keep it up and stay fabulous! 🎉
+Security,20000.0,15000.0,5000.0,0,🎉 Your security budget is perfectly managed! Keep up the fantastic work! 🌟
+Security,20000.0,14000.0,6000.0,0,👏 Great job managing your security expenses! Keep up the amazing work! 🎉
+Security,20000.0,13000.0,7000.0,0,🌟 Excellent job with your security budget! Keep it up and stay fabulous! 🎉
+Security,20000.0,12000.0,8000.0,0,🎉 Fantastic job with your security expenses! Keep up the great work and enjoy those savings! 🌟
+Food & Drinks,50000.0,52000.0,-2000.0,1,🍽️ Food budget is a bit high. Let’s make a tasty adjustment to save more! 🌟
+Food & Drinks,50000.0,51000.0,-1000.0,1,💡 Time for a food budget tweak! A small adjustment will keep things balanced! 🌟
+Food & Drinks,50000.0,50000.0,0.0,0,🎉 Perfectly balanced food budget! Keep enjoying your meals and saving smart! 🌟
+Food & Drinks,50000.0,49000.0,1000.0,0,🌟 Great job managing your food expenses! Keep it up and enjoy those savings! 🎉
+Food & Drinks,50000.0,48000.0,2000.0,0,👏 Excellent job with your food budget! Keep up the great work and enjoy those savings! 🌟
+Food & Drinks,50000.0,47000.0,3000.0,0,🎉 You’re doing an amazing job with your food budget! Keep it up and stay fabulous! 🌟
+Food & Drinks,50000.0,46000.0,4000.0,0,👏 Your food expenses are looking great! Keep up the fantastic work and enjoy the savings! 🎉
+Food & Drinks,50000.0,45000.0,5000.0,0,🌟 Excellent job with your food budget! Keep it up and stay fabulous! 🎉
+Food & Drinks,50000.0,44000.0,6000.0,0,🎉 Great job managing your food expenses! Keep up the amazing work and enjoy those savings! 🌟
+Food & Drinks,50000.0,43000.0,7000.0,0,👏 Excellent job with your food budget! Keep up the great work and enjoy those savings! 🌟
+Others,30000.0,32000.0,-2000.0,1,🚨 Time for a quick review of your "Others" budget. Let’s adjust and keep things balanced! 🌟
+Others,30000.0,31000.0,-1000.0,1,💡 Your "Others" budget is a bit high. A small adjustment will help save more! 🌟
+Others,30000.0,30000.0,0.0,0,🎉 Perfectly balanced "Others" budget! Keep up the great work and enjoy those savings! 🌟
+Others,30000.0,29000.0,1000.0,0,🌟 Great job managing your "Others" expenses! Keep it up and enjoy those savings! 🎉
+Others,30000.0,28000.0,2000.0,0,👏 Excellent job with your "Others" budget! Keep it up and stay fabulous! 🌟
+Others,30000.0,27000.0,3000.0,0,🎉 Your "Others" budget is looking great! Keep up the amazing work and enjoy those savings! 🌟
+Others,30000.0,26000.0,4000.0,0,🌟 You’re managing your "Others" budget like a pro! Keep it up and stay fabulous! 🎉
+Others,30000.0,25000.0,5000.0,0,👏 Excellent job with your "Others" expenses! Keep up the great work and enjoy those savings! 🌟
+Others,30000.0,24000.0,6000.0,0,🎉 Great job managing your "Others" budget! Keep up the fantastic work and enjoy those savings! 🌟
+Others,30000.0,23000.0,7000.0,0,🌟 You’re doing an amazing job with "Others" expenses! Keep it up and stay fabulous! 🎉
+Others,30000.0,22000.0,8000.0,0,👏 Fantastic job with your "Others" budget! Keep up the great work and enjoy those savings! 🎉
