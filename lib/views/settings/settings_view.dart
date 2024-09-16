@@ -180,17 +180,7 @@ class _SettingsViewState extends State<SettingsView> {
                         IconItemRow(
                           title: "Security",
                           icon: "assets/img/face_id.png",
-                          value: "FaceID",
-                        ),
-                        IconItemSwitchRow(
-                          title: "iCloud Sync",
-                          icon: "assets/img/icloud.png",
-                          value: isActive,
-                          didChange: (newVal) {
-                            setState(() {
-                              isActive = newVal;
-                            });
-                          },
+                          value: "Screen Lock",
                         ),
                       ],
                     ),
@@ -198,7 +188,7 @@ class _SettingsViewState extends State<SettingsView> {
                   Padding(
                     padding: const EdgeInsets.only(top: 20, bottom: 8),
                     child: Text(
-                      "My subscription",
+                      "Developer",
                       style: TextStyle(
                           color: TColor.white,
                           fontSize: 14,
@@ -217,62 +207,54 @@ class _SettingsViewState extends State<SettingsView> {
                     child: Column(
                       children: [
                         IconItemRow(
-                          title: "Sorting",
-                          icon: "assets/img/sorting.png",
-                          value: "Date",
-                        ),
-                        IconItemRow(
-                          title: "Summary",
-                          icon: "assets/img/chart.png",
-                          value: "Average",
-                        ),
-                        IconItemRow(
-                          title: "Default currency",
-                          icon: "assets/img/money.png",
-                          value: "USD (\₹)",
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 20, bottom: 8),
-                    child: Text(
-                      "Appearance",
-                      style: TextStyle(
-                          color: TColor.white,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600),
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.symmetric(vertical: 8),
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: TColor.border.withOpacity(0.1),
-                      ),
-                      color: TColor.gray60.withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    child: Column(
-                      children: [
-                        IconItemRow(
-                          title: "App icon",
+                          title: "Team",
                           icon: "assets/img/app_icon.png",
-                          value: "Default",
+                          value: "See Team",
                         ),
                         IconItemRow(
-                          title: "Theme",
+                          title: "Stacks Used",
                           icon: "assets/img/light_theme.png",
-                          value: "Dark",
+                          value: "Stacks",
                         ),
                         IconItemRow(
-                          title: "Font",
+                          title: "App Guide",
                           icon: "assets/img/font.png",
-                          value: "Inter",
+                          value: "Guide",
                         ),
                       ],
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20, bottom: 8),
+                    child: Text(
+                      "Source Code",
+                      style: TextStyle(
+                          color: TColor.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: TColor.border.withOpacity(0.1),
+                      ),
+                      color: TColor.gray60.withOpacity(0.2),
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: const Column(
+                      children: [
+                        IconItemRow(
+                          title: "Github",
+                          icon: "assets/img/github.png",
+                          value: "Check Github Repo",
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  
                 ],
               ),
             )
