@@ -43,7 +43,7 @@ class _SpendingBudgetsViewState extends State<SpendingBudgetsView> {
       "color": TColor.primary10.value
     },
     {
-      "name": "Miscellaneous",
+      "name": "Others",
       "icon": "assets/img/housing.png",
       "total_budget": "10000",
       "spend_amount": "5000",
@@ -51,7 +51,7 @@ class _SpendingBudgetsViewState extends State<SpendingBudgetsView> {
       "color": Colors.yellow.value
     },
     {
-      "name": "Food",
+      "name": "Food & Drinks",
       "icon": "assets/img/store.png",
       "total_budget": "60000",
       "spend_amount": "0",

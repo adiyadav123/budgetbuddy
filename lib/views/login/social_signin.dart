@@ -132,11 +132,18 @@ class _SocialSignInState extends State<SocialSignIn> {
         } else {
           var mail = user.email;
 
-          var box = await Hive.openBox("user");
-          if (box.get("email") == null) {
-            box.put("email", "$mail");
+          if (mail == null) {
+            var box = await Hive.openBox("user");
             box.put("method", "firebase");
+            box.put("email", "$mail");
+            return Get.to(() => ConfigPage(),
+                transition: Transition.fadeIn,
+                duration: const Duration(milliseconds: 1000));
           }
+
+          var box = await Hive.openBox("user");
+          box.put("method", "firebase");
+          box.put("email", "$mail");
 
           Get.to(() => SocialConfigPage(),
               transition: Transition.fadeIn,

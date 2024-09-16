@@ -95,7 +95,7 @@ class _MainTabViewState extends State<MainTabView> {
                                 });
                               },
                               icon: Image.asset(
-                                "assets/img/calendar.png",
+                                "assets/img/creditcards.png",
                                 width: 20,
                                 height: 20,
                                 color: selectTab == 2
@@ -111,7 +111,7 @@ class _MainTabViewState extends State<MainTabView> {
                                 });
                               },
                               icon: Image.asset(
-                                "assets/img/creditcards.png",
+                                "assets/img/settings.png",
                                 width: 20,
                                 height: 20,
                                 color: selectTab == 3

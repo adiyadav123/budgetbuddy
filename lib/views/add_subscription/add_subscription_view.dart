@@ -26,10 +26,10 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
     {"name": "Medicine", "icon": "assets/img/medicine.png"},
     {"name": "Security", "icon": "assets/img/camera.png"},
     {
-      "name": "Miscellaneous",
+      "name": "Others",
       "icon": "assets/img/housing.png",
     },
-    {"name": "Food", "icon": "assets/img/store.png"}
+    {"name": "Food & Drinks", "icon": "assets/img/store.png"}
   ];
 
   List defaultSubArr = [
@@ -37,10 +37,10 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
     {"name": "Medicine", "icon": "assets/img/medicine.png"},
     {"name": "Security", "icon": "assets/img/camera.png"},
     {
-      "name": "Miscellaneous",
+      "name": "Others",
       "icon": "assets/img/housing.png",
     },
-    {"name": "Food", "icon": "assets/img/store.png"}
+    {"name": "Food & Drinks", "icon": "assets/img/store.png"}
   ];
 
   double amountVal = 10;
@@ -446,7 +446,6 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
       }
 
       categoryBox.put("categories", catArr);
-
 
       Get.snackbar("Added", "Added a new transaction successfully!",
           colorText: TColor.white);

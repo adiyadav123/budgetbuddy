@@ -205,6 +205,30 @@ class _HomeViewState extends State<HomeView> {
                       var box = await Hive.openBox("user");
                       var totalSpent = await Hive.openBox("totalSpent");
 
+                      var categoryBox = await Hive.openBox("categories");
+                      var categories = categoryBox.get("categories") ?? [];
+
+                      for (var catAr in categories) {
+                        if (catAr["name"] == "Entertainment" ||
+                            catAr["name"] == "Food & Drinks" ||
+                            catAr["name"] == "Security" ||
+                            catAr["name"] == "Medicine") {
+                          catAr["total_budget"] =
+                              "${double.parse(budgetController.text) * 0.1}";
+                          catAr["left_amount"] =
+                              "${double.parse(budgetController.text) * 0.1}";
+                        } else if (catAr["name"] == "Others") {
+                          catAr["total_budget"] =
+                              "${double.parse(budgetController.text) * 0.6}";
+                          catAr["left_amount"] =
+                              "${double.parse(budgetController.text) * 0.6}";
+                        }
+
+                        print("Category: ${catAr["name"]}");
+                      }
+
+                      categoryBox.put("categories", categories);
+
                       totalSpent.put("totalSpent", 0.0);
                       box.put("budget", budgetController.text);
 

@@ -193,7 +193,7 @@ class _SocialConfigPageState extends State<SocialConfigPage> {
           "color": TColor.primary10.value
         },
         {
-          "name": "Miscellaneous",
+          "name": "Food & Drinks",
           "icon": "assets/img/housing.png",
           "total_budget": "${double.parse(budget) * 0.10}",
           "spend_amount": "0",
@@ -201,7 +201,7 @@ class _SocialConfigPageState extends State<SocialConfigPage> {
           "color": Colors.yellow.value
         },
         {
-          "name": "Food",
+          "name": "Others",
           "icon": "assets/img/store.png",
           "total_budget": "${double.parse(budget) * 0.60}",
           "spend_amount": "0",

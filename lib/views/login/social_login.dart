@@ -126,9 +126,18 @@ class _SocialLoginState extends State<SocialLogin> {
         } else {
           var mail = user.email;
 
+          if (mail == null) {
+            var box = await Hive.openBox("user");
+            box.put("method", "firebase");
+            box.put("email", "$mail");
+            return Get.to(() => ConfigPage(),
+                transition: Transition.fadeIn,
+                duration: const Duration(milliseconds: 1000));
+          }
+
           var box = await Hive.openBox("user");
-          box.put("email", "$mail");
           box.put("method", "firebase");
+          box.put("email", "$mail");
 
           Get.to(() => SocialConfigPage(),
               transition: Transition.fadeIn,
@@ -156,6 +165,16 @@ class _SocialLoginState extends State<SocialLogin> {
             duration: const Duration(milliseconds: 1000));
       } else {
         var mail = user.email;
+
+        if (mail == null) {
+          var box = await Hive.openBox("user");
+          box.put("method", "firebase");
+          box.put("email", "$mail");
+          return Get.to(() => ConfigPage(),
+              transition: Transition.fadeIn,
+              duration: const Duration(milliseconds: 1000));
+        }
+
         var box = await Hive.openBox("user");
 
         box.put("email", "$mail");
