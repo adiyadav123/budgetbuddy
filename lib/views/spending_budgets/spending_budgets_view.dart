@@ -1,3 +1,4 @@
+import 'package:budgetbuddy/ml_model.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:budgetbuddy/common/color_extension.dart';
@@ -16,6 +17,7 @@ class SpendingBudgetsView extends StatefulWidget {
 
 class _SpendingBudgetsViewState extends State<SpendingBudgetsView> {
   List s = [];
+  String _prediction = "";
 
   List budgetArr = [
     {
@@ -65,8 +67,6 @@ class _SpendingBudgetsViewState extends State<SpendingBudgetsView> {
     var categoryBox = await Hive.openBox("categories");
     var catArr = categoryBox.get("categories");
 
-    
-
     if (catArr != null) {
       List<dynamic> categoryList = catArr as List;
       print(categoryList);
@@ -80,10 +80,23 @@ class _SpendingBudgetsViewState extends State<SpendingBudgetsView> {
     }
   }
 
+  void _makePrediction() async {
+    List<double> inputs = [
+      50000.0,
+      55000.0,
+      -5000.0
+    ]; // Replace with actual inputs
+    var results = await MLModel.predict(inputs);
+    setState(() {
+      _prediction = results != null ? results.toString() : 'Error';
+    });
+  }
+
   @override
   void initState() {
     super.initState();
     checkData();
+    MLModel.loadModel();
   }
 
   @override
@@ -155,33 +168,40 @@ class _SpendingBudgetsViewState extends State<SpendingBudgetsView> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-              child: InkWell(
-                borderRadius: BorderRadius.circular(16),
-                onTap: () {},
-                child: Container(
-                  height: 64,
-                  padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: TColor.border.withOpacity(0.1),
-                    ),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  alignment: Alignment.center,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Your budgets are on tack 👍",
-                        style: TextStyle(
-                            color: TColor.white,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600),
+              child: Column(children: [
+                InkWell(
+                  borderRadius: BorderRadius.circular(16),
+                  onTap: () {},
+                  child: Container(
+                    height: 64,
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: TColor.border.withOpacity(0.1),
                       ),
-                    ],
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    alignment: Alignment.center,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "$_prediction",
+                          style: TextStyle(
+                              color: TColor.white,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
+                ElevatedButton(
+                    onPressed: () {
+                      _makePrediction();
+                    },
+                    child: Text('Predict')),
+              ]),
             ),
             ListView.builder(
                 padding:
