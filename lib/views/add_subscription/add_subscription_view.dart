@@ -18,7 +18,6 @@ class AddSubScriptionView extends StatefulWidget {
 }
 
 class _AddSubScriptionViewState extends State<AddSubScriptionView> {
-  TextEditingController txtDescription = TextEditingController();
   TextEditingController txtName = TextEditingController();
   int _current = 0;
 
@@ -183,7 +182,7 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 20),
                       child: Text(
-                        "Add new\n transaction",
+                        "Add a new\n transaction",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: TColor.white,
@@ -251,13 +250,6 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
                   controller: txtName,
                 )),
             Padding(
-                padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
-                child: RoundTextField(
-                  title: "Description",
-                  titleAlign: TextAlign.center,
-                  controller: txtDescription,
-                )),
-            Padding(
               padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -271,7 +263,11 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
                         amountVal = 0;
                       }
 
-                      setState(() {});
+                      setState(() {
+                        txtAmount.text = amountVal.toString();
+
+                        print(txtAmount.text);
+                      });
                     },
                   ),
                   Column(
@@ -346,7 +342,11 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
                     onPressed: () {
                       amountVal += 10;
 
-                      setState(() {});
+                      setState(() {
+                        txtAmount.text = amountVal.toString();
+                      });
+
+                      print(txtAmount.text);
                     },
                   )
                 ],
@@ -373,7 +373,7 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
   }
 
   _saveData() async {
-    if (txtAmount.text.isNotEmpty && txtDescription.text.isNotEmpty) {
+    if (txtAmount.text.isNotEmpty) {
       var subBox = await Hive.openBox("subscription");
       var highestBox = await Hive.openBox("highest");
       var userBox = await Hive.openBox("user");
@@ -402,7 +402,6 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
           "icon": subArrr[_current]["icon"],
           "price": amountVal,
           "type": subArrr[_current]["name"],
-          "description": txtDescription.text,
           "paymentTime": DateFormat('dd.MM.yyyy').format(DateTime.now())
         }
       ];
@@ -424,7 +423,8 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
 
       totalBox.put('totalSpent', amountVal + totalVal);
 
-      Get.snackbar("Added", "Added a new transaction successfully!");
+      Get.snackbar("Added", "Added a new transaction successfully!",
+          colorText: TColor.white);
 
       Get.to(() => const MainTabView(),
           transition: Transition.leftToRightWithFade,

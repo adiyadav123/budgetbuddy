@@ -1,3 +1,4 @@
+import 'package:budgetbuddy/views/main_tab/main_tab_view.dart';
 import 'package:budgetbuddy/views/spending_budgets/spending_budgets_view.dart';
 import 'package:flutter/material.dart';
 import 'package:budgetbuddy/common/color_extension.dart';
@@ -195,15 +196,14 @@ class _HomeViewState extends State<HomeView> {
                 TextButton(
                     onPressed: () async {
                       var box = await Hive.openBox("user");
-                      var lowest = await Hive.openBox("lowest");
-                      var highest = await Hive.openBox("highest");
                       var totalSpent = await Hive.openBox("totalSpent");
-                      lowest.put("lowest", 0.0);
-                      highest.put("highest", 0.0);
+
                       totalSpent.put("totalSpent", 0.0);
                       box.put("budget", budgetController.text);
 
-                      Navigator.pop(context);
+                      Get.to(() => const MainTabView(),
+                          transition: Transition.fadeIn,
+                          duration: const Duration(milliseconds: 500));
                     },
                     child: Text(
                       "Set Budget",
@@ -263,7 +263,7 @@ class _HomeViewState extends State<HomeView> {
                         padding: const EdgeInsets.only(right: 10),
                         child: Row(
                           children: [
-                           const Spacer(),
+                            const Spacer(),
                             IconButton(
                                 onPressed: () {
                                   Navigator.push(
@@ -469,7 +469,7 @@ class _HomeViewState extends State<HomeView> {
                           onPressed: () {},
                         );
                       }),
-           const SizedBox(
+            const SizedBox(
               height: 150,
             ),
           ],
