@@ -195,6 +195,13 @@ class _HomeViewState extends State<HomeView> {
               actions: [
                 TextButton(
                     onPressed: () async {
+                      if (budgetController.text.isEmpty) {
+                        Get.snackbar("Error", "Please enter a valid budget",
+                            colorText: Colors.white,
+                            duration: const Duration(seconds: 3));
+                        return;
+                      }
+
                       var box = await Hive.openBox("user");
                       var totalSpent = await Hive.openBox("totalSpent");
 
@@ -204,6 +211,8 @@ class _HomeViewState extends State<HomeView> {
                       Get.to(() => const MainTabView(),
                           transition: Transition.fadeIn,
                           duration: const Duration(milliseconds: 500));
+
+                      Navigator.pop(context);
                     },
                     child: Text(
                       "Set Budget",
