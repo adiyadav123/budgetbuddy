@@ -103,7 +103,8 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
       }
 
       if (total > doubleBudget) {
-        Get.snackbar("Uh oh!", "You have exceeded your budget!");
+        Get.snackbar("Uh oh!", "You have exceeded your budget!",
+            colorText: Colors.white);
 
         Get.defaultDialog(
             title: "You have exceeded your budget!",
@@ -131,6 +132,7 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
   void initState() {
     super.initState();
     checkCurrentStat();
+    txtAmount.text = 10.toString();
   }
 
   @override
@@ -391,7 +393,7 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
         double diff = am - remaingBd;
         return Get.snackbar("Uh oh!",
             "You have exceeded your budget by ₹ $diff. Please reduce the amount, or increase your budget. This will cause an imbalance in your budget.",
-            colorText: Colors.red, duration: const Duration(seconds: 10));
+            colorText: Colors.white, duration: const Duration(seconds: 10));
       }
 
       List existingSubArr = subBox.get('arr') ?? [];
@@ -430,7 +432,8 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
           transition: Transition.leftToRightWithFade,
           duration: const Duration(milliseconds: 500));
     } else {
-      return Get.snackbar("Uh oh!", "Please fill all the fields");
+      return Get.snackbar("Uh oh!", "Please fill all the fields",
+          colorText: Colors.white);
     }
   }
 }
