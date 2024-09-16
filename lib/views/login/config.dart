@@ -238,17 +238,17 @@ class _ConfigPageState extends State<ConfigPage> {
         {
           "name": "Miscellaneous",
           "icon": "assets/img/housing.png",
-          "total_budget": "${double.parse(budget) * 0.10}",
+          "total_budget": "${double.parse(budget) * 0.60}",
           "spend_amount": "0",
-          "left_amount": "${double.parse(budget) * 0.10}",
+          "left_amount": "${double.parse(budget) * 0.60}",
           "color": Colors.yellow.value
         },
         {
           "name": "Food",
           "icon": "assets/img/store.png",
-          "total_budget": "${double.parse(budget) * 0.60}",
+          "total_budget": "${double.parse(budget) * 0.10}",
           "spend_amount": "0",
-          "left_amount": "${double.parse(budget) * 0.60}",
+          "left_amount": "${double.parse(budget) * 0.10}",
           "color": Colors.blue.value
         }
       ];
